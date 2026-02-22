@@ -1,0 +1,37 @@
+.code-box {
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.blank {
+  min-width: 18px;
+  width: auto;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #38bdf8;
+  color: #38bdf8;
+  font-family: monospace;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+  padding: 2px;
+}
+
+.blank.correct {
+  border-bottom-color: #22c55e;
+  color: #22c55e;
+}
+
+.blank.wrong {
+  border-bottom-color: #ef4444;
+  color: #ef4444;
+}
+    
+
+
+
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeStart | Dashboard</title>
+
+  <link rel="stylesheet" href="dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <h2>CodeStart</h2>
+    <button onclick="logout()">Logout</button>
+  </header>
+
+  <!-- Dashboard -->
+  <section class="dashboard">
+
+    <!-- Welcome Card -->
+    <div class="card welcome">
+      <h3>Welcome, <span id="userName">User</span> 👋</h3>
+      <p>Let’s start learning programming step by step.</p>
+    </div>
+
+    <!-- Profile Card -->
+    <div class="card">
+      <h4>Your Profile</h4>
+      <p><strong>Name:</strong> <span id="fullName"></span></p>
+      <p><strong>Level:</strong> <span id="level"></span></p>
+      <p><strong>Language:</strong> <span id="language"></span></p>
+    </div>
+
+    <!-- Progress -->
+    <div class="card">
+      <h4>Learning Progress</h4>
+      <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+      </div>
+      <p><span id="progressValue">0%</span> Completed</p>
+    </div>
+
+    <!-- Scorecard -->
+    <div class="card">
+      <h4>Scorecard</h4>
+      <p>MCQs Score: <strong>0%</strong></p>
+      <p>Quizzes Score: <strong>0%</strong></p>
+    </div>
+
+    <!-- Actions -->
+    <div class="card actions">
+      <button>Start Learning</button>
+      <button>Take Quiz</button>
+      <button>Open Compiler</button>
+       <div class="nav-buttons">
+    <button onclick="goHome()">Home</button>
+    <button onclick="logout()">Logout</button>
+  </div>
+      
+    </div>
+
+  </section>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

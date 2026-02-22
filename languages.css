@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #08161d;
+}
+
+header h2 {
+  color: #00e6e6;
+}
+
+header button {
+  background: #00e6e6;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Section */
+.language-section {
+  text-align: center;
+  padding: 60px 30px;
+}
+
+.language-section h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #00e6e6;
+}
+
+.language-section p {
+  margin-bottom: 40px;
+  color: #ddd;
+}
+
+/* Grid */
+.language-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Cards */
+.lang-card {
+  background: #132f3b;
+  padding: 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.lang-card:hover {
+  transform: translateY(-10px);
+  background: #00e6e6;
+  color: #000;
+}
+
+.lang-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* ================= HEADER ================= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+header h2 {
+  font-weight: 600;
+  color: #00e6e6;
+}
+
+header button {
+  background: transparent;
+  border: 2px solid #00e6e6;
+  color: #00e6e6;
+  padding: 6px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+header button:hover {
+  background: #00e6e6;
+  color: #000;
+}
+
+/* ================= MAIN SECTION ================= */
+.language-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.language-section h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.language-section p {
+  font-size: 15px;
+  opacity: 0.85;
+  margin-bottom: 40px;
+}
+
+/* ================= GRID ================= */
+.language-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* ================= CARD ================= */
+.lang-card {
+  text-decoration: none;
+  color: inherit;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  padding: 30px 20px;
+  transition: 0.35s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow Effect */
+.lang-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(0, 230, 230, 0.25),
+    transparent
+  );
+  transform: rotate(25deg);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.lang-card:hover::before {
+  opacity: 1;
+}
+
+/* Hover animation */
+.lang-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(0, 230, 230, 0.35);
+}
+
+/* Text */
+.lang-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #00e6e6;
+}
+
+.lang-card p {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 600px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  .language-section h1 {
+    font-size: 28px;
+  }
+}

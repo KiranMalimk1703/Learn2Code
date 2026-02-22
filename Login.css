@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-box {
+  background: #132f3b;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.form-box h2 {
+  color: #00e6e6;
+  margin-bottom: 30px;
+}
+
+.form-box input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.form-box input::placeholder {
+  color: #999;
+}
+
+.btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  background: #00e6e6;
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #00b3b3;
+}
+
+.toggle-text {
+  margin-top: 20px;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.toggle-text span {
+  color: #00e6e6;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.toggle-text span:hover {
+  text-decoration: underline;
+}
+
+/* Hide signup-only field by default */
+.signup-only {
+  display: none;
+}

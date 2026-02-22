@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeStart | Create Profile</title>
+
+  <link rel="stylesheet" href="profile.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    <div class="profile-box">
+      <h2>Create Your Profile</h2>
+
+      <form id="profileForm">
+        <input type="text" id="fullname" placeholder="Full Name" required>
+        <input type="number" id="age" placeholder="Age" required>
+
+        <select id="level" required>
+          <option value="">Select Skill Level</option>
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+        </select>
+
+        <select id="language" required>
+          <option value="">Preferred Language</option>
+          <option value="C">C</option>
+          <option value="C++">C++</option>
+          <option value="Python">Python</option>
+          <option value="Java">Java</option>
+        </select>
+
+        <button type="submit" class="btn">Save Profile</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+</html>
+                

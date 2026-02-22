@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeStart | Login & Signup</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="login.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    <div class="form-box">
+
+      <h2 id="formTitle">Login</h2>
+
+      <form id="authForm">
+        <input type="text" id="username" placeholder="Username" required>
+
+        <input type="email" id="email" placeholder="Email" class="signup-only">
+
+        <input type="password" id="password" placeholder="Password" required>
+
+        <button type="submit" class="btn">Login</button>
+      </form>
+
+      <p class="toggle-text">
+        Don’t have an account?
+        <span onclick="toggleForm()">Sign Up</span>
+      </p>
+
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="login.js"></script>
+</body>
+</html>

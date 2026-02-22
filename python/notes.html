@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Notes – Introduction</title>
+    <link rel="stylesheet" href="notes.css">
+
+<header>
+    <button onclick="gohome()">Home</button>
+</header>
+    
+
+    
+</head>
+<body>
+
+    
+
+<div class="container">
+
+    <h1>🐍 Python Notes – Conceptual View</h1>
+
+    <h2>1️⃣ Introduction to Python</h2>
+
+    <h3>What is Python?</h3>
+    <p>
+        Python is a <strong>high-level, interpreted, general-purpose programming language</strong>
+        designed with the philosophy:
+    </p>
+
+    <blockquote>
+        “Code should be readable and simple.”
+    </blockquote>
+
+    <p>
+        Unlike low-level languages such as <strong>C</strong> and <strong>Assembly</strong>,
+        Python hides hardware complexity and allows the programmer to focus on
+        <strong>logic and problem-solving</strong>.
+    </p>
+
+    <h3>Why Python Was Created</h3>
+    <p>Guido van Rossum created Python to:</p>
+    <ul>
+        <li>Reduce code complexity</li>
+        <li>Improve readability</li>
+        <li>Allow rapid development</li>
+        <li>Make programming accessible to beginners</li>
+    </ul>
+
+    <p>Python follows <strong>The Zen of Python</strong>:</p>
+    <ul>
+        <li>Simple is better than complex</li>
+        <li>Readability counts</li>
+        <li>Explicit is better than implicit</li>
+    </ul>
+
+    <h2>2️⃣ Python Language Characteristics (Deep Insight)</h2>
+
+    <table>
+        <tr>
+            <th>Feature</th>
+            <th>Meaning</th>
+        </tr>
+        <tr>
+            <td>High-level</td>
+            <td>No memory management by user</td>
+        </tr>
+        <tr>
+            <td>Interpreted</td>
+            <td>Executes line by line</td>
+        </tr>
+        <tr>
+            <td>Dynamically typed</td>
+            <td>No need to declare data types</td>
+        </tr>
+        <tr>
+            <td>Object-oriented</td>
+            <td>Everything is an object</td>
+        </tr>
+        <tr>
+            <td>Portable</td>
+            <td>Runs on any operating system</td>
+        </tr>
+        <tr>
+            <td>Extensible</td>
+            <td>Can integrate with C/C++</td>
+        </tr>
+    </table>
+
+    <h2>3️⃣ Python Execution Model (Internal Working)</h2>
+
+    <h3>How Python Code Runs</h3>
+    <ul>
+        <li>Source code (<code>.py</code>) is written</li>
+        <li>Python interpreter converts it into <strong>bytecode</strong></li>
+        <li>Bytecode runs on <strong>Python Virtual Machine (PVM)</strong></li>
+    </ul>
+
+    <p>
+        👉 This is why Python is <strong>slower than C</strong>, but
+        <strong>faster to develop</strong>.
+    </p>
+
+    <h2>4️⃣ Variables & Memory Management</h2>
+
+    <h3>What is a Variable?</h3>
+    <p>
+        A variable is a <strong>reference to a memory object</strong>, not a container.
+    </p>
+
+    <code>x = 10</code>
+
+    <p>Here:</p>
+    <ul>
+        <li><strong>10</strong> is an object</li>
+        <li><strong>x</strong> points to that object</li>
+    </ul>
+
+    <h3>Key Concepts</h3>
+    <ul>
+        <li>Python uses <strong>automatic memory allocation</strong></li>
+        <li><strong>Garbage collection</strong> removes unused objects</li>
+    </ul>
+
+
+    
+
+    <h1>🐍 Python Notes – Core Concepts</h1>
+
+    <!-- Data Types -->
+    <h2>5️⃣ Data Types – Conceptual Understanding</h2>
+
+    <h3>Immutable Types</h3>
+    <ul>
+        <li><strong>int</strong>, <strong>float</strong>, <strong>str</strong>, <strong>tuple</strong></li>
+        <li>Cannot be changed after creation</li>
+    </ul>
+
+    <code>
+    x = 5<br>
+    x = x + 1  # new object created
+    </code>
+
+    <h3>Mutable Types</h3>
+    <ul>
+        <li><strong>list</strong>, <strong>set</strong>, <strong>dict</strong></li>
+        <li>Can be modified in place</li>
+    </ul>
+
+    <code>
+    lst = [1, 2]<br>
+    lst.append(3)
+    </code>
+
+    <!-- Control Flow -->
+    <h2>6️⃣ Control Flow – Logical Decision Making</h2>
+
+    <h3>Conditional Statements</h3>
+    <p>
+        Conditional statements are used to <strong>control program behavior</strong>
+        based on conditions.
+    </p>
+
+    <code>
+    if condition:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;statement
+    </code>
+
+    <div class="note">
+        Python uses <strong>indentation instead of braces</strong>, which enforces clean
+        and readable logic.
+    </div>
+
+    <!-- Loops -->
+    <h2>7️⃣ Loops – Iterative Thinking</h2>
+
+    <h3>for Loop</h3>
+    <p>Used when the number of iterations is known.</p>
+
+    <code>
+    for i in range(5):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print(i)
+    </code>
+
+    <h3>while Loop</h3>
+    <p>Used when iterations depend on a condition.</p>
+
+    <code>
+    while condition:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;action
+    </code>
+
+    <h3>Loop Control Statements</h3>
+    <ul>
+        <li><strong>break</strong> → terminate loop</li>
+        <li><strong>continue</strong> → skip current iteration</li>
+        <li><strong>pass</strong> → placeholder (does nothing)</li>
+    </ul>
+
+    <!-- Functions -->
+    <h2>8️⃣ Functions – Code Abstraction</h2>
+
+    <h3>Why Functions Exist</h3>
+    <ul>
+        <li>Avoid repetition</li>
+        <li>Improve readability</li>
+        <li>Support modular programming</li>
+        <li>Enable easy debugging</li>
+    </ul>
+
+    <code>
+    def add(a, b):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return a + b
+    </code>
+
+    <h3>Types of Functions</h3>
+    <ul>
+        <li>Built-in functions</li>
+        <li>User-defined functions</li>
+        <li>Lambda (anonymous) functions</li>
+    </ul>
+
+
+
+    <h1>🐍 Python Notes – Advanced Core Concepts</h1>
+
+    <!-- Collections -->
+    <h2>9️⃣ Python Collections (Deep Explanation)</h2>
+
+    <h3>List</h3>
+    <ul>
+        <li>Ordered</li>
+        <li>Mutable</li>
+        <li>Allows duplicate elements</li>
+    </ul>
+    <div class="use">
+        <strong>Used when:</strong> Data changes frequently
+    </div>
+
+    <h3>Tuple</h3>
+    <ul>
+        <li>Ordered</li>
+        <li>Immutable</li>
+    </ul>
+    <div class="use">
+        <strong>Used when:</strong> Data integrity is required
+    </div>
+
+    <h3>Set</h3>
+    <ul>
+        <li>Unordered</li>
+        <li>No duplicate elements</li>
+    </ul>
+    <div class="use">
+        <strong>Used when:</strong> Unique elements are needed
+    </div>
+
+    <h3>Dictionary</h3>
+    <ul>
+        <li>Stores data in key-value pairs</li>
+        <li>Provides fast data lookup</li>
+    </ul>
+    <div class="use">
+        <strong>Used in:</strong>
+        <ul>
+            <li>Databases</li>
+            <li>JSON data</li>
+            <li>APIs</li>
+        </ul>
+    </div>
+
+    <!-- Exception Handling -->
+    <h2>🔟 Exception Handling – Defensive Programming</h2>
+
+    <h3>What is an Exception?</h3>
+    <p>
+        An exception is an <strong>unexpected event</strong> that disrupts
+        the normal flow of program execution.
+    </p>
+
+    <code>
+    try:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;risky code<br>
+    except:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;handle error
+    </code>
+
+    <h3>Purpose of Exception Handling</h3>
+    <ul>
+        <li>Prevent program crash</li>
+        <li>Improve reliability</li>
+        <li>Provide user-friendly error messages</li>
+    </ul>
+
+    <!-- File Handling -->
+    <h2>1️⃣1️⃣ File Handling – Persistent Storage</h2>
+
+    <h3>Why File Handling?</h3>
+    <p>
+        Variables store data temporarily, but files allow data to be
+        <strong>stored permanently</strong>.
+    </p>
+
+    <h3>File Modes</h3>
+    <ul>
+        <li><strong>r</strong> → read</li>
+        <li><strong>w</strong> → write</li>
+        <li><strong>a</strong> → append</li>
+    </ul>
+
+    <!-- OOP -->
+    <h2>1️⃣2️⃣ Object-Oriented Programming (OOP)</h2>
+
+    <h3>Core OOP Concepts</h3>
+
+    <h4>Class</h4>
+    <p>A class is a <strong>blueprint</strong> for creating objects.</p>
+
+    <h4>Object</h4>
+    <p>An object is an <strong>instance of a class</strong>.</p>
+
+    <code>
+    class Student:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, name):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.name = name
+    </code>
+
+    <h3>OOP Pillars (Very Important)</h3>
+    <ul>
+        <li><strong>Encapsulation</strong> → Binding data and methods together</li>
+        <li><strong>Inheritance</strong> → Reusing existing class features</li>
+        <li><strong>Polymorphism</strong> → One interface, many forms</li>
+        <li><strong>Abstraction</strong> → Hiding internal details</li>
+    </ul>
+
+
+
+
+
+<h2 class="section-title">Practice & Apply</h2>
+
+<div class="practice-cards">
+
+  <a href="MCQ1.html" class="practice-card">
+    <h3>MCQs</h3>
+    <p>Test your understanding with multiple-choice questions.</p>
+  </a>
+
+  <a href="python-fill.html" class="practice-card">
+    <h3>Fill in the Blanks</h3>
+    <p>Complete missing code to improve logic building.</p>
+  </a>
+
+  <a href="python-compiler.html" class="practice-card">
+    <h3>Online Compiler</h3>
+    <p>Write, run, and test Python code instantly.</p>
+  </a>
+
+</div>
+
+<!--new button dark mode pdf downloads -->
+<div class="center-btn-wrapper">
+  <button class="back-btn" onclick="goBack()">← Back</button>
+
+  <button class="download-btn" onclick="downloadPDF('light')">
+    ⬇ Download Light PDF
+  </button>
+
+  <button class="download-btn dark" onclick="downloadPDF('dark')">
+    🌙 Download Dark PDF
+  </button>
+</div>
+
+
+
+<!-- html2canvas -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<!-- jsPDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<!-- Your JS -->
+<script src="notes.js"></script>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+/* ---------- Global ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f4f6fb;
+  color: #1f2937;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* ---------- Heading ---------- */
+h1 {
+  text-align: center;
+  color: #0f172a;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #38bdf8;
+  padding-bottom: 10px;
+}
+
+/* ---------- MCQ Container ---------- */
+.mcq-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* ---------- MCQ Card ---------- */
+.mcq-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 22px 26px;
+  margin-bottom: 22px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.mcq-card:hover {
+  transform: translateY(-4px);
+}
+
+.mcq-card h3 {
+  font-size: 17px;
+  margin-bottom: 12px;
+  color: #0f172a;
+}
+
+/* ---------- Options ---------- */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.options label {
+  background: #f8fafc;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14.5px;
+  transition: all 0.25s ease;
+  border: 2px solid transparent;
+}
+
+.options label:hover {
+  background: #e0f2fe;
+  border-color: #38bdf8;
+}
+
+.options input {
+  margin-right: 10px;
+  accent-color: #0284c7;
+}
+
+/* ---------- Correct / Wrong ---------- */
+.correct-option {
+  background: #dcfce7 !important;
+  border-color: #22c55e !important;
+  color: #065f46;
+}
+
+.wrong-option {
+  background: #fee2e2 !important;
+  border-color: #ef4444 !important;
+  color: #7f1d1d;
+}
+
+/* ---------- Result Text ---------- */
+.result {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* ---------- Finish Button ---------- */
+.finish-btn {
+  display: block;
+  margin: 30px auto;
+  padding: 14px 36px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background: #22c55e;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.finish-btn:hover {
+  background: #16a34a;
+  transform: translateY(-3px);
+}
+
+/* ---------- Final Result ---------- */
+.final-result {
+  background: #f0f9ff;
+  border-left: 5px solid #0284c7;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 30px;
+}
+
+.final-result h2 {
+  color: #0284c7;
+  margin-bottom: 10px;
+}
+
+.summary-item {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* ---------- Next Text ---------- */
+.next-text {
+  text-align: center;
+  margin: 30px 0 15px;
+  font-size: 17px;
+  color: #1e40af;
+}
+
+/* ---------- Navigation Buttons ---------- */
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+/* Back Button */
+.back-btn {
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  background: transparent;
+  color: #0284c7;
+  border: 2px solid #0284c7;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #0284c7;
+  color: white;
+}
+
+/* Page / Next Links */
+.next-link {
+  padding: 12px 26px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 30px;
+  background: #38bdf8;
+  color: #020617;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.next-link:hover {
+  background: #0284c7;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .mcq-card {
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
