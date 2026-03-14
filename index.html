@@ -1,83 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CodeStart | Learn Programming</title>
+  <meta name="description" content="CodeStart - The interactive platform for beginners to master programming.">
+  <title>CodeStart | Master Programming Interactively</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <!-- CSS File -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
+  <!-- Dynamic Background Elements -->
+  <div class="bg-shape shape-1"></div>
+  <div class="bg-shape shape-2"></div>
+  <div class="bg-shape shape-3"></div>
 
   <!-- Header -->
   <header>
-    <div class="logo">CodeStart</div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Courses</a>
-      <a href="#">Compiler</a>
-      <a href="Login.html">Login</a>
-    </nav>
+    <div class="container header-container">
+      <div class="logo">
+        <i class="fa-solid fa-code"></i> Learn<span>2Code</span>
+      </div>
+      <nav>
+        <a href="#" class="nav-link active">Home</a>
+        <a href="languages.html" class="nav-link">Courses</a>
+        <a href="#" class="nav-link">Compiler</a>
+        <a href="Login.html" class="btn-login">Login</a>
+      </nav>
+      <div class="mobile-menu-btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Learn Programming <br><span>Interactively & Easily</span></h1>
+  <section class="hero container">
+    <div class="hero-text fade-in-up">
+      <div class="badge">
+        <span class="badge-dot"></span> New 2026 Curriculum
+      </div>
+      <h1>Learn Programming <br><span class="gradient-text">Interactively & Easily</span></h1>
       <p>
-        CodeStart helps beginners understand programming through theory,
-        MCQs, quizzes, fill-in-the-blanks and an online compiler.
+        Master coding through interactive theory, challenging MCQs, adaptive quizzes, and our powerful real-time online
+        compiler. Build your future today.
       </p>
 
       <div class="hero-buttons">
-        <button onclick="getStarted()" class="btn-primary">Get Started</button>
-        <button class="btn-secondary">Explore Features</button>
+        <button onclick="getStarted()" class="btn-primary">
+          Get Started <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <button class="btn-secondary">
+          <i class="fa-solid fa-play"></i> Watch Demo
+        </button>
+      </div>
+
+      <div class="stats">
+        <div class="stat-item">
+          <h4>10k+</h4>
+          <p>Active Learners</p>
+        </div>
+        <div class="stat-item">
+          <h4>50+</h4>
+          <p>Interactive Courses</p>
+        </div>
+        <div class="stat-item">
+          <h4>4.9/5</h4>
+          <p>User Rating</p>
+        </div>
       </div>
     </div>
 
-    <div class="hero-image">
-      <img src="https://illustrations.popsy.co/gray/programming.svg" alt="Coding">
+    <div class="hero-image fade-in-left">
+      <div class="image-wrapper">
+        <!-- Modern fullstack web development illustration -->
+
+        <img src="icon.jpg" alt="Programming Illustration">
+        <div class="floating-card card-1">
+          <i class="fa-brands fa-python"></i> Python Mastery
+        </div>
+        <div class="floating-card card-2">
+          <i class="fa-solid fa-check"></i> Code Passed!
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Features -->
-  <section class="features">
-    <div class="feature-card">
-      <h3>Theory</h3>
-      <p>Simple explanations with real examples.</p>
-    </div>
+  <section class="features-section">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <h2>Why Choose <span class="text-highlight">CodeStart?</span></h2>
+        <p>Everything you need to go from absolute beginner to confident developer in one unified platform.</p>
+      </div>
 
-    <div class="feature-card">
-      <h3>Fill in the Blanks</h3>
-      <p>Complete missing code to improve logic.</p>
-    </div>
+      <div class="features">
+        <div class="feature-card delay-1 fade-in-up" style="opacity: 0; animation-fill-mode: forwards;">
+          <div class="feature-icon icon-theory">
+            <i class="fa-solid fa-book-open"></i>
+          </div>
+          <h3>Interactive Theory</h3>
+          <p>Engaging, simple explanations with real-world examples that actually make sense to beginners.</p>
+        </div>
 
-    <div class="feature-card">
-      <h3>MCQs & Quizzes</h3>
-      <p>Practice questions with instant results.</p>
-    </div>
+        <div class="feature-card delay-2 fade-in-up" style="opacity: 0; animation-fill-mode: forwards;">
+          <div class="feature-icon icon-logic">
+            <i class="fa-solid fa-puzzle-piece"></i>
+          </div>
+          <h3>Fill in the Blanks</h3>
+          <p>Complete missing code to build strong fundamental logic and code writing muscle memory.</p>
+        </div>
 
-    <div class="feature-card">
-      <h3>Online Compiler</h3>
-      <p>Write, run and test code instantly.</p>
-    </div>
+        <div class="feature-card delay-3 fade-in-up" style="opacity: 0; animation-fill-mode: forwards;">
+          <div class="feature-icon icon-quiz">
+            <i class="fa-solid fa-list-check"></i>
+          </div>
+          <h3>MCQs & Quizzes</h3>
+          <p>Test your knowledge immediately with practical practice questions and instant feedback.</p>
+        </div>
 
-    <div class="feature-card">
-      <h3>Progress Tracking</h3>
-      <p>Track scores and learning progress.</p>
+        <div class="feature-card delay-4 fade-in-up" style="opacity: 0; animation-fill-mode: forwards;">
+          <div class="feature-icon icon-compiler">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <h3>Online Compiler</h3>
+          <p>Write, run and test your code instantly directly in your web browser without complex setup.</p>
+        </div>
+
+        <div class="feature-card delay-5 fade-in-up" style="opacity: 0; animation-fill-mode: forwards;">
+          <div class="feature-icon icon-progress">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3>Progress Tracking</h3>
+          <p>Visualize your learning journey, track your quiz scores, and stay motivated every single day.</p>
+        </div>
+
+        <div class="feature-card delay-6 fade-in-up" style="opacity: 0; animation-fill-mode: forwards;">
+          <div class="feature-icon icon-community">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <h3>Community Support</h3>
+          <p>Join thousands of active learners. Ask questions, share your solutions, and grow together.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    © 2025 CodeStart | Learn Programming the Smart Way
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="logo">
+          <i class="fa-solid fa-code"></i> Code<span>Start</span>
+        </div>
+        <p>Learn programming the smart, interactive way. Master the most demanding skills you need for the future.</p>
+      </div>
+      <div class="footer-links">
+        <div class="link-group">
+          <h4>Platform</h4>
+          <a href="#">Courses</a>
+          <a href="#">Compiler</a>
+          <a href="#">Challenges</a>
+        </div>
+        <div class="link-group">
+          <h4>Company</h4>
+          <a href="#">About Us</a>
+          <a href="#">Careers</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="link-group">
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        &copy; 2026 CodeStart. All rights reserved.
+      </div>
+    </div>
   </footer>
 
   <!-- JS File -->
   <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,59 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CodeStart | Select Language</title>
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <link rel="stylesheet" href="languages.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
+  <!-- Dynamic Background Elements -->
+  <div class="bg-shape shape-1"></div>
+  <div class="bg-shape shape-2"></div>
+  <div class="bg-shape shape-3"></div>
 
   <!-- Header -->
   <header>
-    <h2>CodeStart</h2>
-    <button onclick="goHome()">Home</button>
+    <div class="container header-container">
+      <div class="logo">
+        <i class="fa-solid fa-code"></i> Code<span>Start</span>
+      </div>
+      <button onclick="goHome()" class="btn-home">
+        <i class="fa-solid fa-arrow-left"></i> Back to Home
+      </button>
+    </div>
   </header>
 
-  <!-- Main -->
-  <section class="language-section">
-    <h1>Select a Programming Language</h1>
-    <p>Choose a language to start your coding journey 🚀</p>
+  <!-- Main Section -->
+  <section class="language-section container">
+    <div class="section-header fade-in-up">
+      <div class="badge">
+        <span class="badge-dot"></span> Interactive Learning
+      </div>
+      <h1>Select a <span class="gradient-text">Programming Language</span></h1>
+      <p>Choose a language below to start your coding journey and build real-world applications 🚀</p>
+    </div>
 
     <div class="language-grid">
+      <a href="c/notes.html" class="lang-card delay-1 fade-in-up">
+        <div class="card-icon icon-c">
+          <i class="fa-solid fa-c"></i>
+        </div>
+        <div class="card-content">
+          <h3>C</h3>
+          <p>The foundation of modern programming. Master memory management and system-level coding.</p>
+        </div>
+        <div class="card-arrow">
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </a>
 
-  <a href="c/notes.html" class="lang-card">
-    <h3>C</h3>
-    <p>Foundation of programming</p>
-  </a>
+      <a href="cpp.html" class="lang-card delay-2 fade-in-up">
+        <div class="card-icon icon-cpp">
+          <i class="fa-brands fa-cuttlefish"></i><i class="fa-solid fa-plus icon-plus"></i><i
+            class="fa-solid fa-plus icon-plus"></i>
+        </div>
+        <div class="card-content">
+          <h3>C++</h3>
+          <p>Powerful object-oriented concepts for game development and high-performance applications.</p>
+        </div>
+        <div class="card-arrow">
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </a>
 
-  <a href="cpp.html" class="lang-card">
-    <h3>C++</h3>
-    <p>Object-oriented concepts</p>
-  </a>
+      <a href="python/notes.html" class="lang-card delay-3 fade-in-up">
+        <div class="card-icon icon-python">
+          <i class="fa-brands fa-python"></i>
+        </div>
+        <div class="card-content">
+          <h3>Python</h3>
+          <p>Easy, readable, and beginner-friendly. Perfect for data science and AI development.</p>
+        </div>
+        <div class="card-arrow">
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </a>
 
-  <a href="python/notes.html" class="lang-card">
-    <h3>Python</h3>
-    <p>Easy & beginner-friendly</p>
-  </a>
+      <a href="java.html" class="lang-card delay-4 fade-in-up">
+        <div class="card-icon icon-java">
+          <i class="fa-brands fa-java"></i>
+        </div>
+        <div class="card-content">
+          <h3>Java</h3>
+          <p>Popular, robust, and platform-independent object-oriented programming language.</p>
+        </div>
+        <div class="card-arrow">
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </a>
 
-  <a href="java.html" class="lang-card">
-    <h3>Java</h3>
-    <p>Popular & platform independent</p>
-  </a>
-
-  <a href="javascript.html" class="lang-card">
-    <h3>JavaScript</h3>
-    <p>Web & interactive programming</p>
-  </a>
-
-</div>
-
-
+      <a href="javascript.html" class="lang-card delay-5 fade-in-up">
+        <div class="card-icon icon-js">
+          <i class="fa-brands fa-js"></i>
+        </div>
+        <div class="card-content">
+          <h3>JavaScript</h3>
+          <p>The language of the web. Build interactive, dynamic user interfaces and full-stack apps.</p>
+        </div>
+        <div class="card-arrow">
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </a>
     </div>
   </section>
 
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-bottom">
+      &copy; 2026 CodeStart. All rights reserved.
+    </div>
+  </footer>
+
   <script src="languages.js"></script>
 </body>
+
 </html>
