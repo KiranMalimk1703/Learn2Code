@@ -5,39 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CodeStart | Create Profile</title>
 
+  <!-- CSS -->
   <link rel="stylesheet" href="profile.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <div class="container">
-    <div class="profile-box">
-      <h2>Create Your Profile</h2>
+  <!-- Background Animated Shapes -->
+  <div class="bg-shape shape-1"></div>
+  <div class="bg-shape shape-2"></div>
+  <div class="bg-shape shape-3"></div>
 
-      <form id="profileForm">
-        <input type="text" id="fullname" placeholder="Full Name" required>
-        <input type="number" id="age" placeholder="Age" required>
+  <!-- Header to go back to home -->
+  <header>
+    <div class="header-container container">
+      <div class="logo">
+        <i class="fa-solid fa-code"></i> <span>CodeStart</span>
+      </div>
+      <a href="index.html" class="btn-home">
+        <i class="fa-solid fa-house"></i> Home
+      </a>
+    </div>
+  </header>
 
-        <select id="level" required>
-          <option value="">Select Skill Level</option>
-          <option value="Beginner">Beginner</option>
-          <option value="Intermediate">Intermediate</option>
-        </select>
+  <div class="container main-container">
+    <div class="form-wrapper fade-in-up">
+      <div class="glass-panel profile-box delay-1">
+        <h2 class="gradient-text text-center">Complete Your Profile</h2>
+        <p class="subtitle text-center">Tell us about yourself to personalize your learning</p>
 
-        <select id="language" required>
-          <option value="">Preferred Language</option>
-          <option value="C">C</option>
-          <option value="C++">C++</option>
-          <option value="Python">Python</option>
-          <option value="Java">Java</option>
-        </select>
+        <form id="profileForm">
+          <div class="input-group">
+            <i class="fa-regular fa-id-card"></i>
+            <input type="text" id="fullname" placeholder="Full Name" required>
+          </div>
+          
+          <div class="input-group">
+            <i class="fa-solid fa-cake-candles"></i>
+            <input type="number" id="age" placeholder="Age" required min="1" max="120">
+          </div>
 
-        <button type="submit" class="btn">Save Profile</button>
-      </form>
+          <div class="input-group">
+            <i class="fa-solid fa-layer-group"></i>
+            <select id="level" required>
+              <option value="" disabled selected>Select Skill Level</option>
+              <option value="Beginner">Beginner</option>
+              <option value="Intermediate">Intermediate</option>
+              <option value="Advanced">Advanced</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <i class="fa-solid fa-terminal"></i>
+            <select id="language" required>
+              <option value="" disabled selected>Preferred Language</option>
+              <option value="C">C</option>
+              <option value="C++">C++</option>
+              <option value="Python">Python</option>
+              <option value="Java">Java</option>
+              <option value="JavaScript">JavaScript</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="submitBtn">
+            Save Profile <i class="fa-solid fa-check"></i>
+          </button>
+        </form>
+      </div>
     </div>
   </div>
 
   <script src="profile.js"></script>
 </body>
 </html>
-                

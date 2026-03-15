@@ -2,7 +2,7 @@ document.getElementById("profileForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
   const profileData = {
-    username: localStorage.getItem("username"),
+    username: localStorage.getItem("username") || "Guest User",
     fullname: document.getElementById("fullname").value,
     age: document.getElementById("age").value,
     level: document.getElementById("level").value,
@@ -12,8 +12,16 @@ document.getElementById("profileForm").addEventListener("submit", function(e) {
   // Save profile (temporary storage)
   localStorage.setItem("profile", JSON.stringify(profileData));
 
-  alert("Profile created successfully!");
+  // Switch button state to loading
+  const submitBtn = document.getElementById("submitBtn");
+  const originalHtml = submitBtn.innerHTML;
+  submitBtn.innerHTML = `Saving... <i class="fa-solid fa-spinner fa-spin"></i>`;
+  submitBtn.style.opacity = "0.8";
+  submitBtn.disabled = true;
 
-  // Redirect to dashboard (next step)
-  window.location.href = "dashboard.html"; // will create next
+  // Let the user see the animation for a second before redirecting
+  setTimeout(() => {
+    // Redirect to dashboard (next step)
+    window.location.href = "dashboard.html";
+  }, 1000);
 });

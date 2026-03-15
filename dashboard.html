@@ -5,63 +5,134 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CodeStart | Dashboard</title>
 
+  <!-- CSS -->
   <link rel="stylesheet" href="dashboard.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
+  <!-- Background Animated Shapes -->
+  <div class="bg-shape shape-1"></div>
+  <div class="bg-shape shape-2"></div>
+  <div class="bg-shape shape-3"></div>
+
   <!-- Navbar -->
   <header>
-    <h2>CodeStart</h2>
-    <button onclick="logout()">Logout</button>
+    <div class="header-container container">
+      <div class="logo">
+        <i class="fa-solid fa-code"></i> <span>CodeStart</span>
+      </div>
+      <div class="nav-actions">
+        <!-- Hidden toggle button for mobile -->
+        <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+        <div class="nav-links">
+          <button onclick="goHome()" class="btn-nav"><i class="fa-solid fa-house"></i> Home</button>
+          <button onclick="logout()" class="btn-nav btn-logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <!-- Dashboard -->
-  <section class="dashboard">
+  <!-- Dashboard Container -->
+  <div class="container main-container">
+    <section class="dashboard">
 
-    <!-- Welcome Card -->
-    <div class="card welcome">
-      <h3>Welcome, <span id="userName">User</span> 👋</h3>
-      <p>Let’s start learning programming step by step.</p>
-    </div>
-
-    <!-- Profile Card -->
-    <div class="card">
-      <h4>Your Profile</h4>
-      <p><strong>Name:</strong> <span id="fullName"></span></p>
-      <p><strong>Level:</strong> <span id="level"></span></p>
-      <p><strong>Language:</strong> <span id="language"></span></p>
-    </div>
-
-    <!-- Progress -->
-    <div class="card">
-      <h4>Learning Progress</h4>
-      <div class="progress-bar">
-        <div class="progress" id="progress"></div>
+      <!-- Welcome Card -->
+      <div class="glass-panel card welcome fade-in-up delay-1">
+        <h3>Welcome back, <span id="userName" class="gradient-text">User</span> <span class="wave">👋</span></h3>
+        <p>Let’s continue your programming journey. You're doing great!</p>
       </div>
-      <p><span id="progressValue">0%</span> Completed</p>
-    </div>
 
-    <!-- Scorecard -->
-    <div class="card">
-      <h4>Scorecard</h4>
-      <p>MCQs Score: <strong>0%</strong></p>
-      <p>Quizzes Score: <strong>0%</strong></p>
-    </div>
+      <!-- Profile Details Card -->
+      <div class="glass-panel card profile-card fade-in-up delay-2">
+        <div class="card-header">
+          <i class="fa-regular fa-id-badge icon-bg"></i>
+          <h4>Your Profile</h4>
+        </div>
+        <div class="card-body">
+          <div class="info-row">
+            <span class="label">Name</span>
+            <span class="value" id="fullName">Not Set</span>
+          </div>
+          <div class="info-row">
+            <span class="label">Skill Level</span>
+            <span class="value badge badge-blue" id="level">Not Set</span>
+          </div>
+          <div class="info-row">
+            <span class="label">Focus</span>
+            <span class="value badge badge-purple" id="language">Not Set</span>
+          </div>
+        </div>
+      </div>
 
-    <!-- Actions -->
-    <div class="card actions">
-      <button>Start Learning</button>
-      <button>Take Quiz</button>
-      <button>Open Compiler</button>
-       <div class="nav-buttons">
-    <button onclick="goHome()">Home</button>
-    <button onclick="logout()">Logout</button>
+      <!-- Progress Card -->
+      <div class="glass-panel card progress-card fade-in-up delay-3">
+        <div class="card-header">
+          <i class="fa-solid fa-chart-line icon-bg"></i>
+          <h4>Overall Progress</h4>
+        </div>
+        <div class="card-body">
+          <div class="progress-info">
+            <span class="progress-title">Course Completion</span>
+            <span class="progress-percent gradient-text" id="progressValue">0%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="progress"></div>
+          </div>
+          <p class="progress-hint">Keep learning to increase your score!</p>
+        </div>
+      </div>
+
+      <!-- Scorecard Card -->
+      <div class="glass-panel card score-card fade-in-up delay-4">
+        <div class="card-header">
+          <i class="fa-solid fa-star icon-bg"></i>
+          <h4>Scorecard</h4>
+        </div>
+        <div class="card-body">
+          <div class="score-grid">
+            <div class="score-item">
+              <div class="score-circle">
+                <span class="score-number">45<small>%</small></span>
+              </div>
+              <span class="score-label">MCQs Avg</span>
+            </div>
+            <div class="score-item">
+              <div class="score-circle">
+                <span class="score-number">60<small>%</small></span>
+              </div>
+              <span class="score-label">Quizzes avg</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Actions Card -->
+      <div class="glass-panel card actions fade-in-up delay-5">
+        <div class="card-header">
+          <i class="fa-solid fa-rocket icon-bg"></i>
+          <h4>Quick Actions</h4>
+        </div>
+        <div class="card-body action-buttons">
+          <button class="btn btn-primary" onclick="window.location.href='languages.html'">
+            <i class="fa-solid fa-book-open"></i> Continue Learning
+          </button>
+          <button class="btn btn-secondary">
+            <i class="fa-solid fa-pen-nib"></i> Take a Quiz
+          </button>
+          <button class="btn btn-dark">
+            <i class="fa-solid fa-terminal"></i> Open Compiler
+          </button>
+        </div>
+      </div>
+
+    </section>
   </div>
-      
-    </div>
-
-  </section>
 
   <script src="dashboard.js"></script>
 </body>

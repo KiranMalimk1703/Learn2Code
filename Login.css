@@ -1,83 +1,248 @@
+:root {
+  --bg-color: #050508;
+  --surface: rgba(255, 255, 255, 0.03);
+  --surface-hover: rgba(255, 255, 255, 0.08);
+  --surface-border: rgba(255, 255, 255, 0.08);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  
+  --accent-primary: #3b82f6;
+  --accent-secondary: #8b5cf6;
+  --accent-glow: rgba(59, 130, 246, 0.5);
+  
+  --font-main: 'Outfit', sans-serif;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-main);
 }
 
 body {
   height: 100vh;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  overflow: hidden;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+}
+
+/* Background Shapes */
+.bg-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: -1;
+  animation: float 20s infinite ease-in-out alternate;
+}
+
+.shape-1 { width: 500px; height: 500px; background: rgba(59, 130, 246, 0.15); top: -150px; left: -100px; }
+.shape-2 { width: 400px; height: 400px; background: rgba(139, 92, 246, 0.15); top: 30%; right: -100px; animation-delay: -5s; }
+.shape-3 { width: 600px; height: 600px; background: rgba(16, 185, 129, 0.1); bottom: -200px; left: 20%; animation-delay: -10s; }
+
+@keyframes float {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, 50px) scale(1.1); }
+  100% { transform: translate(-20px, 20px) scale(0.9); }
 }
 
 .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+header {
+  position: fixed;
+  top: 0;
   width: 100%;
-  max-width: 400px;
+  z-index: 100;
+  background: rgba(5, 5, 8, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--surface-border);
 }
 
-.form-box {
-  background: #132f3b;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-  text-align: center;
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
 }
 
-.form-box h2 {
-  color: #00e6e6;
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo i { color: #3b82f6; }
+.logo span { background: linear-gradient(to right, #3b82f6, #8b5cf6); -webkit-background-clip: text; color: transparent; }
+
+.btn-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  color: var(--text-main);
+  padding: 10px 20px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: var(--transition);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-home:hover {
+  background: var(--surface-hover);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(-3px);
+}
+
+.main-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-wrapper {
+  width: 100%;
+  max-width: 440px;
+  z-index: 1;
+}
+
+.glass-panel {
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 50px 40px;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.text-center { text-align: center; }
+
+h2.gradient-text {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  background: linear-gradient(to right, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 15px;
   margin-bottom: 30px;
 }
 
-.form-box input {
-  width: 100%;
-  padding: 14px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  border: none;
-  outline: none;
-  font-size: 14px;
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
 }
 
-.form-box input::placeholder {
-  color: #999;
+.input-group i {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  font-size: 18px;
+  transition: var(--transition);
+}
+
+.input-group input {
+  width: 100%;
+  padding: 16px 16px 16px 48px;
+  background: rgba(2, 6, 23, 0.6);
+  border: 1px solid var(--surface-border);
+  border-radius: 14px;
+  color: var(--text-main);
+  font-size: 15px;
+  outline: none;
+  transition: var(--transition);
+}
+
+.input-group input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  background: rgba(15, 23, 42, 0.8);
+}
+
+.input-group input:focus + i {
+  color: #3b82f6;
+}
+
+.input-group input::placeholder {
+  color: #475569;
 }
 
 .btn {
   width: 100%;
-  padding: 14px;
-  border-radius: 30px;
+  padding: 16px;
+  border-radius: 14px;
   border: none;
-  background: #00e6e6;
-  color: #000;
   font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
 }
 
-.btn:hover {
-  background: #00b3b3;
+.btn-primary {
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.6);
+  background: linear-gradient(to right, #60a5fa, #3b82f6);
 }
 
 .toggle-text {
-  margin-top: 20px;
-  color: #ccc;
+  margin-top: 24px;
+  color: var(--text-muted);
   font-size: 14px;
 }
 
-.toggle-text span {
-  color: #00e6e6;
-  cursor: pointer;
+.highlight-link {
+  color: #60a5fa;
   font-weight: 600;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: var(--transition);
 }
 
-.toggle-text span:hover {
+.highlight-link:hover {
+  color: #93c5fd;
   text-decoration: underline;
 }
 
-/* Hide signup-only field by default */
 .signup-only {
   display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
+
+/* Animations */
+.fade-in-up { opacity: 0; animation: fadeInUp 0.8s forwards; }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+.delay-1 { animation-delay: 0.1s; animation: fadeInUp 0.8s forwards; opacity: 0; }
+.delay-3 { animation-delay: 0.3s; animation: fadeInUp 0.8s forwards; opacity: 0; }

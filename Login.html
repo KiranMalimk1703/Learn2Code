@@ -1,42 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CodeStart | Login & Signup</title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="Login.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
 
-  <div class="container">
-    <div class="form-box">
+  <!-- Background Animated Shapes -->
+  <div class="bg-shape shape-1"></div>
+  <div class="bg-shape shape-2"></div>
+  <div class="bg-shape shape-3"></div>
 
-      <h2 id="formTitle">Login</h2>
+  <!-- Header to go back to home -->
+  <header>
+    <div class="header-container container">
+      <div class="logo">
+        <i class="fa-solid fa-code"></i> <span>CodeStart</span>
+      </div>
+      <a href="index.html" class="btn-home">
+        <i class="fa-solid fa-house"></i> Home
+      </a>
+    </div>
+  </header>
 
-      <form id="authForm">
-        <input type="text" id="username" placeholder="Username" required>
+  <div class="container main-container">
+    <div class="form-wrapper fade-in-up">
+      <div class="glass-panel form-box delay-1">
+        <h2 id="formTitle" class="gradient-text text-center">Welcome Back</h2>
+        <p class="subtitle text-center" id="formSubtitle">Login to continue your learning journey</p>
 
-        <input type="email" id="email" placeholder="Email" class="signup-only">
+        <form id="authForm">
+          <div class="input-group">
+            <i class="fa-regular fa-user"></i>
+            <input type="text" id="username" placeholder="Username" required>
+          </div>
 
-        <input type="password" id="password" placeholder="Password" required>
+          <div class="input-group signup-only" id="emailGroup">
+            <i class="fa-regular fa-envelope"></i>
+            <input type="email" id="email" placeholder="Email Address">
+          </div>
 
-        <button type="submit" class="btn">Login</button>
-      </form>
+          <div class="input-group">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="password" placeholder="Password" required>
+          </div>
 
-      <p class="toggle-text">
-        Don’t have an account?
-        <span onclick="toggleForm()">Sign Up</span>
-      </p>
+          <button type="submit" class="btn btn-primary" id="submitBtn">
+            Login <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </form>
 
+        <p class="toggle-text text-center delay-3">
+          <span id="toggleQuestion">Don't have an account?</span>
+          <span class="highlight-link" onclick="toggleForm()" id="toggleAction">Sign Up</span>
+        </p>
+      </div>
     </div>
   </div>
 
   <!-- JS -->
-  <script src="login.js"></script>
+  <script src="Login.js"></script>
 </body>
+
 </html>
