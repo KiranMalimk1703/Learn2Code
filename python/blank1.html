@@ -3,78 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Python Fill-in-the-Blanks | CodeStart</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <link rel="stylesheet" href="blank1.css">
 </head>
 <body>
+  
+  <header>
+    <button onclick="goBack()" class="btn-home">
+        <i class="fa-solid fa-arrow-left"></i> Back to Notes
+    </button>
+  </header>
 
-  <!--1-->
-<div class="question-container">
-    <p>1️⃣ Python is an <input type="text" class="blank" data-answer="interpreted">language that executes programs line by line.</p>
-    <span class="result-message"></span>
-</div>
+  <h1>🐍 Python Fill-in-the-Blanks – Easy Level</h1>
 
- <!--2-->
-<div class="question-container">
-    <p>2️⃣ Python was created by <input type="text" class="blank" data-answer="Guido van Rossum">.</p>
-    <span class="result-message"></span> 
-</div>
+  <div class="mcq-container">
+    <!--1-->
+    <div class="question-container">
+        <p>1️⃣ Python is an <input type="text" class="blank" data-answer="interpreted">language that executes programs line by line.</p>
+        <span class="result-message"></span>
+    </div>
 
-<!--3-->
-<div class="question-container">
-  <p>3️⃣ The file extension of a Python program is <input type="text" class="blank" data-answer=".py">.</p>
-  <span class="result-message"></span>
-</div>
+    <!--2-->
+    <div class="question-container">
+        <p>2️⃣ Python was created by <input type="text" class="blank" data-answer="Guido van Rossum">.</p>
+        <span class="result-message"></span> 
+    </div>
 
-<!--4-->
-<div class="question-container">
-  <p>4️⃣ The keyword used to define a function in Python is <input type="text" class="blank" data-answer="def">.</p>
-  <span class="result-message"></span>
-</div>
+    <!--3-->
+    <div class="question-container">
+      <p>3️⃣ The file extension of a Python program is <input type="text" class="blank" data-answer=".py">.</p>
+      <span class="result-message"></span>
+    </div>
 
-<!--5-->
-<div class="question-container">
-  <p>5️⃣<input type="text" class="blank" data-answer="print"> used to display output in Python.</p>
-  <span class="result-message"></span>
-</div>
+    <!--4-->
+    <div class="question-container">
+      <p>4️⃣ The keyword used to define a function in Python is <input type="text" class="blank" data-answer="def">.</p>
+      <span class="result-message"></span>
+    </div>
 
-<!--6-->
-<div class="question-container">
-  <p>6️⃣ A list in Python is<input type="text" class="blank" data-answer="mutable">(mutable/unmutable).</p>
-  <span class="result-message"></span>
-</div>
-<!--7-->
-<div class="question-container">
-  <p>7️⃣ The symbol used for comments in Python is <input type="text" class="blank" data-answer="#">.</p>
-  <span class="result-message"></span>
-</div>
+    <!--5-->
+    <div class="question-container">
+      <p>5️⃣ <input type="text" class="blank" data-answer="print"> is used to display output in Python.</p>
+      <span class="result-message"></span>
+    </div>
 
-<!--8-->
-<div class="question-container">
-  <p>8️⃣<input type="text" class="blank" data-answer="int"> data type is used to store whole numbers in Python.</p>
-  <span class="result-message"></span>
-</div>
+    <!--6-->
+    <div class="question-container">
+      <p>6️⃣ A list in Python is <input type="text" class="blank" data-answer="mutable"> (mutable/unmutable).</p>
+      <span class="result-message"></span>
+    </div>
 
-<!--9-->
-<div class="question-container">
-  <p>9️⃣<input type="text" class="blank" data-answer="input" >used to take input from the user in Python.</p>
-  <span class="result-message"></span>
-</div>
+    <!--7-->
+    <div class="question-container">
+      <p>7️⃣ The symbol used for comments in Python is <input type="text" class="blank" data-answer="#">.</p>
+      <span class="result-message"></span>
+    </div>
 
-<!--10-->
-<div class="question-container">
-  <p>🔟 Python follows <input type="text" class="blank" data-answer="indentation"> define blocks of code</p>
-  <span class="result-message"></span>
-</div>
+    <!--8-->
+    <div class="question-container">
+      <p>8️⃣ <input type="text" class="blank" data-answer="int"> data type is used to store whole numbers in Python.</p>
+      <span class="result-message"></span>
+    </div>
 
+    <!--9-->
+    <div class="question-container">
+      <p>9️⃣ <input type="text" class="blank" data-answer="input"> is used to take input from the user in Python.</p>
+      <span class="result-message"></span>
+    </div>
 
+    <!--10-->
+    <div class="question-container">
+      <p>🔟 Python follows <input type="text" class="blank" data-answer="indentation"> to define blocks of code.</p>
+      <span class="result-message"></span>
+    </div>
 
+    <!-- Final Result Section -->
+    <button id="finishBtn" class="finish-btn">Finish Practice</button>
+    <div id="finalResult" class="final-result" style="display:none;">
+      <h2>📊 Practice Summary</h2>
+      <p id="scoreText"></p>
+      <div id="answerSummary"></div>
+    </div>
+  </div>
 
+  <h3 class="next-text">Click on Next to continue</h3>
 
- <script src="blank1.js"></script>
+  <div class="nav-buttons">
+    <button class="back-btn" onclick="goBack()">⬅ Back</button>
+    <a href="blank2.html" class="next-link">Next ➡</a>
+    <a href="blank1.html" class="next-link">1️⃣</a>
+    <a href="blank2.html" class="next-link">2️⃣</a>
+    <a href="blank3.html" class="next-link">3️⃣</a>
+  </div>
+
+  <script src="blank1.js"></script>
 </body>
 </html>
-
-
-
-
