@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C MCQs - Hard</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="MCQ3.css">
+</head>
+
+<body>
+
+    <header>
+        <button onclick="goBack()" class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i> Back
+        </button>
+    </header>
+
+    <h1>🔵 C Language MCQs – Hard Level</h1>
+
+    <div class="mcq-container">
+
+        <!-- Q1 -->
+        <div class="mcq-card">
+            <h3>1️⃣. What will be the output of the following C code?</h3>
+            <code>int x = 5;</code><br>
+            <code>printf("%d %d %d", x++, x, ++x);</code>
+            <div class="options">
+                <label><input type="radio" name="q1">A. 5 6 7</label>
+                <label><input type="radio" name="q1">B. 6 6 6</label>
+                <label><input type="radio" name="q1" data-correct="true">C. Compiler dependent</label>
+                <label><input type="radio" name="q1">D. 7 7 7</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+
+        <!-- Q2 -->
+        <div class="mcq-card">
+            <h3>2️⃣. Which of the following correctly declares a pointer to an array of 5 integers?</h3>
+            <div class="options">
+                <label><input type="radio" name="q2">A. int *ptr[5];</label>
+                <label><input type="radio" name="q2" data-correct="true">B. int (*ptr)[5];</label>
+                <label><input type="radio" name="q2">C. int ptr*[5];</label>
+                <label><input type="radio" name="q2">D. int *(ptr)[5];</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="mcq-card">
+            <h3>3️⃣. What is a "Dangling Pointer"?</h3>
+            <div class="options">
+                <label><input type="radio" name="q3">A. A pointer pointing to unallocated memory</label>
+                <label><input type="radio" name="q3" data-correct="true">B. A pointer pointing to memory that has been deallocated</label>
+                <label><input type="radio" name="q3">C. A pointer pointing to NULL</label>
+                <label><input type="radio" name="q3">D. A pointer initialized to zero</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="mcq-card">
+            <h3>4️⃣. What happens if you try to free() a memory block that was already freed?</h3>
+            <div class="options">
+                <label><input type="radio" name="q4">A. Nothing</label>
+                <label><input type="radio" name="q4">B. Memory leak</label>
+                <label><input type="radio" name="q4" data-correct="true">C. Undefined behavior (often a crash)</label>
+                <label><input type="radio" name="q4">D. Compiler Warning</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="mcq-card">
+            <h3>5️⃣. What is the output of sizeof(void) in C?</h3>
+            <div class="options">
+                <label><input type="radio" name="q5">A. 0</label>
+                <label><input type="radio" name="q5" data-correct="true">B. Compile time error (Void is incomplete type)</label>
+                <label><input type="radio" name="q5">C. 1</label>
+                <label><input type="radio" name="q5">D. System dependent</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="mcq-card">
+            <h3>6️⃣. What does `extern` variable mean?</h3>
+            <div class="options">
+                <label><input type="radio" name="q6">A. Local to the function</label>
+                <label><input type="radio" name="q6" data-correct="true">B. Defined in another file or scope</label>
+                <label><input type="radio" name="q6">C. Read-only variable</label>
+                <label><input type="radio" name="q6">D. Dynamically allocated</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="mcq-card">
+            <h3>7️⃣. In bitwise operators, what is `a ^ a` always equal to?</h3>
+            <div class="options">
+                <label><input type="radio" name="q7">A. a</label>
+                <label><input type="radio" name="q7" data-correct="true">B. 0</label>
+                <label><input type="radio" name="q7">C. 1</label>
+                <label><input type="radio" name="q7">D. Undefined</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!-- Q8 -->
+        <div class="mcq-card">
+            <h3>8️⃣. Can a C struct contain a member of its own type directly?</h3>
+            <div class="options">
+                <label><input type="radio" name="q8">A. Yes</label>
+                <label><input type="radio" name="q8" data-correct="true">B. No, only a pointer to its own type</label>
+                <label><input type="radio" name="q8">C. Only if the struct is global</label>
+                <label><input type="radio" name="q8">D. Yes, if compiled in C99</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!-- Q9 -->
+        <div class="mcq-card">
+            <h3>9️⃣. What does the `static` keyword do for a local variable in a function?</h3>
+            <div class="options">
+                <label><input type="radio" name="q9">A. Makes it accessible to other functions</label>
+                <label><input type="radio" name="q9" data-correct="true">B. Preserves its value between function calls</label>
+                <label><input type="radio" name="q9">C. Allocates it on the heap</label>
+                <label><input type="radio" name="q9">D. Makes it read-only</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!-- Q10 -->
+        <div class="mcq-card">
+            <h3>🔟. What is the main difference between struct and union?</h3>
+            <div class="options">
+                <label><input type="radio" name="q10">A. Unions cannot hold integers</label>
+                <label><input type="radio" name="q10" data-correct="true">B. Members of a union share the exact same memory location</label>
+                <label><input type="radio" name="q10">C. Structs are faster to read</label>
+                <label><input type="radio" name="q10">D. Structs allocate less overall memory</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!--Q11-->
+        <div class="mcq-card">
+            <h3>1️⃣1️⃣. Memory-leak in C occurs when:</h3>
+            <div class="options">
+                <label><input type="radio" name="q11">A. Malloc returns NULL</label>
+                <label><input type="radio" name="q11">B. Freeing unallocated memory</label>
+                <label><input type="radio" name="q11" data-correct="true">C. Forgetting to free() allocated memory blocks inside loops or scope</label>
+                <label><input type="radio" name="q11">D. Pointers are initialized to NULL</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!--Q12-->
+        <div class="mcq-card">
+            <h3>1️⃣2️⃣. What is a Memory Segmentation Fault?</h3>
+            <div class="options">
+                <label><input type="radio" name="q12">A. Compiling with wrong flags</label>
+                <label><input type="radio" name="q12" data-correct="true">B. Attempting to access memory the program does not own</label>
+                <label><input type="radio" name="q12">C. Forgetting semicolons</label>
+                <label><input type="radio" name="q12">D. Declaring too many variables</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+
+        <!--q13-->
+        <div class="mcq-card">
+            <h3>1️⃣3️⃣. What is the scope of a global variable declared as `static`?</h3>
+            <div class="options">
+                <label><input type="radio" name="q13">A. Entire C program</label>
+                <label><input type="radio" name="q13" data-correct="true">B. Restricted to the file it is declared in</label>
+                <label><input type="radio" name="q13">C. Depends on OS</label>
+                <label><input type="radio" name="q13">D. Limited to main() function</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!--q14-->
+        <div class="mcq-card">
+            <h3>1️⃣4️⃣. Are Macros evaluated during Compilation or Preprocessing?</h3>
+            <div class="options">
+                <label><input type="radio" name="q14">A. Compilation</label>
+                <label><input type="radio" name="q14">B. Linker</label>
+                <label><input type="radio" name="q14" data-correct="true">C. Preprocessing</label>
+                <label><input type="radio" name="q14">D. Runtime Executing</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+
+        <!--Q15-->
+        <div class="mcq-card">
+            <h3>1️⃣5️⃣. What does `typedef` do?</h3>
+            <div class="options">
+                <label><input type="radio" name="q15" data-correct="true">A. Creates an alias alias name for an existing data type</label>
+                <label><input type="radio" name="q15">B. Creates a completely new type in memory</label>
+                <label><input type="radio" name="q15">C. Dynamically allocates structs</label>
+                <label><input type="radio" name="q15">D. Links external assemblies</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!--Q16-->
+        <div class="mcq-card">
+            <h3>1️⃣6️⃣. Calloc heavily differs from Malloc because:</h3>
+            <div class="options">
+                <label><input type="radio" name="q16">A. It is significantly faster</label>
+                <label><input type="radio" name="q16" data-correct="true">B. It initializes the allocated memory blocks to zero explicitly</label>
+                <label><input type="radio" name="q16">C. It doesn't require `<stdlib.h>`</label>
+                <label><input type="radio" name="q16">D. It returns a void pointer</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!--Q17-->
+        <div class="mcq-card">
+            <h3>1️⃣7️⃣. How do you cast a standard integer `a` into a float?</h3>
+            <div class="options">
+                <label><input type="radio" name="q17">A. float(a)</label>
+                <label><input type="radio" name="q17">B. cast(float, a)</label>
+                <label><input type="radio" name="q17" data-correct="true">C. (float)a</label>
+                <label><input type="radio" name="q17">D. It cannot be done</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!--Q18-->
+        <div class="mcq-card">
+            <h3>1️⃣8️⃣. In a `printf("%s", str)`, what determines when the function stops printing characters?</h3>
+            <div class="options">
+                <label><input type="radio" name="q18">A. After 255 chars</label>
+                <label><input type="radio" name="q18">B. Automatically parses length from OS</label>
+                <label><input type="radio" name="q18" data-correct="true">C. Reaching the Null-terminator '\0'</label>
+                <label><input type="radio" name="q18">D. Finding a Space Character</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!--Q19-->
+        <div class="mcq-card">
+            <h3>1️⃣9️⃣. If `int arr[5]`, what does `arr` alone signify in C?</h3>
+            <div class="options">
+                <label><input type="radio" name="q19">A. The entire array content</label>
+                <label><input type="radio" name="q19" data-correct="true">B. A pointer indicating the address of the first element</label>
+                <label><input type="radio" name="q19">C. The number 5 directly</label>
+                <label><input type="radio" name="q19">D. Array type metadata</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!--Q20-->
+        <div class="mcq-card">
+            <h3>2️⃣0️⃣. Which of the following allows exiting a function immediately and passing control back to the caller?</h3>
+            <div class="options">
+                <label><input type="radio" name="q20">A. exit()</label>
+                <label><input type="radio" name="q20">B. continue</label>
+                <label><input type="radio" name="q20" data-correct="true">C. return</label>
+                <label><input type="radio" name="q20">D. break</label>
+                <div class="result"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Result Section -->
+    <div id="finalResult" class="final-result" style="display:none;">
+        <h2>📊 Quiz Summary</h2>
+        <p id="scoreText"></p>
+        <div id="answerSummary"></div>
+    </div>
+
+    <button id="finishBtn" class="finish-btn">Finish Quiz</button>
+    </div>
+
+    <h3 class="next-text">You have completed all MCQs!</h3>
+
+    <div class="nav-buttons">
+        <a href="MCQ2.html" class="back-btn">⬅ Back</a>
+        <a href="blank1.html" class="next-link">Fill in the Blanks ➡</a>
+        <a href="MCQ1.html" class="next-link">1️⃣</a>
+        <a href="MCQ2.html" class="next-link">2️⃣</a>
+        <a href="MCQ3.html" class="next-link">3️⃣</a>
+    </div>
+
+    <script src="MCQ3.js"></script>
+
+</body>
+
+</html>

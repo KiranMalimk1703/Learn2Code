@@ -1,26 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple HTML Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-        }
-        h1 {
-            color: #2c3e50;
-        }
-        p {
-            color: #34495e;
-        }
-    </style>
+    <title>C Mastery | CodeStart</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="notes.css">
 </head>
+
 <body>
-    <h1>Welcome to My Simple HTML Page</h1>
-    <p>This is a basic HTML file with a heading and a paragraph.</p>
-    <button onclick="alert('Hello!')">Click Me</button>
+
+    <!-- Dynamic Background Elements -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fa-solid fa-c"></i> C<span>Notes</span>
+            </div>
+            <button onclick="goBack()" class="btn-home">
+                <i class="fa-solid fa-arrow-left"></i> Back to Courses
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <div class="notes-wrapper container fade-in-up">
+
+        <div class="notes-content">
+            <div class="glass-panel main-header delay-1">
+                <div class="badge"><i class="fa-solid fa-book-open"></i> Full Course</div>
+                <h1><span class="gradient-text">C</span> Fundamentals</h1>
+                <p>Master everything from basic syntax to pointers and memory management with these interactive,
+                    beautifully formatted master notes.</p>
+            </div>
+
+            <!-- Section 1 -->
+            <section class="glass-panel delay-2" id="intro">
+                <h2><i class="fa-solid fa-1 section-num"></i> Introduction to C</h2>
+
+                <h3>What is C?</h3>
+                <p>C is a <strong>procedural, general-purpose computer programming language</strong> developed in 1972 by Dennis
+                    Ritchie.</p>
+
+                <blockquote>
+                    “C is quirky, flawed, and an enormous success.” – Dennis Ritchie
+                </blockquote>
+
+                <p>It was created to write the UNIX operating system but has since become one of the most widely used
+                    programming languages of all time.</p>
+
+                <h3>Why C Was Created?</h3>
+                <p>Dennis Ritchie created C to:</p>
+                <ul class="custom-list">
+                    <li><i class="fa-solid fa-check"></i> Build utilities running on Unix</li>
+                    <li><i class="fa-solid fa-check"></i> Provide low-level access to memory</li>
+                    <li><i class="fa-solid fa-check"></i> Have a simple and consistent language structure</li>
+                    <li><i class="fa-solid fa-check"></i> Compile to efficient machine instructions</li>
+                </ul>
+
+                <div class="note highlight-blue">
+                    <strong><i class="fa-solid fa-lightbulb"></i> The Mother Language:</strong>
+                    Many modern languages like C++, C#, Java, and Python borrow fundamentally from C's syntax and concepts.
+                </div>
+            </section>
+
+            <!-- Section 2 -->
+            <section class="glass-panel delay-3" id="characteristics">
+                <h2><i class="fa-solid fa-2 section-num"></i> Language Characteristics</h2>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Meaning</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Middle-level</strong></td>
+                                <td>Bridges the gap between machine-level execution and human-readable code.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Compiled</strong></td>
+                                <td>Transforms fully into machine readable executables for fast execution.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Statically typed</strong></td>
+                                <td>All variables must be explicitly defined with a data type before usage.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Procedural</strong></td>
+                                <td>Follows a top-down execution approach relying on functions and actions.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Portable</strong></td>
+                                <td>C code can run on a multitude of architectures with minimal changes.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fast and Efficient</strong></td>
+                                <td>Direct access to system-level operations ensures high-speed execution.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Section 3 -->
+            <section class="glass-panel delay-4" id="execution">
+                <h2><i class="fa-solid fa-3 section-num"></i> Execution & Memory Management</h2>
+
+                <h3>How C Code Runs</h3>
+                <ul class="custom-list">
+                    <li><i class="fa-solid fa-file-code"></i> Source code (<code>.c</code>) is written</li>
+                    <li><i class="fa-solid fa-gear"></i> The <strong>Compiler (e.g. GCC)</strong> translates it to an object file (<code>.o</code>)
+                    </li>
+                    <li><i class="fa-solid fa-link"></i> The <strong>Linker</strong> links object files and produces an executable (<code>.exe</code>)</li>
+                </ul>
+
+                <div class="note highlight-orange">
+                    <strong><i class="fa-solid fa-bolt"></i> Performance Note:</strong> This direct compilation to machine language makes C extremely fast, but it means you must manage memory carefully.
+                </div>
+
+                <h3>Pointers and Memory</h3>
+                <p>C provides direct access to system memory through <strong>pointers</strong>.</p>
+
+                <div class="code-block">
+                    <div class="code-header">c</div>
+                    <pre><code>int x = 10;
+int *p = &x;
+// 'p' holds the exact memory address of the variable 'x'
+// '*p' will access the value stored at that address</code></pre>
+                </div>
+            </section>
+
+            <!-- Section 4 -->
+            <section class="glass-panel delay-5" id="datatypes">
+                <h2><i class="fa-solid fa-4 section-num"></i> Core Data Types</h2>
+
+                <div class="grid-2">
+                    <div class="card-inner">
+                        <h3 class="text-green"><i class="fa-solid fa-cube"></i> Primary Types</h3>
+                        <p><strong>int</strong>, <strong>float</strong>, <strong>char</strong>, <strong>double</strong>
+                        </p>
+                        <p>Fundamental data types that support individual values in memory.
+                        </p>
+                        <div class="code-block small">
+                            <pre><code>int age = 20;
+float pi = 3.14f;
+char myGrade = 'A';</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="card-inner">
+                        <h3 class="text-red"><i class="fa-solid fa-layer-group"></i> Derived Types</h3>
+                        <p><strong>array</strong>, <strong>pointer</strong>, <strong>structure</strong>, <strong>union</strong></p>
+                        <p>Complex data structures that group or point to primary data types.</p>
+                        <div class="code-block small">
+                            <pre><code>int marks[3] = {90, 85, 95};
+struct Point { int x; int y; };</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5 -->
+            <section class="glass-panel delay-6" id="control">
+                <h2><i class="fa-solid fa-5 section-num"></i> Control Flow & Loops</h2>
+
+                <h3>Conditional Statements</h3>
+                <p>Control flow structures are used to handle logical pathways inside functions.</p>
+
+                <div class="code-block">
+                    <div class="code-header">c</div>
+                    <pre><code>int age = 18;
+
+if (age >= 18) {
+    printf("You are an adult\n");
+} else if (age > 12) {
+    printf("You are a teenager\n");
+} else {
+    printf("You are a child\n");
+}</code></pre>
+                </div>
+
+                <div class="note highlight-blue">
+                    <strong><i class="fa-solid fa-info-circle"></i> Semicolons:</strong> C heavily relies on 
+                    <strong>semicolons (;)</strong> to properly terminate statements, completely regardless of whitespace or indentation.
+                </div>
+
+                <h3>Looping Constructions</h3>
+                <div class="grid-2">
+                    <div>
+                        <h4>For Loop</h4>
+                        <p>Used when you know exactly how many iterations to complete.</p>
+                        <div class="code-block small">
+                            <pre><code>for (int i = 0; i < 5; i++) {
+    printf("%d\n", i);
+}</code></pre>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>While Loop</h4>
+                        <p>Evaluate looping iterations conditionally on an ongoing truth.</p>
+                        <div class="code-block small">
+                            <pre><code>while (health > 0) {
+    playGame();
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Practice Section -->
+            <section class="glass-panel cta-panel delay-6">
+                <h2><span class="gradient-text">Practice & Apply</span></h2>
+                <p>Ready to put your newly acquired C knowledge to the ultimate test?</p>
+
+                <div class="practice-cards">
+                    <a href="MCQ1.html" class="practice-card">
+                        <div class="p-icon"><i class="fa-solid fa-list-check"></i></div>
+                        <h3>MCQs</h3>
+                        <p>Test your understanding with rigorous multiple-choice questions.</p>
+                    </a>
+
+                    <a href="blank1.html" class="practice-card">
+                        <div class="p-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+                        <h3>Fill in the Blanks</h3>
+                        <p>Complete missing fragments of code to drastically improve logic building.</p>
+                    </a>
+
+                    <a href="../c-compiler.html" class="practice-card">
+                        <div class="p-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h3>Online Compiler</h3>
+                        <p>Write, rapidly run, and strictly test C code instantly in browser.</p>
+                    </a>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Actions Sidebar Setup -->
+        <div class="actions-sidebar delay-5">
+            <div class="glass-panel sidebar-sticky">
+                <h3><i class="fa-solid fa-download"></i> Resources</h3>
+                <p class="sidebar-text">Take your notes offline or export them for offline viewing.</p>
+
+                <button class="action-btn btn-light" onclick="downloadPDF('light')">
+                    <i class="fa-solid fa-file-pdf"></i> Download Light PDF
+                </button>
+
+                <button class="action-btn btn-dark" onclick="downloadPDF('dark')">
+                    <i class="fa-solid fa-moon"></i> Download Dark PDF
+                </button>
+
+                <hr class="sidebar-divider">
+
+                <h3><i class="fa-solid fa-compass"></i> Quick Navigate</h3>
+                <div class="toc">
+                    <a href="#intro">1. Introduction</a>
+                    <a href="#characteristics">2. Characteristics</a>
+                    <a href="#execution">3. Execution Model</a>
+                    <a href="#datatypes">4. Data Types</a>
+                    <a href="#control">5. Control Flow</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-bottom">
+            &copy; 2026 CodeStart. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- html2canvas & jsPDF for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="notes.js"></script>
+    <script>
+        function goBack() {
+            window.location.href = '../languages.html';
+        }
+    </script>
 </body>
+
 </html>

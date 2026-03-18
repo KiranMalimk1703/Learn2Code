@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Fill-in-the-Blanks | CodeStart</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="blank1.css">
+</head>
+<body>
+  
+  <header>
+    <button onclick="goBack()" class="btn-home">
+        <i class="fa-solid fa-arrow-left"></i> Back to Notes
+    </button>
+  </header>
+
+  <h1>🔵 C Fill-in-the-Blanks – Easy Level</h1>
+
+  <div class="mcq-container">
+    <!--1-->
+    <div class="question-container">
+        <p>1️⃣ C language uses a <input type="text" class="blank" data-answer="procedural"> programming paradigm.</p>
+        <span class="result-message"></span>
+    </div>
+
+    <!--2-->
+    <div class="question-container">
+        <p>2️⃣ C language was invented by <input type="text" class="blank" data-answer="Dennis Ritchie">.</p>
+        <span class="result-message"></span> 
+    </div>
+
+    <!--3-->
+    <div class="question-container">
+      <p>3️⃣ Every executable C program must have a <input type="text" class="blank" data-answer="main"> function.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--4-->
+    <div class="question-container">
+      <p>4️⃣ The file extension for a C language source file is <input type="text" class="blank" data-answer=".c">.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--5-->
+    <div class="question-container">
+      <p>5️⃣ The <input type="text" class="blank" data-answer="printf"> function is used to display output statements onto the screen.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--6-->
+    <div class="question-container">
+      <p>6️⃣ A <input type="text" class="blank" data-answer="pointer"> is a special variable that stores the memory address of another variable.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--7-->
+    <div class="question-container">
+      <p>7️⃣ Single line comments in C language start with <input type="text" class="blank" data-answer="//">.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--8-->
+    <div class="question-container">
+      <p>8️⃣ The <input type="text" class="blank" data-answer="int"> keyword is the standard data type used to declare integer variables.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--9-->
+    <div class="question-container">
+      <p>9️⃣ The symbol <input type="text" class="blank" data-answer="&"> is used before a variable to get its memory address.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--10-->
+    <div class="question-container">
+      <p>🔟 The <input type="text" class="blank" data-answer="stdio.h"> header file must be included to use standard input and output functions.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!-- Final Result Section -->
+    <button id="finishBtn" class="finish-btn">Finish Practice</button>
+    <div id="finalResult" class="final-result" style="display:none;">
+      <h2>📊 Practice Summary</h2>
+      <p id="scoreText"></p>
+      <div id="answerSummary"></div>
+    </div>
+  </div>
+
+  <h3 class="next-text">Click on Next to continue</h3>
+
+  <div class="nav-buttons">
+    <button class="back-btn" onclick="goBack()">⬅ Back</button>
+    <a href="blank2.html" class="next-link">Next ➡</a>
+    <a href="blank1.html" class="next-link">1️⃣</a>
+    <a href="blank2.html" class="next-link">2️⃣</a>
+    <a href="blank3.html" class="next-link">3️⃣</a>
+  </div>
+
+  <script src="blank1.js"></script>
+</body>
+</html>

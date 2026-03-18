@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C MCQs - Medium</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="MCQ2.css">
+</head>
+
+<body>
+
+    <header>
+        <button onclick="goBack()" class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i> Back
+        </button>
+    </header>
+
+    <h1>🔵 C Language MCQs – Medium Level</h1>
+
+    <div class="mcq-container">
+
+        <!-- Q1 -->
+        <div class="mcq-card">
+            <h3>1️⃣. What is the output of printf("%d", 5 / 2); ?</h3>
+            <div class="options">
+                <label><input type="radio" name="q1" data-correct="true">A. 2</label>
+                <label><input type="radio" name="q1">B. 2.5</label>
+                <label><input type="radio" name="q1">C. 3</label>
+                <label><input type="radio" name="q1">D. Error</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+
+        <!-- Q2 -->
+        <div class="mcq-card">
+            <h3>2️⃣. Which operator is used to get the memory address of a variable?</h3>
+            <div class="options">
+                <label><input type="radio" name="q2">A. *</label>
+                <label><input type="radio" name="q2" data-correct="true">B. &</label>
+                <label><input type="radio" name="q2">C. -></label>
+                <label><input type="radio" name="q2">D. pointer</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="mcq-card">
+            <h3>3️⃣. How do you correctly declare a pointer to an integer?</h3>
+            <div class="options">
+                <label><input type="radio" name="q3" data-correct="true">A. int *ptr;</label>
+                <label><input type="radio" name="q3">B. *int ptr;</label>
+                <label><input type="radio" name="q3">C. int ptr*;</label>
+                <label><input type="radio" name="q3">D. pointer int ptr;</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="mcq-card">
+            <h3>4️⃣. What does *ptr represent when ptr is a pointer?</h3>
+            <div class="options">
+                <label><input type="radio" name="q4">A. Address of ptr</label>
+                <label><input type="radio" name="q4">B. Address of the variable</label>
+                <label><input type="radio" name="q4" data-correct="true">C. Value at the address stored in ptr</label>
+                <label><input type="radio" name="q4">D. Memory size of ptr</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="mcq-card">
+            <h3>5️⃣. How do you dynamically allocate memory for a single integer?</h3>
+            <div class="options">
+                <label><input type="radio" name="q5">A. alloc(int)</label>
+                <label><input type="radio" name="q5">B. new int()</label>
+                <label><input type="radio" name="q5" data-correct="true">C. malloc(sizeof(int))</label>
+                <label><input type="radio" name="q5">D. memory(int)</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="mcq-card">
+            <h3>6️⃣. What is the return type of malloc()?</h3>
+            <div class="options">
+                <label><input type="radio" name="q6" data-correct="true">A. void*</label>
+                <label><input type="radio" name="q6">B. int*</label>
+                <label><input type="radio" name="q6">C. char*</label>
+                <label><input type="radio" name="q6">D. NULL</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="mcq-card">
+            <h3>7️⃣. Which function is used to release dynamically allocated memory?</h3>
+            <div class="options">
+                <label><input type="radio" name="q7">A. delete</label>
+                <label><input type="radio" name="q7">B. clear</label>
+                <label><input type="radio" name="q7" data-correct="true">C. free</label>
+                <label><input type="radio" name="q7">D. remove</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!-- Q8 -->
+        <div class="mcq-card">
+            <h3>8️⃣. Which header file is required for malloc() and free()?</h3>
+            <div class="options">
+                <label><input type="radio" name="q8">A. stdio.h</label>
+                <label><input type="radio" name="q8">B. string.h</label>
+                <label><input type="radio" name="q8">C. math.h</label>
+                <label><input type="radio" name="q8" data-correct="true">D. stdlib.h</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!-- Q9 -->
+        <div class="mcq-card">
+            <h3>9️⃣. What is the index of the last element in an array of size 10?</h3>
+            <div class="options">
+                <label><input type="radio" name="q9">A. 10</label>
+                <label><input type="radio" name="q9" data-correct="true">B. 9</label>
+                <label><input type="radio" name="q9">C. 11</label>
+                <label><input type="radio" name="q9">D. 0</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!-- Q10 -->
+        <div class="mcq-card">
+            <h3>🔟. Which of the following is true about arrays in C?</h3>
+            <div class="options">
+                <label><input type="radio" name="q10">A. Can store different data types</label>
+                <label><input type="radio" name="q10" data-correct="true">B. Elements are stored in contiguous memory</label>
+                <label><input type="radio" name="q10">C. Size can change dynamically without realloc</label>
+                <label><input type="radio" name="q10">D. Cannot be passed to functions</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!--Q11-->
+        <div class="mcq-card">
+            <h3>1️⃣1️⃣. What is the correct way to pass an array `arr` to a function `func()`?</h3>
+            <div class="options">
+                <label><input type="radio" name="q11">A. func(arr[]);</label>
+                <label><input type="radio" name="q11">B. func(&arr);</label>
+                <label><input type="radio" name="q11" data-correct="true">C. func(arr);</label>
+                <label><input type="radio" name="q11">D. func(*arr);</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!--Q12-->
+        <div class="mcq-card">
+            <h3>1️⃣2️⃣. Which function calculates the length of a string?</h3>
+            <div class="options">
+                <label><input type="radio" name="q12">A. strsize()</label>
+                <label><input type="radio" name="q12">B. stringlen()</label>
+                <label><input type="radio" name="q12" data-correct="true">C. strlen()</label>
+                <label><input type="radio" name="q12">D. len()</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+
+        <!--q13-->
+        <div class="mcq-card">
+            <h3>1️⃣3️⃣. What does strcmp() do?</h3>
+            <div class="options">
+                <label><input type="radio" name="q13">A. Copies string</label>
+                <label><input type="radio" name="q13" data-correct="true">B. Compares two strings</label>
+                <label><input type="radio" name="q13">C. Concatenates strings</label>
+                <label><input type="radio" name="q13">D. Reverses a string</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!--q14-->
+        <div class="mcq-card">
+            <h3>1️⃣4️⃣. Which function is used for string concatenation?</h3>
+            <div class="options">
+                <label><input type="radio" name="q14">A. addstr()</label>
+                <label><input type="radio" name="q14">B. concat()</label>
+                <label><input type="radio" name="q14">C. stringcat()</label>
+                <label><input type="radio" name="q14" data-correct="true">D. strcat()</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+
+        <!--Q15-->
+        <div class="mcq-card">
+            <h3>1️⃣5️⃣. What happens when a pointer is declared but not initialized?</h3>
+            <div class="options">
+                <label><input type="radio" name="q15" data-correct="true">A. It becomes a Wild pointer</label>
+                <label><input type="radio" name="q15">B. It points to NULL automatically</label>
+                <label><input type="radio" name="q15">C. Compilation Error</label>
+                <label><input type="radio" name="q15">D. It points to 0</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!--Q16-->
+        <div class="mcq-card">
+            <h3>1️⃣6️⃣. Can a function return a pointer in C?</h3>
+            <div class="options">
+                <label><input type="radio" name="q16" data-correct="true">A. Yes</label>
+                <label><input type="radio" name="q16">B. No</label>
+                <label><input type="radio" name="q16">C. Only int pointers</label>
+                <label><input type="radio" name="q16">D. Only void pointers</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!--Q17-->
+        <div class="mcq-card">
+            <h3>1️⃣7️⃣. How do you declare a pointer to a pointer in C?</h3>
+            <div class="options">
+                <label><input type="radio" name="q17">A. int ptr;</label>
+                <label><input type="radio" name="q17">B. pointer ptr;</label>
+                <label><input type="radio" name="q17" data-correct="true">C. int **ptr;</label>
+                <label><input type="radio" name="q17">D. int *ptr*;</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!--Q18-->
+        <div class="mcq-card">
+            <h3>1️⃣8️⃣. In a switch statement, what is used to exit a case?</h3>
+            <div class="options">
+                <label><input type="radio" name="q18">A. return</label>
+                <label><input type="radio" name="q18">B. stop</label>
+                <label><input type="radio" name="q18" data-correct="true">C. break</label>
+                <label><input type="radio" name="q18">D. exit</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!--Q19-->
+        <div class="mcq-card">
+            <h3>1️⃣9️⃣. What does the sizeof operator return?</h3>
+            <div class="options">
+                <label><input type="radio" name="q19">A. Number of bits</label>
+                <label><input type="radio" name="q19" data-correct="true">B. Number of bytes</label>
+                <label><input type="radio" name="q19">C. Number of words</label>
+                <label><input type="radio" name="q19">D. Memory address</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!--Q20-->
+        <div class="mcq-card">
+            <h3>2️⃣0️⃣. Which data structure is primarily based on LIFO (Last In First Out)?</h3>
+            <div class="options">
+                <label><input type="radio" name="q20">A. Queue</label>
+                <label><input type="radio" name="q20">B. Linked List</label>
+                <label><input type="radio" name="q20" data-correct="true">C. Stack</label>
+                <label><input type="radio" name="q20">D. Tree</label>
+                <div class="result"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Result Section -->
+    <div id="finalResult" class="final-result" style="display:none;">
+        <h2>📊 Quiz Summary</h2>
+        <p id="scoreText"></p>
+        <div id="answerSummary"></div>
+    </div>
+
+    <button id="finishBtn" class="finish-btn">Finish Quiz</button>
+    </div>
+
+    <h3 class="next-text">Click on the Next for the next set of questions</h3>
+
+
+
+    <div class="nav-buttons">
+        <a href="MCQ1.html" class="back-btn">⬅ Back</a>
+        <a href="MCQ3.html" class="next-link">Next ➡</a>
+        <a href="MCQ1.html" class="next-link">1️⃣</a>
+        <a href="MCQ2.html" class="next-link">2️⃣</a>
+        <a href="MCQ3.html" class="next-link">3️⃣</a>
+    </div>
+
+
+    <script src="MCQ2.js"></script>
+
+</body>
+
+</html>
