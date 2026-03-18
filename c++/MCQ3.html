@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ MCQs - Hard</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="MCQ3.css">
+</head>
+
+<body>
+
+    <header>
+        <button onclick="goBack()" class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i> Back
+        </button>
+    </header>
+
+    <h1>🔵 C++ Language MCQs – Hard Level</h1>
+
+    <div class="mcq-container">
+
+        <!-- Q1 -->
+        <div class="mcq-card">
+            <h3>1️⃣. What is the size of an empty class in C++ (with no data members or virtual functions)?</h3>
+            <div class="options">
+                <label><input type="radio" name="q1">A. 0 byte</label>
+                <label><input type="radio" name="q1" data-correct="true">B. 1 byte</label>
+                <label><input type="radio" name="q1">C. 4 bytes</label>
+                <label><input type="radio" name="q1">D. System dependent</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="mcq-card">
+            <h3>2️⃣. What is the correct purpose of a virtual destructor in C++?</h3>
+            <div class="options">
+                <label><input type="radio" name="q2">A. It destroys static members</label>
+                <label><input type="radio" name="q2">B. It deletes the pointer of the base class</label>
+                <label><input type="radio" name="q2" data-correct="true">C. Ensures the derived class destructor is called when deleted via a base class pointer</label>
+                <label><input type="radio" name="q2">D. Destructors cannot be virtual</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="mcq-card">
+            <h3>3️⃣. Which feature of OOP is demonstrated by function overriding in derived classes?</h3>
+            <div class="options">
+                <label><input type="radio" name="q3">A. Compile-time Polymorphism</label>
+                <label><input type="radio" name="q3">B. Encapsulation</label>
+                <label><input type="radio" name="q3" data-correct="true">C. Runtime (Dynamic) Polymorphism</label>
+                <label><input type="radio" name="q3">D. Abstraction</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="mcq-card">
+            <h3>4️⃣. What happens when a `const` member function is called on a non-const object?</h3>
+            <div class="options">
+                <label><input type="radio" name="q4">A. Compilation error</label>
+                <label><input type="radio" name="q4">B. Runtime error</label>
+                <label><input type="radio" name="q4" data-correct="true">C. It successfully executes without modifying the object state</label>
+                <label><input type="radio" name="q4">D. The object automatically becomes const</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="mcq-card">
+            <h3>5️⃣. How must a reference variable member of a class be initialized?</h3>
+            <div class="options">
+                <label><input type="radio" name="q5">A. Within the constructor body</label>
+                <label><input type="radio" name="q5" data-correct="true">B. In the constructor's initializer list</label>
+                <label><input type="radio" name="q5">C. At the time of definition inside the class</label>
+                <label><input type="radio" name="q5">D. Using a setter member function</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="mcq-card">
+            <h3>6️⃣. Is multiple inheritance supported in C++?</h3>
+            <div class="options">
+                <label><input type="radio" name="q6">A. Only with interfaces</label>
+                <label><input type="radio" name="q6" data-correct="true">B. Yes, a class can inherit from more than one base class</label>
+                <label><input type="radio" name="q6">C. No, C++ only supports single inheritance</label>
+                <label><input type="radio" name="q6">D. Only for abstract classes</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="mcq-card">
+            <h3>7️⃣. What does `std::move` do in modern C++?</h3>
+            <div class="options">
+                <label><input type="radio" name="q7" data-correct="true">A. Casts an lvalue to an rvalue reference to enable move semantics</label>
+                <label><input type="radio" name="q7">B. Moves data physically in memory</label>
+                <label><input type="radio" name="q7">C. Deletes the original object</label>
+                <label><input type="radio" name="q7">D. Copies the object faster</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!-- Q8 -->
+        <div class="mcq-card">
+            <h3>8️⃣. Which keyword prevents a class from being inherited further in C++11?</h3>
+            <div class="options">
+                <label><input type="radio" name="q8">A. sealed</label>
+                <label><input type="radio" name="q8" data-correct="true">B. final</label>
+                <label><input type="radio" name="q8">C. static</label>
+                <label><input type="radio" name="q8">D. const</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!-- Q9 -->
+        <div class="mcq-card">
+            <h3>9️⃣. What does the `mutable` keyword do in C++?</h3>
+            <div class="options">
+                <label><input type="radio" name="q9">A. Prevents the variable from being cached</label>
+                <label><input type="radio" name="q9" data-correct="true">B. Allows modification of a member even if the object is const</label>
+                <label><input type="radio" name="q9">C. Protects the variable from thread race conditions</label>
+                <label><input type="radio" name="q9">D. Makes the variable dynamically sized</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!-- Q10 -->
+        <div class="mcq-card">
+            <h3>🔟. What is the "Diamond Problem" in C++?</h3>
+            <div class="options">
+                <label><input type="radio" name="q10">A. A memory leak caused by circular pointers</label>
+                <label><input type="radio" name="q10" data-correct="true">B. Ambiguity in multiple inheritance when classes inherit from the same base</label>
+                <label><input type="radio" name="q10">C. A template meta-programming error</label>
+                <label><input type="radio" name="q10">D. Issues with four-way switch statements</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!--Q11-->
+        <div class="mcq-card">
+            <h3>1️⃣1️⃣. How is the "Diamond Problem" resolved in C++?</h3>
+            <div class="options">
+                <label><input type="radio" name="q11">A. Using static inheritance</label>
+                <label><input type="radio" name="q11">B. Using dynamic_cast</label>
+                <label><input type="radio" name="q11" data-correct="true">C. Using virtual inheritance</label>
+                <label><input type="radio" name="q11">D. C++ cannot resolve it</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!--Q12-->
+        <div class="mcq-card">
+            <h3>1️⃣2️⃣. What happens if an exception is thrown inside a constructor and not caught?</h3>
+            <div class="options">
+                <label><input type="radio" name="q12">A. The constructor silently fails</label>
+                <label><input type="radio" name="q12" data-correct="true">B. The destructor is not called, potentially causing memory leaks</label>
+                <label><input type="radio" name="q12">C. The destructor is immediately called</label>
+                <label><input type="radio" name="q12">D. The program ignores the exception forever</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!--q13-->
+        <div class="mcq-card">
+            <h3>1️⃣3️⃣. Which C++ cast is used to safely downcast a base class pointer to a derived class pointer?</h3>
+            <div class="options">
+                <label><input type="radio" name="q13">A. static_cast</label>
+                <label><input type="radio" name="q13" data-correct="true">B. dynamic_cast</label>
+                <label><input type="radio" name="q13">C. const_cast</label>
+                <label><input type="radio" name="q13">D. reinterpret_cast</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!--q14-->
+        <div class="mcq-card">
+            <h3>1️⃣4️⃣. In C++ templates, what is "Template Instantiation"?</h3>
+            <div class="options">
+                <label><input type="radio" name="q14">A. The process of passing variables to templates</label>
+                <label><input type="radio" name="q14">B. Error checking for templates</label>
+                <label><input type="radio" name="q14" data-correct="true">C. The compiler generating a specific class or function from a template</label>
+                <label><input type="radio" name="q14">D. Overriding a template</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!--Q15-->
+        <div class="mcq-card">
+            <h3>1️⃣5️⃣. What distinguishes `std::vector` from `std::array`?</h3>
+            <div class="options">
+                <label><input type="radio" name="q15" data-correct="true">A. std::vector is dynamically sized, std::array is fixed size</label>
+                <label><input type="radio" name="q15">B. std::array relies on pointers, std::vector doesn't</label>
+                <label><input type="radio" name="q15">C. std::vector is faster for direct access</label>
+                <label><input type="radio" name="q15">D. std::array can store only integers</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!--Q16-->
+        <div class="mcq-card">
+            <h3>1️⃣6️⃣. What is a "pure virtual function"?</h3>
+            <div class="options">
+                <label><input type="radio" name="q16">A. A function with no parameters</label>
+                <label><input type="radio" name="q16" data-correct="true">B. A virtual function assigned to 0, making the class abstract</label>
+                <label><input type="radio" name="q16">C. A function running without side effects</label>
+                <label><input type="radio" name="q16">D. A function accessible anywhere in the program</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!--Q17-->
+        <div class="mcq-card">
+            <h3>1️⃣7️⃣. What does RAII stand for in C++?</h3>
+            <div class="options">
+                <label><input type="radio" name="q17">A. Real-time Allocation of Internal Memory</label>
+                <label><input type="radio" name="q17">B. Required Allocation In Int</label>
+                <label><input type="radio" name="q17" data-correct="true">C. Resource Acquisition Is Initialization</label>
+                <label><input type="radio" name="q17">D. Runtime Application Interface Initialization</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!--Q18-->
+        <div class="mcq-card">
+            <h3>1️⃣8️⃣. Does a friend function have access to the `this` pointer?</h3>
+            <div class="options">
+                <label><input type="radio" name="q18">A. Yes, always</label>
+                <label><input type="radio" name="q18">B. Yes, if it is public</label>
+                <label><input type="radio" name="q18" data-correct="true">C. No, because it is not a class member</label>
+                <label><input type="radio" name="q18">D. Only if passed explicitly</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!--Q19-->
+        <div class="mcq-card">
+            <h3>1️⃣9️⃣. What does `explicit` keyword do for constructors?</h3>
+            <div class="options">
+                <label><input type="radio" name="q19">A. Allows implicit type conversions</label>
+                <label><input type="radio" name="q19" data-correct="true">B. Prevents implicit type conversions on initialization</label>
+                <label><input type="radio" name="q19">C. Forces the constructor to execute instantly</label>
+                <label><input type="radio" name="q19">D. Makes the constructor public everywhere</label>
+                <div class="result"></div>
+            </div>
+        </div>
+
+        <!--Q20-->
+        <div class="mcq-card">
+            <h3>2️⃣0️⃣. What is the output of `sizeof` on an abstract base class containing only one pure virtual function (on a 64-bit system)?</h3>
+            <div class="options">
+                <label><input type="radio" name="q20">A. 0 bytes</label>
+                <label><input type="radio" name="q20">B. 1 byte</label>
+                <label><input type="radio" name="q20">C. 4 bytes</label>
+                <label><input type="radio" name="q20" data-correct="true">D. 8 bytes (due to the vptr)</label>
+                <div class="result"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Result Section -->
+    <div id="finalResult" class="final-result" style="display:none;">
+        <h2>📊 Quiz Summary</h2>
+        <p id="scoreText"></p>
+        <div id="answerSummary"></div>
+    </div>
+
+    <button id="finishBtn" class="finish-btn">Finish Quiz</button>
+
+    <h3 class="next-text">You have completed all MCQs!</h3>
+
+    <div class="nav-buttons">
+        <a href="MCQ2.html" class="back-btn">⬅ Back</a>
+        <a href="blank1.html" class="next-link">Fill in the Blanks ➡</a>
+        <a href="MCQ1.html" class="next-link">1️⃣</a>
+        <a href="MCQ2.html" class="next-link">2️⃣</a>
+        <a href="MCQ3.html" class="next-link">3️⃣</a>
+    </div>
+
+    <script src="MCQ3.js"></script>
+
+</body>
+
+</html>

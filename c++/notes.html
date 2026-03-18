@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Mastery | CodeStart</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="notes.css">
+</head>
+
+<body>
+
+    <!-- Dynamic Background Elements -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fa-solid fa-code"></i> C++<span>Notes</span>
+            </div>
+            <button onclick="goBack()" class="btn-home">
+                <i class="fa-solid fa-arrow-left"></i> Back to Courses
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <div class="notes-wrapper container fade-in-up">
+
+        <div class="notes-content">
+            <div class="glass-panel main-header delay-1">
+                <div class="badge"><i class="fa-solid fa-book-open"></i> Full Course</div>
+                <h1><span class="gradient-text">C++</span> Fundamentals</h1>
+                <p>Master Object-Oriented Programming, Memory Management, and the vast Standard Template Library (STL) with these interactive master notes.</p>
+            </div>
+
+            <!-- Section 1 -->
+            <section class="glass-panel delay-2" id="intro">
+                <h2><i class="fa-solid fa-1 section-num"></i> Introduction to C++</h2>
+
+                <h3>What is C++?</h3>
+                <p>C++ is a <strong>cross-platform, powerful, general-purpose</strong> programming language created by Bjarne Stroustrup as an extension of the C programming language.</p>
+
+                <blockquote>
+                    “C makes it easy to shoot yourself in the foot; C++ makes it harder, but when you do it blows your whole leg off.” – Bjarne Stroustrup
+                </blockquote>
+
+                <p>It provides developers with a high level of control over system resources and memory, making it the choice for high-performance applications like video games or operating systems.</p>
+
+                <h3>Why C++ Over C?</h3>
+                <ul class="custom-list">
+                    <li><i class="fa-solid fa-check"></i> Supports Object-Oriented Programming (OOP)</li>
+                    <li><i class="fa-solid fa-check"></i> Much richer standard library (STL)</li>
+                    <li><i class="fa-solid fa-check"></i> Exception Handling for errors</li>
+                    <li><i class="fa-solid fa-check"></i> Function and Operator overloading</li>
+                </ul>
+
+                <div class="note highlight-blue">
+                    <strong><i class="fa-solid fa-lightbulb"></i> Compatibility:</strong>
+                    Almost all C programs are valid C++ programs. C++ is essentially a superset of C!
+                </div>
+            </section>
+
+            <!-- Section 2 -->
+            <section class="glass-panel delay-3" id="io">
+                <h2><i class="fa-solid fa-2 section-num"></i> Key Additions & I/O</h2>
+
+                <h3>Basic Input and Output</h3>
+                <p>C++ introduces <code>iostream</code>, moving away from C's <code>printf()</code> and <code>scanf()</code>.</p>
+                <div class="code-block">
+                    <div class="code-header">cpp</div>
+                    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int age;
+    cout &lt;&lt; "Enter your age: "; // Printing to console
+    cin &gt;&gt; age;                 // Reading from user
+    
+    cout &lt;&lt; "You are " &lt;&lt; age &lt;&lt; " years old!" &lt;&lt; endl;
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>References vs. Pointers</h3>
+                <p>C++ introduces <strong>References</strong>, which are safer and cleaner alternatives to pointers.</p>
+                <div class="code-block small">
+                    <pre><code>int x = 10;
+int& ref = x; // ref is an alias to x
+ref = 20;     // x is now 20, no dereferencing needed!</code></pre>
+                </div>
+            </section>
+
+            <!-- Section 3 -->
+            <section class="glass-panel delay-4" id="oop">
+                <h2><i class="fa-solid fa-3 section-num"></i> Object-Oriented Principles</h2>
+
+                <h3>The Core Pillars of OOP</h3>
+                <div class="grid-2">
+                    <div class="card-inner">
+                        <h3 class="text-green"><i class="fa-solid fa-box"></i> Encapsulation</h3>
+                        <p>Bundling data and methods that work on that data within a single class unit, hiding the internal state from the outside world using access modifiers (<code>public</code>, <code>private</code>).</p>
+                    </div>
+
+                    <div class="card-inner">
+                        <h3 class="text-red"><i class="fa-solid fa-diagram-project"></i> Inheritance</h3>
+                        <p>Allows one class (derived) to inherit attributes and methods from another class (base). This naturally supports code reusability.</p>
+                    </div>
+                    
+                    <div class="card-inner">
+                        <h3 class="text-blue"><i class="fa-solid fa-masks-theater"></i> Polymorphism</h3>
+                        <p>The ability to present the same interface for differing underlying forms (data types or logic). Often achieved via virtual functions.</p>
+                    </div>
+                </div>
+
+                <div class="code-block mt-3">
+                    <div class="code-header">cpp</div>
+                    <pre><code>class Animal {
+public:
+    virtual void makeSound() {
+        cout &lt;&lt; "Some sound" &lt;&lt; endl;
+    }
+};
+
+class Dog : public Animal {
+public:
+    void makeSound() override {
+        cout &lt;&lt; "Bark!" &lt;&lt; endl;
+    }
+};</code></pre>
+                </div>
+            </section>
+
+            <!-- Section 4 -->
+            <section class="glass-panel delay-5" id="stl">
+                <h2><i class="fa-solid fa-4 section-num"></i> The STL (Standard Template Library)</h2>
+
+                <p>The STL is a massive library of generic classes and functions built deeply using C++ templates. It heavily reduces the pain of writing data structures from scratch.</p>
+
+                <div class="grid-2">
+                    <div class="card-inner">
+                        <h3 class="text-green"><i class="fa-solid fa-layer-group"></i> Vectors</h3>
+                        <p>Dynamic arrays that resize automatically.</p>
+                        <div class="code-block small">
+                            <pre><code>vector&lt;int&gt; nums = {1, 2, 3};
+nums.push_back(4); // Dynamically grows</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="card-inner">
+                        <h3 class="text-red"><i class="fa-solid fa-list-ol"></i> Maps</h3>
+                        <p>Collections of Key-Value pairs (Dictionaries).</p>
+                        <div class="code-block small">
+                            <pre><code>map&lt;string, int&gt; ages;
+ages["John"] = 25;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Practice Section -->
+            <section class="glass-panel cta-panel delay-6" id="practice">
+                <h2><span class="gradient-text">Practice & Apply</span></h2>
+                <p>Ready to put your newly acquired C++ knowledge to the ultimate test?</p>
+
+                <div class="practice-cards">
+                    <a href="#" class="practice-card">
+                        <div class="p-icon"><i class="fa-solid fa-list-check"></i></div>
+                        <h3>MCQs</h3>
+                        <p>Test your understanding with rigorous multiple-choice questions.</p>
+                    </a>
+
+                    <a href="#" class="practice-card">
+                        <div class="p-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+                        <h3>Fill in the Blanks</h3>
+                        <p>Complete missing fragments of code to drastically improve logic building.</p>
+                    </a>
+
+                    <!-- Links to the C compiler, which handles C/C++ in GCC! -->
+                    <a href="../c-compiler.html" class="practice-card">
+                        <div class="p-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h3>Online C++ Compiler</h3>
+                        <p>Write, rapidly run, and strictly test C++ code instantly in browser.</p>
+                    </a>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Actions Sidebar Setup -->
+        <div class="actions-sidebar delay-5">
+            <div class="glass-panel sidebar-sticky">
+                <h3><i class="fa-solid fa-download"></i> Resources</h3>
+                <p class="sidebar-text">Take your notes offline or export them for offline viewing.</p>
+
+                <button class="action-btn btn-light" onclick="downloadPDF('light')">
+                    <i class="fa-solid fa-file-pdf"></i> Download Light PDF
+                </button>
+
+                <button class="action-btn btn-dark" onclick="downloadPDF('dark')">
+                    <i class="fa-solid fa-moon"></i> Download Dark PDF
+                </button>
+
+                <hr class="sidebar-divider">
+
+                <h3><i class="fa-solid fa-compass"></i> Quick Navigate</h3>
+                <div class="toc">
+                    <a href="#intro">1. Introduction</a>
+                    <a href="#io">2. Key Additions & I/O</a>
+                    <a href="#oop">3. Object-Oriented Principles</a>
+                    <a href="#stl">4. STL Structures</a>
+                    <a href="#practice">5. Practice Now</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-bottom">
+            &copy; 2026 CodeStart. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- html2canvas & jsPDF for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="notes.js"></script>
+    <script>
+        function goBack() {
+            window.location.href = '../languages.html';
+        }
+    </script>
+</body>
+
+</html>

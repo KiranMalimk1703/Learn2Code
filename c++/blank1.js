@@ -92,5 +92,5 @@ function showFinalResult() {
 }
 
 function goBack() {
-  window.history.back(); // Usually goes back one page
+  window.history.back();
 }
