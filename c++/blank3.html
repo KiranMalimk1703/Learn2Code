@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C++ Fill-in-the-Blanks | CodeStart</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="blank3.css">
+</head>
+<body>
+  
+  <header>
+    <button onclick="goBack()" class="btn-home">
+        <i class="fa-solid fa-arrow-left"></i> Back
+    </button>
+  </header>
+
+  <h1>🔴 C++ Fill-in-the-Blanks – Advanced Level</h1>
+
+  <div class="mcq-container">
+    <!--1-->
+    <div class="question-container">
+        <p>1️⃣ A <input type="text" class="blank" data-answer="variadic"> template in modern C++ specifies that a template can take an arbitrary number of template arguments.</p>
+        <span class="result-message"></span>
+    </div>
+
+    <!--2-->
+    <div class="question-container">
+        <p>2️⃣ The <input type="text" class="blank" data-answer="constexpr"> keyword specifies that a function's return value or a variable's value can be evaluated at compile time.</p>
+        <span class="result-message"></span> 
+    </div>
+
+    <!--3-->
+    <div class="question-container">
+      <p>3️⃣ To prevent a class from being inherited or a virtual function from being overridden, you use the <input type="text" class="blank" data-answer="final"> specifier.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--4-->
+    <div class="question-container">
+      <p>4️⃣ The <input type="text" class="blank" data-answer="decltype"> specifier is used in C++ to inspect and query the exact declared type of an entity or expression.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--5-->
+    <div class="question-container">
+      <p>5️⃣ In a class hierarchy, a base class destructor must be declared <input type="text" class="blank" data-answer="virtual"> so that derived class destructors are called correctly via a base pointer.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--6-->
+    <div class="question-container">
+      <p>6️⃣ A <input type="text" class="blank" data-answer="lambda"> expression provides a concise way to create an anonymous function object right at the location where it is invoked.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--7-->
+    <div class="question-container">
+      <p>7️⃣ The smart pointer <input type="text" class="blank" data-answer="unique_ptr"> enforces exclusive ownership of a dynamically allocated object and cannot be copied, only moved.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--8-->
+    <div class="question-container">
+      <p>8️⃣ The <input type="text" class="blank" data-answer="dynamic_cast"> operator safely converts pointers of a polymorphic base class to a derived class, returning null on failure.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--9-->
+    <div class="question-container">
+      <p>9️⃣ The mechanism where a template definition provides a specific implementation for a particular data type is called template <input type="text" class="blank" data-answer="specialization">.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--10-->
+    <div class="question-container">
+      <p>🔟 The rule of <input type="text" class="blank" data-answer="five"> prescribes that if a class defines a destructor, it should usually also define copy/move constructors and copy/move assignment operators.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!-- Final Result Section -->
+    <button id="finishBtn" class="finish-btn">Finish Practice</button>
+    <div id="finalResult" class="final-result" style="display:none;">
+      <h2>📊 Practice Summary</h2>
+      <p id="scoreText"></p>
+      <div id="answerSummary"></div>
+    </div>
+  </div>
+
+  <h3 class="next-text">Practice Completed!</h3>
+
+  <div class="nav-buttons">
+    <button class="back-btn" onclick="goBack()">⬅ Back</button>
+    <a href="notes.html" class="next-link">Notes ➡</a>
+    <a href="blank1.html" class="next-link">1️⃣</a>
+    <a href="blank2.html" class="next-link">2️⃣</a>
+    <a href="blank3.html" class="next-link">3️⃣</a>
+  </div>
+
+  <script src="blank3.js"></script>
+</body>
+</html>
