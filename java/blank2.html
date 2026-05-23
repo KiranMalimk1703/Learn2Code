@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Java Fill-in-the-Blanks 2 | CodeStart</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="blank2.css">
+</head>
+
+<body>
+
+  <header>
+    <button onclick="goBack()" class="btn-home">
+      <i class="fa-solid fa-arrow-left"></i> Back to Notes
+    </button>
+  </header>
+
+  <h1>☕ Java Fill-in-the-Blanks – Data Types &amp; Control Flow</h1>
+
+  <div class="mcq-container">
+
+    <!--1-->
+    <div class="question-container">
+      <p>1️⃣ Java has <input type="text" class="blank" data-answer="8"> primitive data types.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--2-->
+    <div class="question-container">
+      <p>2️⃣ The <input type="text" class="blank" data-answer="int"> data type stores whole numbers and has a size of 4
+        bytes.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--3-->
+    <div class="question-container">
+      <p>3️⃣ To store a single character in Java, you use the <input type="text" class="blank" data-answer="char"> data
+        type.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--4-->
+    <div class="question-container">
+      <p>4️⃣ The <input type="text" class="blank" data-answer="boolean"> data type can only hold <code>true</code> or
+        <code>false</code>.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--5-->
+    <div class="question-container">
+      <p>5️⃣ To declare a constant variable in Java, you use the <input type="text" class="blank" data-answer="final">
+        keyword.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--6-->
+    <div class="question-container">
+      <p>6️⃣ The <input type="text" class="blank" data-answer="double"> data type is used to store decimal numbers with
+        double precision.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--7-->
+    <div class="question-container">
+      <p>7️⃣ In Java, the <input type="text" class="blank" data-answer="if"> statement is used to execute a block of
+        code based on a condition.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--8-->
+    <div class="question-container">
+      <p>8️⃣ A <input type="text" class="blank" data-answer="for"> loop is best used when the number of iterations is
+        known in advance.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--9-->
+    <div class="question-container">
+      <p>9️⃣ The <input type="text" class="blank" data-answer="while"> loop keeps executing as long as its condition
+        remains true.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--10-->
+    <div class="question-container">
+      <p>🔟 The <input type="text" class="blank" data-answer="switch"> statement is used to select one of many code
+        blocks to execute based on a variable's value.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!-- Final Result Section -->
+    <button id="finishBtn" class="finish-btn">Finish Practice</button>
+    <div id="finalResult" class="final-result" style="display:none;">
+      <h2>📊 Practice Summary</h2>
+      <p id="scoreText"></p>
+    </div>
+  </div>
+
+  <div class="nav-buttons">
+    <button class="back-btn" onclick="goBack()">⬅ Back</button>
+    <a href="blank3.html" class="next-link">Next ➡</a>
+    <a href="blank1.html" class="next-link">1️⃣</a>
+    <a href="blank2.html" class="next-link">2️⃣</a>
+    <a href="blank3.html" class="next-link">3️⃣</a>
+  </div>
+
+
+  <script src="blank2.js"></script>
+</body>
+
+</html>

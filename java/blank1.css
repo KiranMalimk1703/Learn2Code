@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --bg-color: #050508;
+  --surface: rgba(255, 255, 255, 0.03);
+  --surface-hover: rgba(255, 255, 255, 0.08);
+  --surface-border: rgba(255, 255, 255, 0.08);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  
+  --accent-primary: #ef4444; /* Java Red */
+  --accent-secondary: #f97316; /* Java Orange */
+  --accent-glow: rgba(239, 68, 68, 0.5);
+  
+  --font-main: 'Outfit', sans-serif;
+  --font-code: 'Fira Code', monospace;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.7;
+  padding: 40px 20px;
+  min-height: 100vh;
+  /* subtle background shapes */
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(239, 68, 68, 0.08), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(249, 115, 22, 0.08), transparent 25%);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(5, 5, 8, 0.7);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--surface-border);
+  padding: 15px 30px;
+  margin: -40px -20px 40px -20px;
+  display: flex;
+}
+
+header button {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+  padding: 10px 24px;
+  border-radius: 100px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+header button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(-3px);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 36px;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+  width: 100%;
+}
+
+.mcq-container {
+  max-width: 900px;
+  margin: auto;
+  position: relative;
+  z-index: 10;
+}
+
+.question-container {
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 30px 40px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: var(--transition);
+}
+
+.question-container:hover {
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+.question-container p {
+  font-size: 19px;
+  color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.blank {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--surface-border);
+  border-radius: 8px;
+  padding: 6px 15px;
+  color: #fca5a5;
+  font-family: var(--font-code);
+  font-size: 17px;
+  width: 180px;
+  outline: none;
+  transition: var(--transition);
+}
+
+.blank:focus {
+  border-color: var(--accent-primary);
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.blank.correct {
+  border-color: #10b981 !important;
+  background: rgba(16, 185, 129, 0.1) !important;
+  color: #34d399 !important;
+}
+
+.blank.wrong {
+  border-color: #ef4444 !important;
+  background: rgba(239, 68, 68, 0.1) !important;
+  color: #fca5a5 !important;
+}
+
+.result-message {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  height: 20px;
+}
+
+.finish-btn {
+  display: block;
+  margin: 50px auto;
+  padding: 16px 45px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 100px;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.finish-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.3);
+}
+
+.final-result {
+  background: rgba(15, 23, 42, 0.6);
+  padding: 40px;
+  border-radius: 20px;
+  margin-top: 30px;
+  border-left: 5px solid var(--accent-primary);
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 60px;
+}
+
+.back-btn, .next-link {
+  padding: 12px 28px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.back-btn {
+  background: rgba(255,255,255,0.03);
+  color: #94a3b8;
+  border: 1px solid var(--surface-border);
+}
+
+.next-link {
+  background: rgba(239, 68, 68, 0.1);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.next-link:hover {
+  background: rgba(239, 68, 68, 0.2);
+  color: white;
+}

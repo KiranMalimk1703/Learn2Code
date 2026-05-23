@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Java Fill-in-the-Blanks 3 | CodeStart</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="blank3.css">
+</head>
+
+<body>
+
+  <header>
+    <button onclick="goBack()" class="btn-home">
+      <i class="fa-solid fa-arrow-left"></i> Back to Notes
+    </button>
+  </header>
+
+  <h1>☕ Java Fill-in-the-Blanks – OOP Concepts</h1>
+
+  <div class="mcq-container">
+
+    <!--1-->
+    <div class="question-container">
+      <p>1️⃣ A <input type="text" class="blank" data-answer="class"> is a blueprint or template used to create objects
+        in Java.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--2-->
+    <div class="question-container">
+      <p>2️⃣ An <input type="text" class="blank" data-answer="object"> is a real-world instance of a class.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--3-->
+    <div class="question-container">
+      <p>3️⃣ The <input type="text" class="blank" data-answer="new"> keyword is used to create an instance of a class in
+        Java.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--4-->
+    <div class="question-container">
+      <p>4️⃣ A <input type="text" class="blank" data-answer="constructor"> is a special method that is called
+        automatically when an object is created.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--5-->
+    <div class="question-container">
+      <p>5️⃣ The <input type="text" class="blank" data-answer="this"> keyword refers to the current object inside a
+        class.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--6-->
+    <div class="question-container">
+      <p>6️⃣ <input type="text" class="blank" data-answer="encapsulation"> is the OOP concept of wrapping data and
+        methods together and hiding internal details.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--7-->
+    <div class="question-container">
+      <p>7️⃣ <input type="text" class="blank" data-answer="inheritance"> allows a child class to acquire the properties
+        and methods of a parent class.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--8-->
+    <div class="question-container">
+      <p>8️⃣ In Java, the <input type="text" class="blank" data-answer="extends"> keyword is used to inherit from
+        another class.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--9-->
+    <div class="question-container">
+      <p>9️⃣ <input type="text" class="blank" data-answer="polymorphism"> is the ability of a method to behave
+        differently depending on the object that calls it.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!--10-->
+    <div class="question-container">
+      <p>🔟 A class declared with the <input type="text" class="blank" data-answer="abstract"> keyword cannot be
+        instantiated and may contain abstract methods.</p>
+      <span class="result-message"></span>
+    </div>
+
+    <!-- Final Result Section -->
+    <button id="finishBtn" class="finish-btn">Finish Practice</button>
+    <div id="finalResult" class="final-result" style="display:none;">
+      <h2>📊 Practice Summary</h2>
+      <p id="scoreText"></p>
+    </div>
+  </div>
+
+  <h3 class="next-text">Complete all blanks and head back to notes!</h3>
+
+  <div class="nav-buttons">
+    <button class="back-btn" onclick="goBack()">⬅ Back</button>
+    <a href="blank1.html" class="next-link">1️⃣</a>
+    <a href="blank2.html" class="next-link">2️⃣</a>
+    <a href="blank3.html" class="next-link">3️⃣</a>
+  </div>
+
+
+  <script src="blank3.js"></script>
+</body>
+
+</html>
