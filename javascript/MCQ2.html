@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript MCQs – Level 2 | CodeStart</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="MCQ1.css">
+</head>
+
+<body>
+
+  <header>
+    <button onclick="goBack()">
+      <i class="fa-solid fa-arrow-left"></i> Back to Notes
+    </button>
+  </header>
+
+  <h1>🟨 JavaScript MCQs – Level 2</h1>
+
+  <div class="mcq-container">
+
+    <!-- Q1 -->
+    <div class="mcq-card">
+      <h3>1️⃣. What is a <strong>closure</strong> in JavaScript?</h3>
+      <div class="options">
+        <label><input type="radio" name="q1">A. A way to close the browser window</label>
+        <label><input type="radio" name="q1" data-correct="true">B. A function that has access to its outer scope even after the outer function has returned</label>
+        <label><input type="radio" name="q1">C. A method to terminate a loop</label>
+        <label><input type="radio" name="q1">D. A built-in class for file handling</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="mcq-card">
+      <h3>2️⃣. What are the three states of a JavaScript <strong>Promise</strong>?</h3>
+      <div class="options">
+        <label><input type="radio" name="q2">A. start, running, end</label>
+        <label><input type="radio" name="q2">B. open, processing, closed</label>
+        <label><input type="radio" name="q2" data-correct="true">C. pending, fulfilled, rejected</label>
+        <label><input type="radio" name="q2">D. waiting, resolved, failed</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="mcq-card">
+      <h3>3️⃣. Which keyword pauses execution inside an <code>async</code> function until a Promise resolves?</h3>
+      <div class="options">
+        <label><input type="radio" name="q3">A. pause</label>
+        <label><input type="radio" name="q3">B. hold</label>
+        <label><input type="radio" name="q3">C. defer</label>
+        <label><input type="radio" name="q3" data-correct="true">D. await</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="mcq-card">
+      <h3>4️⃣. What does <code>Array.prototype.map()</code> return?</h3>
+      <div class="options">
+        <label><input type="radio" name="q4">A. The original array modified in place</label>
+        <label><input type="radio" name="q4" data-correct="true">B. A new array with the results of calling a function on every element</label>
+        <label><input type="radio" name="q4">C. A single accumulated value</label>
+        <label><input type="radio" name="q4">D. A boolean indicating if any element matches</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="mcq-card">
+      <h3>5️⃣. What is <strong>hoisting</strong> in JavaScript?</h3>
+      <div class="options">
+        <label><input type="radio" name="q5">A. Moving DOM elements to the top of the page</label>
+        <label><input type="radio" name="q5">B. Lifting values from arrays</label>
+        <label><input type="radio" name="q5" data-correct="true">C. JavaScript's behaviour of moving declarations to the top of their scope before code execution</label>
+        <label><input type="radio" name="q5">D. A CSS technique for vertical alignment</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="mcq-card">
+      <h3>6️⃣. Which method removes the <strong>last</strong> element from an array and returns it?</h3>
+      <div class="options">
+        <label><input type="radio" name="q6">A. shift()</label>
+        <label><input type="radio" name="q6">B. splice()</label>
+        <label><input type="radio" name="q6">C. unshift()</label>
+        <label><input type="radio" name="q6" data-correct="true">D. pop()</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="mcq-card">
+      <h3>7️⃣. What is the output of <code>0.1 + 0.2 === 0.3</code> in JavaScript?</h3>
+      <div class="options">
+        <label><input type="radio" name="q7" data-correct="true">A. false</label>
+        <label><input type="radio" name="q7">B. true</label>
+        <label><input type="radio" name="q7">C. NaN</label>
+        <label><input type="radio" name="q7">D. undefined</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="mcq-card">
+      <h3>8️⃣. Which method attaches an event handler to an HTML element?</h3>
+      <div class="options">
+        <label><input type="radio" name="q8">A. element.onClick()</label>
+        <label><input type="radio" name="q8">B. element.attachEvent()</label>
+        <label><input type="radio" name="q8" data-correct="true">C. element.addEventListener()</label>
+        <label><input type="radio" name="q8">D. element.bindEvent()</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="mcq-card">
+      <h3>9️⃣. What does the <strong>spread operator</strong> (<code>...</code>) do?</h3>
+      <div class="options">
+        <label><input type="radio" name="q9">A. Creates a deep clone of an object</label>
+        <label><input type="radio" name="q9">B. Deletes all elements of an array</label>
+        <label><input type="radio" name="q9" data-correct="true">C. Expands an iterable (array/object) into individual elements</label>
+        <label><input type="radio" name="q9">D. Joins two strings together</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="mcq-card">
+      <h3>🔟. What is the result of <code>typeof undefined</code>?</h3>
+      <div class="options">
+        <label><input type="radio" name="q10">A. "null"</label>
+        <label><input type="radio" name="q10">B. "object"</label>
+        <label><input type="radio" name="q10" data-correct="true">C. "undefined"</label>
+        <label><input type="radio" name="q10">D. "void"</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q11 -->
+    <div class="mcq-card">
+      <h3>1️⃣1️⃣. Which method converts an array into a string joined by a separator?</h3>
+      <div class="options">
+        <label><input type="radio" name="q11">A. concat()</label>
+        <label><input type="radio" name="q11">B. toString()</label>
+        <label><input type="radio" name="q11" data-correct="true">C. join()</label>
+        <label><input type="radio" name="q11">D. split()</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q12 -->
+    <div class="mcq-card">
+      <h3>1️⃣2️⃣. Which of the following correctly <strong>destructures</strong> an array in JavaScript?</h3>
+      <div class="options">
+        <label><input type="radio" name="q12">A. const {a, b} = [1, 2];</label>
+        <label><input type="radio" name="q12" data-correct="true">B. const [a, b] = [1, 2];</label>
+        <label><input type="radio" name="q12">C. const (a, b) = [1, 2];</label>
+        <label><input type="radio" name="q12">D. let a, b = [1, 2];</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q13 -->
+    <div class="mcq-card">
+      <h3>1️⃣3️⃣. What does <code>localStorage.setItem("key", "value")</code> do?</h3>
+      <div class="options">
+        <label><input type="radio" name="q13">A. Stores data that expires when the tab closes</label>
+        <label><input type="radio" name="q13">B. Sends data to a server</label>
+        <label><input type="radio" name="q13" data-correct="true">C. Stores data in the browser with no expiration date</label>
+        <label><input type="radio" name="q13">D. Saves data to a cookie</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q14 -->
+    <div class="mcq-card">
+      <h3>1️⃣4️⃣. Which array method returns <code>true</code> if <strong>at least one</strong> element satisfies the condition?</h3>
+      <div class="options">
+        <label><input type="radio" name="q14">A. every()</label>
+        <label><input type="radio" name="q14">B. find()</label>
+        <label><input type="radio" name="q14" data-correct="true">C. some()</label>
+        <label><input type="radio" name="q14">D. includes()</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q15 -->
+    <div class="mcq-card">
+      <h3>1️⃣5️⃣. What is <strong>event bubbling</strong> in JavaScript?</h3>
+      <div class="options">
+        <label><input type="radio" name="q15">A. An event that fires repeatedly</label>
+        <label><input type="radio" name="q15">B. An event triggered by mouse hover</label>
+        <label><input type="radio" name="q15" data-correct="true">C. An event propagates from the target element up through its ancestors in the DOM</label>
+        <label><input type="radio" name="q15">D. A method to create custom events</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q16 -->
+    <div class="mcq-card">
+      <h3>1️⃣6️⃣. Which method creates a <strong>shallow copy</strong> of an object?</h3>
+      <div class="options">
+        <label><input type="radio" name="q16">A. Object.deepCopy()</label>
+        <label><input type="radio" name="q16">B. Object.clone()</label>
+        <label><input type="radio" name="q16" data-correct="true">C. Object.assign()</label>
+        <label><input type="radio" name="q16">D. Object.copy()</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q17 -->
+    <div class="mcq-card">
+      <h3>1️⃣7️⃣. What is the purpose of <code>setTimeout(fn, 0)</code>?</h3>
+      <div class="options">
+        <label><input type="radio" name="q17">A. It executes <code>fn</code> immediately and synchronously</label>
+        <label><input type="radio" name="q17">B. It stops script execution for 0 milliseconds</label>
+        <label><input type="radio" name="q17" data-correct="true">C. It schedules <code>fn</code> to run after the current call stack is empty</label>
+        <label><input type="radio" name="q17">D. It deletes the function after execution</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q18 -->
+    <div class="mcq-card">
+      <h3>1️⃣8️⃣. What does <code>Array.isArray([])</code> return?</h3>
+      <div class="options">
+        <label><input type="radio" name="q18" data-correct="true">A. true</label>
+        <label><input type="radio" name="q18">B. false</label>
+        <label><input type="radio" name="q18">C. "array"</label>
+        <label><input type="radio" name="q18">D. undefined</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q19 -->
+    <div class="mcq-card">
+      <h3>1️⃣9️⃣. Which statement correctly describes <strong>prototypal inheritance</strong> in JavaScript?</h3>
+      <div class="options">
+        <label><input type="radio" name="q19">A. Every object must have a class to inherit from</label>
+        <label><input type="radio" name="q19" data-correct="true">B. Objects can inherit properties and methods directly from other objects via the prototype chain</label>
+        <label><input type="radio" name="q19">C. JavaScript does not support inheritance</label>
+        <label><input type="radio" name="q19">D. Inheritance is only possible using the <code>extends</code> keyword</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q20 -->
+    <div class="mcq-card">
+      <h3>2️⃣0️⃣. What does the <code>filter()</code> method return?</h3>
+      <div class="options">
+        <label><input type="radio" name="q20">A. The first element that matches the condition</label>
+        <label><input type="radio" name="q20">B. A boolean indicating whether any element matches</label>
+        <label><input type="radio" name="q20" data-correct="true">C. A new array with all elements that pass the provided test function</label>
+        <label><input type="radio" name="q20">D. The index of the matching element</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Final Result Section -->
+  <div id="finalResult" class="final-result" style="display:none;">
+    <h2>📊 Quiz Summary</h2>
+    <p id="scoreText"></p>
+    <div id="answerSummary"></div>
+  </div>
+
+  <button id="finishBtn" class="finish-btn">Finish Quiz</button>
+
+  <h3 class="next-text">Check your score and return to study more!</h3>
+
+  <div class="nav-buttons">
+    <a href="notes.html" class="back-btn">⬅ Back to Notes</a>
+    <a href="MCQ3.html" class="next-link">Next ➡</a>
+    <a href="MCQ1.html" class="next-link">1️⃣</a>
+    <a href="MCQ2.html" class="next-link">2️⃣</a>
+    <a href="MCQ3.html" class="next-link">3️⃣</a>
+  </div>
+
+  <script src="MCQ2.js"></script>
+</body>
+
+</html>

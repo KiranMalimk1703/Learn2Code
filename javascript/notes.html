@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Mastery | CodeStart</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="notes.css">
+</head>
+
+<body>
+
+    <!-- Dynamic Background Elements -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fa-brands fa-js"></i> JS<span>Notes</span>
+            </div>
+            <button onclick="goBack()" class="btn-home">
+                <i class="fa-solid fa-arrow-left"></i> Back to Courses
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <div class="notes-wrapper container fade-in-up">
+
+        <div class="notes-content">
+            <div class="glass-panel main-header delay-1">
+                <div class="badge"><i class="fa-solid fa-book-open"></i> Full Course</div>
+                <h1><span class="gradient-text">JavaScript</span> Fundamentals</h1>
+                <p>Master everything from variables and functions to DOM manipulation and modern ES6+ features with these beautifully formatted interactive notes.</p>
+            </div>
+
+            <!-- Section 1 -->
+            <section class="glass-panel delay-2" id="intro">
+                <h2><i class="fa-solid fa-1 section-num"></i> Introduction to JavaScript</h2>
+
+                <h3>What is JavaScript?</h3>
+                <p>JavaScript is a <strong>lightweight, interpreted, multi-paradigm programming language</strong> that is one of the core technologies of the World Wide Web, alongside HTML and CSS.</p>
+
+                <blockquote>
+                    "Any application that can be written in JavaScript, will eventually be written in JavaScript." – Atwood's Law
+                </blockquote>
+
+                <p>Created by <strong>Brendan Eich</strong> at Netscape in just 10 days in 1995, JavaScript has grown from a simple browser scripting language into a full-stack powerhouse used for web, mobile, desktop, server, and even AI applications.</p>
+
+                <h3>Where Does JavaScript Run?</h3>
+                <ul class="custom-list">
+                    <li><i class="fa-solid fa-check"></i> <strong>Browser:</strong> Every modern browser has a built-in JavaScript engine (Chrome → V8, Firefox → SpiderMonkey).</li>
+                    <li><i class="fa-solid fa-check"></i> <strong>Server (Node.js):</strong> JavaScript runs outside the browser via Node.js, enabling full-stack development.</li>
+                    <li><i class="fa-solid fa-check"></i> <strong>Mobile:</strong> Frameworks like React Native let you build native mobile apps in JavaScript.</li>
+                </ul>
+
+                <div class="note highlight-yellow">
+                    <strong><i class="fa-solid fa-lightbulb"></i> Dynamic Typing:</strong>
+                    JavaScript is <strong>dynamically typed</strong> — you don't declare variable types. The type is determined at runtime and can change.
+                </div>
+            </section>
+
+            <!-- Section 2 -->
+            <section class="glass-panel delay-3" id="variables">
+                <h2><i class="fa-solid fa-2 section-num"></i> Variables &amp; Data Types</h2>
+
+                <h3>Declaring Variables</h3>
+                <p>JavaScript has three ways to declare variables:</p>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Keyword</th>
+                                <th>Scope</th>
+                                <th>Reassignable</th>
+                                <th>Hoisted</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>var</code></td>
+                                <td>Function</td>
+                                <td>✅ Yes</td>
+                                <td>✅ Yes (undefined)</td>
+                            </tr>
+                            <tr>
+                                <td><code>let</code></td>
+                                <td>Block</td>
+                                <td>✅ Yes</td>
+                                <td>⚠️ TDZ</td>
+                            </tr>
+                            <tr>
+                                <td><code>const</code></td>
+                                <td>Block</td>
+                                <td>❌ No</td>
+                                <td>⚠️ TDZ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Primitive Data Types</h3>
+                <div class="grid-2">
+                    <div class="card-inner">
+                        <h3 class="text-yellow"><i class="fa-solid fa-cube"></i> The 7 Primitives</h3>
+                        <ul class="custom-list">
+                            <li><i class="fa-solid fa-circle-dot"></i> <strong>String</strong> – Text: <code>"Hello"</code></li>
+                            <li><i class="fa-solid fa-circle-dot"></i> <strong>Number</strong> – Integers &amp; decimals: <code>42</code>, <code>3.14</code></li>
+                            <li><i class="fa-solid fa-circle-dot"></i> <strong>Boolean</strong> – <code>true</code> / <code>false</code></li>
+                            <li><i class="fa-solid fa-circle-dot"></i> <strong>undefined</strong> – Declared but not assigned</li>
+                            <li><i class="fa-solid fa-circle-dot"></i> <strong>null</strong> – Intentional empty value</li>
+                            <li><i class="fa-solid fa-circle-dot"></i> <strong>Symbol</strong> – Unique identifier (ES6)</li>
+                            <li><i class="fa-solid fa-circle-dot"></i> <strong>BigInt</strong> – Very large integers (ES2020)</li>
+                        </ul>
+                    </div>
+                    <div class="card-inner">
+                        <h3 class="text-green"><i class="fa-solid fa-layer-group"></i> Reference Types</h3>
+                        <p><strong>Object, Array, Function</strong></p>
+                        <p>Stored by reference in memory. Changing one reference affects all references to the same object.</p>
+                        <div class="code-block small">
+                            <pre><code>let arr = [1, 2, 3];
+let obj = { name: "JS" };
+let fn = () => "hello";</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3 -->
+            <section class="glass-panel delay-4" id="functions">
+                <h2><i class="fa-solid fa-3 section-num"></i> Functions &amp; Scope</h2>
+
+                <h3>Ways to Define a Function</h3>
+                <div class="code-block">
+                    <div class="code-header">javascript</div>
+                    <pre><code>// 1. Function Declaration (hoisted)
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+
+// 2. Function Expression
+const greet = function(name) {
+    return `Hello, ${name}!`;
+};
+
+// 3. Arrow Function (ES6)
+const greet = (name) => `Hello, ${name}!`;
+
+// 4. IIFE – Immediately Invoked Function Expression
+(function() {
+    console.log("Runs immediately!");
+})();</code></pre>
+                </div>
+
+                <h3>Scope &amp; Closures</h3>
+                <p>A <strong>closure</strong> is a function that remembers the variables from its outer scope even after the outer function has returned.</p>
+                <div class="code-block">
+                    <div class="code-header">javascript</div>
+                    <pre><code>function makeCounter() {
+    let count = 0;
+    return function() {
+        count++;
+        return count;
+    };
+}
+
+const counter = makeCounter();
+console.log(counter()); // 1
+console.log(counter()); // 2</code></pre>
+                </div>
+
+                <div class="note highlight-blue">
+                    <strong><i class="fa-solid fa-info-circle"></i> Hoisting:</strong>
+                    Function declarations are fully hoisted (callable before defined). <code>var</code> is hoisted but initialized as <code>undefined</code>. <code>let</code> and <code>const</code> are in the <strong>Temporal Dead Zone (TDZ)</strong> until their declaration.
+                </div>
+            </section>
+
+            <!-- Section 4 -->
+            <section class="glass-panel delay-5" id="dom">
+                <h2><i class="fa-solid fa-4 section-num"></i> DOM Manipulation</h2>
+
+                <h3>What is the DOM?</h3>
+                <p>The <strong>Document Object Model (DOM)</strong> is a programming interface for HTML documents. It represents the page as a tree of objects that JavaScript can read and modify.</p>
+
+                <div class="grid-2">
+                    <div class="card-inner">
+                        <h3 class="text-yellow"><i class="fa-solid fa-magnifying-glass"></i> Selecting Elements</h3>
+                        <div class="code-block small">
+                            <pre><code>// Single element
+document.getElementById("id")
+document.querySelector(".class")
+
+// Multiple elements
+document.querySelectorAll("p")
+document.getElementsByClassName("x")</code></pre>
+                        </div>
+                    </div>
+                    <div class="card-inner">
+                        <h3 class="text-green"><i class="fa-solid fa-pen-to-square"></i> Modifying Elements</h3>
+                        <div class="code-block small">
+                            <pre><code>const el = document.querySelector("h1");
+
+el.textContent = "New Text";
+el.innerHTML = "&lt;span&gt;Bold&lt;/span&gt;";
+el.style.color = "gold";
+el.classList.add("active");</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Event Listeners</h3>
+                <div class="code-block">
+                    <div class="code-header">javascript</div>
+                    <pre><code>const btn = document.getElementById("myBtn");
+
+btn.addEventListener("click", function(event) {
+    console.log("Button clicked!", event.target);
+});
+
+// Arrow function shorthand
+btn.addEventListener("mouseover", (e) => {
+    e.target.style.background = "gold";
+});</code></pre>
+                </div>
+            </section>
+
+            <!-- Section 5 -->
+            <section class="glass-panel delay-6" id="es6">
+                <h2><i class="fa-solid fa-5 section-num"></i> Modern JavaScript (ES6+)</h2>
+
+                <h3>Key ES6+ Features</h3>
+                <div class="grid-2">
+                    <div class="card-inner">
+                        <h3 class="text-yellow"><i class="fa-solid fa-wand-magic-sparkles"></i> Destructuring &amp; Spread</h3>
+                        <div class="code-block small">
+                            <pre><code>// Destructuring
+const { name, age } = person;
+const [first, ...rest] = array;
+
+// Spread operator
+const merged = [...arr1, ...arr2];
+const clone = { ...obj1, ...obj2 };</code></pre>
+                        </div>
+                    </div>
+                    <div class="card-inner">
+                        <h3 class="text-green"><i class="fa-solid fa-clock-rotate-left"></i> Promises &amp; Async/Await</h3>
+                        <div class="code-block small">
+                            <pre><code>// Async/Await
+async function fetchData() {
+    try {
+        const res = await fetch(url);
+        const data = await res.json();
+        return data;
+    } catch (err) {
+        console.error(err);
+    }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="note highlight-orange">
+                    <strong><i class="fa-solid fa-bolt"></i> Template Literals:</strong>
+                    Use backticks (<code>`</code>) for multi-line strings and embedded expressions: <code>`Hello, ${name}! You are ${age} years old.`</code>
+                </div>
+
+                <h3>Array Methods</h3>
+                <div class="code-block">
+                    <div class="code-header">javascript</div>
+                    <pre><code>const numbers = [1, 2, 3, 4, 5];
+
+// map – transform each element
+const doubled = numbers.map(n => n * 2);      // [2,4,6,8,10]
+
+// filter – keep matching elements
+const evens = numbers.filter(n => n % 2 === 0); // [2,4]
+
+// reduce – accumulate a value
+const sum = numbers.reduce((acc, n) => acc + n, 0); // 15
+
+// find – first match
+const found = numbers.find(n => n > 3);       // 4</code></pre>
+                </div>
+            </section>
+
+            <!-- Practice Section -->
+            <section class="glass-panel cta-panel delay-6">
+                <h2><span class="gradient-text">Practice &amp; Apply</span></h2>
+                <p>Ready to put your newly acquired JavaScript knowledge to the ultimate test?</p>
+
+                <div class="practice-cards">
+                    <a href="MCQ1.html" class="practice-card">
+                        <div class="p-icon"><i class="fa-solid fa-list-check"></i></div>
+                        <h3>MCQs</h3>
+                        <p>Test your understanding with rigorous multiple-choice questions.</p>
+                    </a>
+
+                    <a href="blank1.html" class="practice-card">
+                        <div class="p-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+                        <h3>Fill in the Blanks</h3>
+                        <p>Complete missing fragments of code to sharpen your logic.</p>
+                    </a>
+
+                    <a href="../javascript-compiler.html" class="practice-card">
+                        <div class="p-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h3>Online Compiler</h3>
+                        <p>Write, run, and test JavaScript code instantly in the browser.</p>
+                    </a>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Actions Sidebar -->
+        <div class="actions-sidebar delay-5">
+            <div class="glass-panel sidebar-sticky">
+                <h3><i class="fa-solid fa-download"></i> Resources</h3>
+                <p class="sidebar-text">Take your notes offline or export them for offline viewing.</p>
+
+                <button class="action-btn btn-light" onclick="downloadPDF('light')">
+                    <i class="fa-solid fa-file-pdf"></i> Download Light PDF
+                </button>
+
+                <button class="action-btn btn-dark" onclick="downloadPDF('dark')">
+                    <i class="fa-solid fa-moon"></i> Download Dark PDF
+                </button>
+
+                <hr class="sidebar-divider">
+
+                <h3><i class="fa-solid fa-compass"></i> Quick Navigate</h3>
+                <div class="toc">
+                    <a href="#intro">1. Introduction</a>
+                    <a href="#variables">2. Variables &amp; Data Types</a>
+                    <a href="#functions">3. Functions &amp; Scope</a>
+                    <a href="#dom">4. DOM Manipulation</a>
+                    <a href="#es6">5. Modern JS (ES6+)</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-bottom">
+            &copy; 2026 CodeStart. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- html2canvas & jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="notes.js"></script>
+    <script>
+        function goBack() {
+            window.location.href = '../languages.html';
+        }
+    </script>
+
+</body>
+
+</html>

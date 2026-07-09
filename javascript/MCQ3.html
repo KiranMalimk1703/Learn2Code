@@ -1,0 +1,292 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript MCQs – Level 3 | CodeStart</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="MCQ1.css">
+</head>
+
+<body>
+
+  <header>
+    <button onclick="goBack()">
+      <i class="fa-solid fa-arrow-left"></i> Back to Notes
+    </button>
+  </header>
+
+  <h1>🟨 JavaScript MCQs – Level 3</h1>
+
+  <div class="mcq-container">
+
+    <!-- Q1 -->
+    <div class="mcq-card">
+      <h3>1️⃣. What is the output of <code>console.log(1 + "2" + 3)</code>?</h3>
+      <div class="options">
+        <label><input type="radio" name="q1">A. 6</label>
+        <label><input type="radio" name="q1" data-correct="true">B. "123"</label>
+        <label><input type="radio" name="q1">C. "33"</label>
+        <label><input type="radio" name="q1">D. NaN</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="mcq-card">
+      <h3>2️⃣. Which method is used to <strong>flatten</strong> a nested array by one level?</h3>
+      <div class="options">
+        <label><input type="radio" name="q2">A. Array.merge()</label>
+        <label><input type="radio" name="q2">B. Array.concat()</label>
+        <label><input type="radio" name="q2" data-correct="true">C. Array.flat()</label>
+        <label><input type="radio" name="q2">D. Array.reduce()</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="mcq-card">
+      <h3>3️⃣. What does the <code>reduce()</code> method do?</h3>
+      <div class="options">
+        <label><input type="radio" name="q3">A. Removes duplicate elements from an array</label>
+        <label><input type="radio" name="q3">B. Returns elements that pass a test</label>
+        <label><input type="radio" name="q3" data-correct="true">C. Executes a reducer function on each element, resulting in a single output value</label>
+        <label><input type="radio" name="q3">D. Reverses the array in place</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="mcq-card">
+      <h3>4️⃣. What is a <strong>Symbol</strong> in JavaScript?</h3>
+      <div class="options">
+        <label><input type="radio" name="q4">A. A special string type</label>
+        <label><input type="radio" name="q4" data-correct="true">B. A primitive data type that is always unique and immutable</label>
+        <label><input type="radio" name="q4">C. A mathematical operator</label>
+        <label><input type="radio" name="q4">D. A shorthand for a class method</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="mcq-card">
+      <h3>5️⃣. Which of the following creates a <strong>WeakMap</strong>?</h3>
+      <div class="options">
+        <label><input type="radio" name="q5">A. new Map(weak: true)</label>
+        <label><input type="radio" name="q5">B. Map.createWeak()</label>
+        <label><input type="radio" name="q5" data-correct="true">C. new WeakMap()</label>
+        <label><input type="radio" name="q5">D. WeakMap.create()</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="mcq-card">
+      <h3>6️⃣. What does <code>Object.freeze(obj)</code> do?</h3>
+      <div class="options">
+        <label><input type="radio" name="q6">A. Deletes all properties of the object</label>
+        <label><input type="radio" name="q6">B. Creates a deep copy of the object</label>
+        <label><input type="radio" name="q6" data-correct="true">C. Prevents new properties from being added and existing properties from being modified or deleted</label>
+        <label><input type="radio" name="q6">D. Converts the object to a frozen JSON string</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="mcq-card">
+      <h3>7️⃣. What is <strong>debouncing</strong> in JavaScript?</h3>
+      <div class="options">
+        <label><input type="radio" name="q7">A. Removing duplicate event listeners</label>
+        <label><input type="radio" name="q7" data-correct="true">B. Delaying a function's execution until after a specified wait time has passed since its last invocation</label>
+        <label><input type="radio" name="q7">C. Executing a function at regular intervals</label>
+        <label><input type="radio" name="q7">D. Cancelling a pending Promise</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="mcq-card">
+      <h3>8️⃣. What does <code>Promise.all([])</code> do?</h3>
+      <div class="options">
+        <label><input type="radio" name="q8">A. Runs promises one after another</label>
+        <label><input type="radio" name="q8" data-correct="true">B. Runs all promises in parallel and resolves when all have resolved, or rejects if any rejects</label>
+        <label><input type="radio" name="q8">C. Returns the first promise that resolves</label>
+        <label><input type="radio" name="q8">D. Ignores rejected promises</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="mcq-card">
+      <h3>9️⃣. What is the <strong>temporal dead zone (TDZ)</strong>?</h3>
+      <div class="options">
+        <label><input type="radio" name="q9">A. The time between two setTimeout calls</label>
+        <label><input type="radio" name="q9">B. A zone in memory reserved for garbage collection</label>
+        <label><input type="radio" name="q9" data-correct="true">C. The period from the start of a block until a <code>let</code> or <code>const</code> variable is declared, during which accessing it throws a ReferenceError</label>
+        <label><input type="radio" name="q9">D. The delay before an async function resolves</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="mcq-card">
+      <h3>🔟. Which method returns a <strong>new string</strong> with all matches of a pattern replaced?</h3>
+      <div class="options">
+        <label><input type="radio" name="q10">A. str.replace()</label>
+        <label><input type="radio" name="q10" data-correct="true">B. str.replaceAll()</label>
+        <label><input type="radio" name="q10">C. str.swap()</label>
+        <label><input type="radio" name="q10">D. str.substitute()</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q11 -->
+    <div class="mcq-card">
+      <h3>1️⃣1️⃣. What does the <code>new</code> keyword do when used with a constructor function?</h3>
+      <div class="options">
+        <label><input type="radio" name="q11">A. Imports a new module</label>
+        <label><input type="radio" name="q11">B. Creates a deep copy of an object</label>
+        <label><input type="radio" name="q11" data-correct="true">C. Creates a new object, sets its prototype, runs the constructor, and returns the object</label>
+        <label><input type="radio" name="q11">D. Declares a new class</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q12 -->
+    <div class="mcq-card">
+      <h3>1️⃣2️⃣. What is the difference between <code>null</code> and <code>undefined</code>?</h3>
+      <div class="options">
+        <label><input type="radio" name="q12">A. They are identical in every way</label>
+        <label><input type="radio" name="q12">B. <code>null</code> is for strings, <code>undefined</code> is for numbers</label>
+        <label><input type="radio" name="q12" data-correct="true">C. <code>undefined</code> means a variable has been declared but not assigned; <code>null</code> is an explicit assignment meaning "no value"</label>
+        <label><input type="radio" name="q12">D. <code>null</code> causes errors while <code>undefined</code> does not</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q13 -->
+    <div class="mcq-card">
+      <h3>1️⃣3️⃣. What does <code>event.preventDefault()</code> do?</h3>
+      <div class="options">
+        <label><input type="radio" name="q13">A. Stops the event from bubbling up the DOM</label>
+        <label><input type="radio" name="q13">B. Removes the event listener</label>
+        <label><input type="radio" name="q13" data-correct="true">C. Prevents the browser's default action for that event (e.g., form submission, link navigation)</label>
+        <label><input type="radio" name="q13">D. Deletes the element that fired the event</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q14 -->
+    <div class="mcq-card">
+      <h3>1️⃣4️⃣. Which built-in object provides methods for working with <strong>dates and times</strong>?</h3>
+      <div class="options">
+        <label><input type="radio" name="q14">A. Time</label>
+        <label><input type="radio" name="q14">B. Calendar</label>
+        <label><input type="radio" name="q14" data-correct="true">C. Date</label>
+        <label><input type="radio" name="q14">D. Clock</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q15 -->
+    <div class="mcq-card">
+      <h3>1️⃣5️⃣. What does <code>JSON.stringify()</code> do?</h3>
+      <div class="options">
+        <label><input type="radio" name="q15">A. Parses a JSON string into a JavaScript object</label>
+        <label><input type="radio" name="q15" data-correct="true">B. Converts a JavaScript value or object into a JSON string</label>
+        <label><input type="radio" name="q15">C. Validates whether a string is valid JSON</label>
+        <label><input type="radio" name="q15">D. Fetches data from a JSON file</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q16 -->
+    <div class="mcq-card">
+      <h3>1️⃣6️⃣. Which statement about <code>var</code> is correct?</h3>
+      <div class="options">
+        <label><input type="radio" name="q16">A. It is block-scoped</label>
+        <label><input type="radio" name="q16">B. It cannot be redeclared</label>
+        <label><input type="radio" name="q16" data-correct="true">C. It is function-scoped and is hoisted to the top of its scope with a value of <code>undefined</code></label>
+        <label><input type="radio" name="q16">D. It throws a ReferenceError if used before declaration</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q17 -->
+    <div class="mcq-card">
+      <h3>1️⃣7️⃣. What is the output of <code>console.log([] + [])</code>?</h3>
+      <div class="options">
+        <label><input type="radio" name="q17" data-correct="true">A. "" (empty string)</label>
+        <label><input type="radio" name="q17">B. []</label>
+        <label><input type="radio" name="q17">C. 0</label>
+        <label><input type="radio" name="q17">D. undefined</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q18 -->
+    <div class="mcq-card">
+      <h3>1️⃣8️⃣. Which API is used to make asynchronous HTTP requests in modern JavaScript?</h3>
+      <div class="options">
+        <label><input type="radio" name="q18">A. XMLHttpRequest only</label>
+        <label><input type="radio" name="q18">B. axios (built-in)</label>
+        <label><input type="radio" name="q18" data-correct="true">C. fetch()</label>
+        <label><input type="radio" name="q18">D. http.get()</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q19 -->
+    <div class="mcq-card">
+      <h3>1️⃣9️⃣. What does the optional chaining operator <code>?.</code> do?</h3>
+      <div class="options">
+        <label><input type="radio" name="q19">A. Checks if a value is strictly equal to null</label>
+        <label><input type="radio" name="q19">B. Assigns a default value if the left side is falsy</label>
+        <label><input type="radio" name="q19" data-correct="true">C. Safely accesses nested object properties without throwing an error if a reference is null or undefined</label>
+        <label><input type="radio" name="q19">D. Creates an optional parameter in a function</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <!-- Q20 -->
+    <div class="mcq-card">
+      <h3>2️⃣0️⃣. What is a <strong>generator function</strong> in JavaScript?</h3>
+      <div class="options">
+        <label><input type="radio" name="q20">A. A function that generates random numbers</label>
+        <label><input type="radio" name="q20">B. A function that returns a Promise automatically</label>
+        <label><input type="radio" name="q20" data-correct="true">C. A function declared with <code>function*</code> that can pause execution with <code>yield</code> and resume later</label>
+        <label><input type="radio" name="q20">D. A factory function for creating class instances</label>
+        <div class="result"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Final Result Section -->
+  <div id="finalResult" class="final-result" style="display:none;">
+    <h2>📊 Quiz Summary</h2>
+    <p id="scoreText"></p>
+    <div id="answerSummary"></div>
+  </div>
+
+  <button id="finishBtn" class="finish-btn">Finish Quiz</button>
+
+  <h3 class="next-text">You have completed all 3 JavaScript MCQ levels!</h3>
+
+  <div class="nav-buttons">
+    <a href="notes.html" class="back-btn">⬅ Back to Notes</a>
+    <a href="MCQ1.html" class="next-link">1️⃣</a>
+    <a href="MCQ2.html" class="next-link">2️⃣</a>
+    <a href="MCQ3.html" class="next-link">3️⃣</a>
+  </div>
+
+  <script src="MCQ3.js"></script>
+</body>
+
+</html>
