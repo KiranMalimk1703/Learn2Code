@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Fill in the Blanks | CodeStart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="blank3.css">
+</head>
+
+<body>
+  <header>
+    <button onclick="goBack()">
+      <i class="fa-solid fa-arrow-left"></i> Back to Notes
+    </button>
+  </header>
+
+  <h1>🧩 JavaScript Fill in the Blanks - Part 3</h1>
+
+  <div class="blank-container">
+    <!-- Q1 -->
+    <div class="blank-card">
+      <h3>1️⃣. In JavaScript, a <input type="text" class="blank-input" data-correct="closure"> gives you access to an
+        outer function's scope from an inner function.</h3>
+      <button class="check-btn">Check</button>
+      <div class="result"></div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="blank-card">
+      <h3>2️⃣. <input type="text" class="blank-input" data-correct="hoisting"> is JavaScript's default behavior of
+        moving declarations to the top of the current scope.</h3>
+      <button class="check-btn">Check</button>
+      <div class="result"></div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="blank-card">
+      <h3>3️⃣. The <input type="text" class="blank-input" data-correct="strict"> mode in JavaScript is a restricted
+        variant of JavaScript, invoked by adding "use strict" at the beginning of a script.</h3>
+      <button class="check-btn">Check</button>
+      <div class="result"></div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="blank-card">
+      <h3>4️⃣. The <input type="text" class="blank-input" data-correct="Spread"> operator (`...`) allows an iterable
+        such as an array expression or string to be expanded in places where zero or more arguments or elements are
+        expected.</h3>
+      <button class="check-btn">Check</button>
+      <div class="result"></div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="blank-card">
+      <h3>5️⃣. The <input type="text" class="blank-input" data-correct="Destructuring"> assignment syntax is a
+        JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into
+        distinct variables.</h3>
+      <button class="check-btn">Check</button>
+      <div class="result"></div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="blank-card">
+      <h3>6️⃣. The <input type="text" class="blank-input" data-correct="bind"> method creates a new function that,
+        when called, has its `this` keyword set to the provided value.</h3>
+      <button class="check-btn">Check</button>
+      <div class="result"></div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="blank-card">
+      <h3>7️⃣. <input type="text" class="blank-input" data-correct="localStorage"> allows you to save key/value pairs
+        in the browser with no expiration time.</h3>
+      <button class="check-btn">Check</button>
+      <div class="result"></div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="blank-card">
+      <h3>8️⃣. The <input type="text" class="blank-input" data-correct="sessionStorage"> property allows you to save
+        key/value pairs in the browser which are cleared when the page session ends.</h3>
+      <button class="check-btn">Check</button>
+      <div class="result"></div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="blank-card">
+      <h3>9️⃣. A <input type="text" class="blank-input" data-correct="callback"> function is a function passed into
+        another function as an argument, which is then invoked inside the outer function.</h3>
+      <button class="check-btn">Check</button>
+      <div class="result"></div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="blank-card">
+      <h3>🔟. The <input type="text" class="blank-input" data-correct="reduce"> method executes a user-supplied
+        "reducer" callback function on each element of the array, in order, passing in the return value from the
+        calculation on the preceding element.</h3>
+      <button class="check-btn">Check</button>
+      <div class="result"></div>
+    </div>
+  </div>
+
+  <div id="finalResult" class="final-result" style="display:none;">
+    <h2>📊 Quiz Summary</h2>
+    <p id="scoreText"></p>
+    <div id="answerSummary"></div>
+  </div>
+
+  <button id="finishBtn" class="finish-btn">Finish Quiz</button>
+
+  <h3 class="next-text">Review your answers and keep practicing!</h3>
+
+  <div class="nav-buttons">
+    <a href="blank2.html" class="back-btn">⬅ Prev</a>
+    <a href="notes.html" class="next-link">Notes ➡</a>
+    <a href="blank1.html" class="next-link">1️⃣</a>
+    <a href="blank2.html" class="next-link">2️⃣</a>
+    <a href="blank3.html" class="next-link">3️⃣</a>
+  </div>
+
+  <script src="blank3.js"></script>
+</body>
+
+</html>

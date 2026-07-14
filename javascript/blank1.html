@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Fill in the Blanks | CodeStart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="blank1.css">
+</head>
+<body>
+  <header>
+    <button onclick="goBack()">
+      <i class="fa-solid fa-arrow-left"></i> Back to Notes
+    </button>
+  </header>
+
+  <h1>🧩 JavaScript Fill in the Blanks</h1>
+
+  <div class="blank-container">
+    <!-- Q1 -->
+    <div class="blank-card">
+      <h3>1️⃣. The <input type="text" class="blank-input" data-correct="let"> keyword declares a block-scoped variable that can be reassigned.</h3>
+      <button class="check-btn">Check</button>
+      <div class="result"></div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="blank-card">
+      <h3>2️⃣. We use <input type="text" class="blank-input" data-correct="const"> to declare variables whose values should not change.</h3>
+      <button class="check-btn">Check</button>
+      <div class="result"></div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="blank-card">
+      <h3>3️⃣. The <input type="text" class="blank-input" data-correct="console.log"> function is used to print messages to the browser console.</h3>
+      <button class="check-btn">Check</button>
+      <div class="result"></div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="blank-card">
+      <h3>4️⃣. <input type="text" class="blank-input" data-correct="DOM"> stands for Document Object Model.</h3>
+      <button class="check-btn">Check</button>
+      <div class="result"></div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="blank-card">
+      <h3>5️⃣. A function without a name is often called an <input type="text" class="blank-input" data-correct="anonymous"> function.</h3>
+      <button class="check-btn">Check</button>
+      <div class="result"></div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="blank-card">
+      <h3>6️⃣. The <input type="text" class="blank-input" data-correct="typeof"> operator returns a string indicating the type of the unevaluated operand.</h3>
+      <button class="check-btn">Check</button>
+      <div class="result"></div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="blank-card">
+      <h3>7️⃣. To add an element to the end of an array, you use the <input type="text" class="blank-input" data-correct="push"> method.</h3>
+      <button class="check-btn">Check</button>
+      <div class="result"></div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="blank-card">
+      <h3>8️⃣. <input type="text" class="blank-input" data-correct="NaN"> is a special value in JavaScript meaning "Not-a-Number".</h3>
+      <button class="check-btn">Check</button>
+      <div class="result"></div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="blank-card">
+      <h3>9️⃣. The <input type="text" class="blank-input" data-correct="JSON.parse"> method parses a JSON string, constructing the JavaScript value or object described by the string.</h3>
+      <button class="check-btn">Check</button>
+      <div class="result"></div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="blank-card">
+      <h3>🔟. <input type="text" class="blank-input" data-correct="var"> is the older keyword used to declare a variable globally or locally to an entire function regardless of block scope.</h3>
+      <button class="check-btn">Check</button>
+      <div class="result"></div>
+    </div>
+  </div>
+
+  <div id="finalResult" class="final-result" style="display:none;">
+    <h2>📊 Quiz Summary</h2>
+    <p id="scoreText"></p>
+    <div id="answerSummary"></div>
+  </div>
+
+  <button id="finishBtn" class="finish-btn">Finish Quiz</button>
+
+  <h3 class="next-text">Review your answers and keep practicing!</h3>
+
+  <div class="nav-buttons">
+    <a href="notes.html" class="back-btn">⬅ Back to Notes</a>
+    <a href="blank2.html" class="next-link">Next ➡</a>
+    <a href="blank1.html" class="next-link">1️⃣</a>
+    <a href="blank2.html" class="next-link">2️⃣</a>
+    <a href="blank3.html" class="next-link">3️⃣</a>
+  </div>
+
+  <script src="blank1.js"></script>
+</body>
+</html>
