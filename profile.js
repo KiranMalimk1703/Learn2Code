@@ -1,16 +1,23 @@
 document.getElementById("profileForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
+  const currentUser = localStorage.getItem("currentUser") || "Guest User";
+  
   const profileData = {
-    username: localStorage.getItem("username") || "Guest User",
+    username: currentUser,
     fullname: document.getElementById("fullname").value,
     age: document.getElementById("age").value,
     level: document.getElementById("level").value,
     language: document.getElementById("language").value
   };
 
-  // Save profile (temporary storage)
-  localStorage.setItem("profile", JSON.stringify(profileData));
+  // Save profile to the user's specific object
+  let users = JSON.parse(localStorage.getItem("users")) || {};
+  if (!users[currentUser]) {
+      users[currentUser] = { scores: {} };
+  }
+  users[currentUser].profile = profileData;
+  localStorage.setItem("users", JSON.stringify(users));
 
   // Switch button state to loading
   const submitBtn = document.getElementById("submitBtn");

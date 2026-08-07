@@ -18,6 +18,9 @@
 
   <!-- CSS File -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Chatbot CSS -->
+  <link rel="stylesheet" href="chatbot.css">
 </head>
 
 <body>
@@ -37,7 +40,8 @@
         <a href="#" class="nav-link active">Home</a>
         <a href="languages.html" class="nav-link">Courses</a>
         <a href="#" class="nav-link">Compiler</a>
-        <a href="Login.html" class="btn-login">Login</a>
+        <a href="Login.html" class="btn-login" id="navLoginBtn">Login</a>
+        <a href="#" class="btn-login" id="navLogoutBtn" style="display: none; background: #ef4444; border-color: #ef4444;">Logout</a>
       </nav>
       <div class="mobile-menu-btn">
         <i class="fa-solid fa-bars"></i>
@@ -46,7 +50,7 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero container">
+  <section class="hero container" id="heroSection">
     <div class="hero-text fade-in-up">
       <div class="badge">
         <span class="badge-dot"></span> New 2026 Curriculum
@@ -94,6 +98,50 @@
           <i class="fa-solid fa-check"></i> Code Passed!
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Landing Profile Section (Hidden by default) -->
+  <section id="landingProfileSection" class="features-section container" style="display: none; padding-top: 50px;">
+    <div class="section-header fade-in-up">
+      <h2>Welcome Back! <span class="text-highlight" id="landingProfileName"></span></h2>
+      <p>Manage your CodeStart profile directly from here.</p>
+    </div>
+    
+    <div class="feature-card delay-1 fade-in-up" style="max-width: 600px; margin: 0 auto; text-align: left;">
+      <form id="landingProfileForm">
+        <div style="margin-bottom: 20px;">
+          <label style="display: block; margin-bottom: 8px; color: var(--text-muted);">Full Name</label>
+          <input type="text" id="landingFullname" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--surface-border); background: var(--surface); color: var(--text-main);">
+        </div>
+        <div style="margin-bottom: 20px;">
+          <label style="display: block; margin-bottom: 8px; color: var(--text-muted);">Age</label>
+          <input type="number" id="landingAge" required min="1" max="120" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--surface-border); background: var(--surface); color: var(--text-main);">
+        </div>
+        <div style="margin-bottom: 20px;">
+          <label style="display: block; margin-bottom: 8px; color: var(--text-muted);">Skill Level</label>
+          <select id="landingLevel" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--surface-border); background: var(--surface); color: var(--text-main);">
+            <option value="" disabled>Select Skill Level</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+          </select>
+        </div>
+        <div style="margin-bottom: 20px;">
+          <label style="display: block; margin-bottom: 8px; color: var(--text-muted);">Preferred Language</label>
+          <select id="landingLanguage" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--surface-border); background: var(--surface); color: var(--text-main);">
+            <option value="" disabled>Preferred Language</option>
+            <option value="C">C</option>
+            <option value="C++">C++</option>
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+            <option value="JavaScript">JavaScript</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary" style="width: 100%; border: none; cursor: pointer;">
+          Save Updates <i class="fa-solid fa-check"></i>
+        </button>
+      </form>
     </div>
   </section>
 
@@ -195,6 +243,9 @@
 
   <!-- JS File -->
   <script src="script.js"></script>
+
+  <!-- Chatbot JS -->
+  <script src="chatbot.js"></script>
 </body>
 
 </html>

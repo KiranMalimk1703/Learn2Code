@@ -13,6 +13,9 @@
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Chatbot CSS -->
+  <link rel="stylesheet" href="chatbot.css">
 </head>
 <body>
 
@@ -131,9 +134,35 @@
         </div>
       </div>
 
+      <!-- Admin Panel Card -->
+      <div id="adminPanel" class="glass-panel card admin-card fade-in-up delay-6" style="display: none; grid-column: 1 / -1;">
+        <div class="card-header">
+          <i class="fa-solid fa-users-gear icon-bg" style="color: #ef4444;"></i>
+          <h4 style="color: #ef4444;">Admin Panel: Users Overview</h4>
+        </div>
+        <div class="card-body">
+          <table style="width: 100%; text-align: left; border-collapse: collapse; margin-top: 10px;">
+            <thead>
+              <tr style="border-bottom: 1px solid #334155;">
+                <th style="padding: 10px 0;">Username</th>
+                <th>Level</th>
+                <th>Language</th>
+                <th>Total Scores Tracked</th>
+              </tr>
+            </thead>
+            <tbody id="adminUserList">
+              <!-- Admin user rows will be injected here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
     </section>
   </div>
 
   <script src="dashboard.js"></script>
+
+  <!-- Chatbot JS -->
+  <script src="chatbot.js"></script>
 </body>
 </html>

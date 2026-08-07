@@ -40,11 +40,39 @@ function toggleForm() {
 document.getElementById("authForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
-  const username = document.getElementById("username").value;
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value;
+  let users = JSON.parse(localStorage.getItem("users")) || {};
 
-  // Save user temporarily
-  localStorage.setItem("username", username);
-
-  // Redirect to profile page
-  window.location.href = "profile.html";
+  if (isLogin) {
+    // Login flow
+    if (users[username] && users[username].password === password) {
+      localStorage.setItem("currentUser", username);
+      window.location.href = "dashboard.html"; // Existing users go to dashboard
+    } else {
+      alert("Invalid username or password.");
+    }
+  } else {
+    // Sign Up flow
+    if (users[username]) {
+      alert("Username already exists. Please choose another.");
+      return;
+    }
+    
+    const email = document.getElementById("email").value;
+    
+    // Register new user
+    users[username] = {
+      email: email,
+      password: password, // Note: In a real app, hash passwords. This is a mock.
+      profile: null,
+      scores: {}
+    };
+    
+    localStorage.setItem("users", JSON.stringify(users));
+    localStorage.setItem("currentUser", username);
+    
+    // Redirect to profile setup
+    window.location.href = "profile.html";
+  }
 });
