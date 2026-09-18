@@ -1,4 +1,4 @@
-let isLogin = true;
+﻿let isLogin = true;
 
 function toggleForm() {
   const title = document.getElementById("formTitle");
@@ -11,7 +11,7 @@ function toggleForm() {
   if (isLogin) {
     // Switch to Sign Up
     title.innerText = "Create Account";
-    if (subtitle) subtitle.innerText = "Join CodeStart and begin your journey";
+    if (subtitle) subtitle.innerText = "Join Learn2code and begin your journey";
     
     emailGroup.style.display = "block";
     // Small delay to allow display to apply before fading in

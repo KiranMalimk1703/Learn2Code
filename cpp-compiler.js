@@ -1,4 +1,4 @@
-// cpp-compiler.js
+﻿// cpp-compiler.js
 
 function goBack() {
     window.location.href = 'c++/notes.html';
@@ -50,7 +50,7 @@ function appendMessage(text, sender) {
 
 async function generateAIResponse(query) {
     try {
-        const systemPrompt = "You are a friendly, highly knowledgeable C++ programming tutor called 'CodeStart AI'. You are helping a student who is currently using an online C++ compiler. You specialize in modern C++ (C++11/14/17/20), OOP, STL, templates, memory management, and best practices. Keep your answers concise, accurate, and use HTML formatting (like <code> for code snippets, <b> for emphasis, and <br> for line breaks). Do not use Markdown, ONLY use HTML tags for formatting.";
+        const systemPrompt = "You are a friendly, highly knowledgeable C++ programming tutor called 'Learn2code AI'. You are helping a student who is currently using an online C++ compiler. You specialize in modern C++ (C++11/14/17/20), OOP, STL, templates, memory management, and best practices. Keep your answers concise, accurate, and use HTML formatting (like <code> for code snippets, <b> for emphasis, and <br> for line breaks). Do not use Markdown, ONLY use HTML tags for formatting.";
 
         if (typeof puter !== 'undefined' && puter.ai) {
             const response = await puter.ai.chat(

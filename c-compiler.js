@@ -1,4 +1,4 @@
-// c-compiler.js
+﻿// c-compiler.js
 
 function goBack() {
     window.location.href = 'C/notes.html';
@@ -50,7 +50,7 @@ function appendMessage(text, sender) {
 
 async function generateAIResponse(query) {
     try {
-        const systemPrompt = "You are a friendly, highly knowledgeable C programming tutor called 'CodeStart AI'. You are helping a student who is currently using an online C compiler. Keep your answers concise, accurate, and use HTML formatting (like <code> for code snippets, <b> for emphasis, and <br> for line breaks). Do not use Markdown, ONLY use HTML tags for formatting.";
+        const systemPrompt = "You are a friendly, highly knowledgeable C programming tutor called 'Learn2code AI'. You are helping a student who is currently using an online C compiler. Keep your answers concise, accurate, and use HTML formatting (like <code> for code snippets, <b> for emphasis, and <br> for line breaks). Do not use Markdown, ONLY use HTML tags for formatting.";
 
         if (typeof puter !== 'undefined' && puter.ai) {
             const response = await puter.ai.chat(

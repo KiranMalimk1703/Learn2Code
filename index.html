@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="CodeStart - The interactive platform for beginners to master programming.">
-  <title>CodeStart | Master Programming Interactively</title>
+  <meta name="description" content="Learn2code - The interactive platform for beginners to master programming.">
+  <title>Learn2code | Master Programming Interactively</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,14 +34,14 @@
   <header>
     <div class="container header-container">
       <div class="logo">
-        <i class="fa-solid fa-code"></i> Learn<span>2Code</span>
+        <i class="fa-solid fa-code"></i> Learn<span>2code</span>
       </div>
       <nav>
         <a href="#" class="nav-link active">Home</a>
         <a href="languages.html" class="nav-link">Courses</a>
-        <a href="#" class="nav-link">Compiler</a>
+        <a href="compiler-select.html" class="nav-link">Compiler</a>
         <a href="Login.html" class="btn-login" id="navLoginBtn">Login</a>
-        <a href="#" class="btn-login" id="navLogoutBtn" style="display: none; background: #ef4444; border-color: #ef4444;">Logout</a>
+        <a href="#" class="btn-login" id="navLogoutBtn" onclick="handleLogout()" style="display: none; background: #ef4444; border-color: #ef4444;">Logout</a>
       </nav>
       <div class="mobile-menu-btn">
         <i class="fa-solid fa-bars"></i>
@@ -65,7 +65,7 @@
         <button onclick="getStarted()" class="btn-primary">
           Get Started <i class="fa-solid fa-arrow-right"></i>
         </button>
-        <button class="btn-secondary">
+        <button class="btn-secondary" onclick="window.location.href='languages.html'">
           <i class="fa-solid fa-play"></i> Watch Demo
         </button>
       </div>
@@ -105,7 +105,7 @@
   <section id="landingProfileSection" class="features-section container" style="display: none; padding-top: 50px;">
     <div class="section-header fade-in-up">
       <h2>Welcome Back! <span class="text-highlight" id="landingProfileName"></span></h2>
-      <p>Manage your CodeStart profile directly from here.</p>
+      <p>Manage your Learn2code profile directly from here.</p>
     </div>
     
     <div class="feature-card delay-1 fade-in-up" style="max-width: 600px; margin: 0 auto; text-align: left;">
@@ -149,7 +149,7 @@
   <section class="features-section">
     <div class="container">
       <div class="section-header fade-in-up">
-        <h2>Why Choose <span class="text-highlight">CodeStart?</span></h2>
+        <h2>Why Choose <span class="text-highlight">Learn2code?</span></h2>
         <p>Everything you need to go from absolute beginner to confident developer in one unified platform.</p>
       </div>
 
@@ -236,13 +236,20 @@
     </div>
     <div class="footer-bottom">
       <div class="container">
-        &copy; 2026 CodeStart. All rights reserved.
+        &copy; 2026 Learn2code. All rights reserved.
       </div>
     </div>
   </footer>
 
   <!-- JS File -->
   <script src="script.js"></script>
+
+  <script>
+    function handleLogout() {
+      localStorage.removeItem('currentUser');
+      window.location.href = 'index.html';
+    }
+  </script>
 
   <!-- Chatbot JS -->
   <script src="chatbot.js"></script>

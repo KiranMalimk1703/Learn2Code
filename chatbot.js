@@ -1,5 +1,5 @@
-/**
- * CodeStart AI Chatbot — Powered by Google Gemini
+﻿/**
+ * Learn2code AI Chatbot — Powered by Google Gemini
  * Inject <link rel="stylesheet" href="/chatbot.css"> + <script src="/chatbot.js"></script>
  * into any page and this self-contained widget will mount automatically.
  */
@@ -7,9 +7,9 @@
     'use strict';
 
     /* ── Constants ── */
-    const STORAGE_KEY = 'codestart_gemini_key';
+    const STORAGE_KEY = 'Learn2code_gemini_key';
     const GEMINI_MODEL = 'gemini-2.0-flash';
-    const SYSTEM_PROMPT = `You are CodeStart AI, a friendly and expert programming tutor embedded in the CodeStart learning platform. 
+    const SYSTEM_PROMPT = `You are Learn2code AI, a friendly and expert programming tutor embedded in the Learn2code learning platform. 
 The platform teaches C, C++, Java, JavaScript, and Python through notes, MCQs, fill-in-the-blank exercises, and online compilers.
 Keep answers concise, friendly, and educational. Use code examples when helpful (wrap them in triple backticks). 
 If asked anything unrelated to programming or learning, politely redirect the conversation back to coding topics.`;
@@ -20,7 +20,7 @@ If asked anything unrelated to programming or learning, politely redirect the co
         wrapper.id = 'chatbot-root';
         wrapper.innerHTML = `
 <!-- Floating Toggle Button -->
-<button id="chatbot-toggle" aria-label="Open AI Chatbot" title="Ask CodeStart AI">
+<button id="chatbot-toggle" aria-label="Open AI Chatbot" title="Ask Learn2code AI">
     <!-- Bot icon (open state) -->
     <svg class="icon-open" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7H3a7 7 0 0 1 7-7h1V5.73A2 2 0 0 1 12 2zM5 15v4a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-4H5zm4 1h2v2H9v-2zm4 0h2v2h-2v-2zM7 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
@@ -32,13 +32,13 @@ If asked anything unrelated to programming or learning, politely redirect the co
 </button>
 
 <!-- Chat Window -->
-<div id="chatbot-window" role="dialog" aria-label="CodeStart AI Chat">
+<div id="chatbot-window" role="dialog" aria-label="Learn2code AI Chat">
 
     <!-- Header -->
     <div id="chatbot-header">
         <div class="chatbot-avatar">🤖</div>
         <div class="chatbot-title">
-            <h4>CodeStart AI</h4>
+            <h4>Learn2code AI</h4>
             <span>Powered by Gemini</span>
         </div>
         <button class="close-btn" id="chatbot-close-btn" aria-label="Close chat">✕</button>
@@ -140,7 +140,7 @@ If asked anything unrelated to programming or learning, politely redirect the co
 
     /* ── Welcome message ── */
     function addWelcomeMessage() {
-        appendMessage('bot', `👋 Hi! I'm **CodeStart AI**, your personal programming tutor. I can help you with:\n\n• Understanding concepts from your notes\n• Debugging code snippets\n• Explaining C, C++, Java, JavaScript & Python\n• MCQ & quiz questions\n\nWhat would you like to learn today?`);
+        appendMessage('bot', `👋 Hi! I'm **Learn2code AI**, your personal programming tutor. I can help you with:\n\n• Understanding concepts from your notes\n• Debugging code snippets\n• Explaining C, C++, Java, JavaScript & Python\n• MCQ & quiz questions\n\nWhat would you like to learn today?`);
     }
 
     /* ── Append a message bubble ── */

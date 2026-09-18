@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Python Online Compiler | CodeStart</title>
+  <title>Python Online Compiler | Learn2code</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,14 +55,11 @@
     <div class="compiler-container fade-in-up">
       <div class="glass-compiler-panel">
         
-        <div class="compiler-header">
-          <span><i class="fa-brands fa-python" style="color:#facc15; margin-right:5px;"></i> main.py</span>
-          <button class="btn-run" onclick="runit()"><i class="fa-solid fa-play"></i> Run Code</button>
-        </div>
+        <div class="compiler-header"><span class="compiler-filename-tab"><i class="fa-brands fa-python" style="color:#f59e0b; margin-right:5px;"></i> main.py</span><div class="compiler-toolbar"><div class="toolbar-group"><select class="toolbar-select" id="templateSelect" title="Load a template"><option value="">📋 Templates</option></select></div><div class="toolbar-group toolbar-font-size"><button class="toolbar-btn" id="fontDecrBtn"><i class="fa-solid fa-minus"></i></button><span class="font-size-label" id="fontSizeLabel">14px</span><button class="toolbar-btn" id="fontIncrBtn"><i class="fa-solid fa-plus"></i></button></div><div class="toolbar-group"><button class="toolbar-btn" id="copyBtn"><i class="fa-solid fa-copy"></i></button><button class="toolbar-btn" id="clearOutBtn"><i class="fa-solid fa-broom"></i></button><button class="toolbar-btn" id="fullscreenBtn"><i class="fa-solid fa-expand"></i></button></div><button class="btn-run" onclick="runit()" id="runBtn"><i class="fa-solid fa-play"></i> Run <kbd class="run-kbd">Ctrl+↵</kbd></button></div></div>
         
         <div class="compiler-body">
           <div class="editor-pane">
-            <textarea id="code" spellcheck="false" autocomplete="off">print("Welcome to CodeStart Python Compiler!")
+            <textarea id="code" spellcheck="false" autocomplete="off">print("Welcome to Learn2code Python Compiler!")
 name = input("What is your name? ")
 print(f"Hello, {name}! Let's write some Python code.")
 for i in range(1, 4):
@@ -70,7 +67,7 @@ for i in range(1, 4):
           </div>
           
           <div class="output-pane">
-            <div class="output-header">Terminal Output</div>
+            <div class="output-header">Terminal Output <span class="exec-time" id="execTime"></span></div>
             <div id="terminal">
               <div id="output"></div>
               <input type="text" id="inputBox" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="Terminal input...">
@@ -91,7 +88,7 @@ for i in range(1, 4):
   <div class="ai-chat-panel" id="aiChatPanel">
     <div class="chat-header">
       <div class="chat-title">
-        <i class="fa-solid fa-robot"></i> CodeStart AI Tutor
+        <i class="fa-solid fa-robot"></i> Learn2code AI Tutor
       </div>
       <button class="chat-close" onclick="toggleChat()">
         <i class="fa-solid fa-xmark"></i>

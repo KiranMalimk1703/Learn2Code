@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CodeStart | Dashboard</title>
+  <title>Learn2code | Dashboard</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="dashboard.css">
@@ -28,7 +28,7 @@
   <header>
     <div class="header-container container">
       <div class="logo">
-        <i class="fa-solid fa-code"></i> <span>CodeStart</span>
+        <i class="fa-solid fa-code"></i> <span>Learn2code</span>
       </div>
       <div class="nav-actions">
         <!-- Hidden toggle button for mobile -->
@@ -125,10 +125,10 @@
           <button class="btn btn-primary" onclick="window.location.href='languages.html'">
             <i class="fa-solid fa-book-open"></i> Continue Learning
           </button>
-          <button class="btn btn-secondary">
+          <button class="btn btn-secondary" onclick="window.location.href='languages.html'">
             <i class="fa-solid fa-pen-nib"></i> Take a Quiz
           </button>
-          <button class="btn btn-dark">
+          <button class="btn btn-dark" onclick="window.location.href='compiler-select.html'">
             <i class="fa-solid fa-terminal"></i> Open Compiler
           </button>
         </div>
@@ -154,6 +154,17 @@
               <!-- Admin user rows will be injected here -->
             </tbody>
           </table>
+        </div>
+      </div>
+
+      <!-- Language Progress Card -->
+      <div class="glass-panel card fade-in-up" style="grid-column: 1 / -1;">
+        <div class="card-header">
+          <i class="fa-solid fa-layer-group icon-bg"></i>
+          <h4>Language-wise Progress</h4>
+        </div>
+        <div class="card-body" id="langProgressBody">
+          <!-- injected by dashboard.js -->
         </div>
       </div>
 
