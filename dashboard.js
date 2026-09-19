@@ -88,16 +88,33 @@ if (!currentUser || !users[currentUser]) {
   }, 300);
 
   // --- Language-wise Progress ---
+  const COMPILER_LINKS = {
+    java: "java-compiler.html",
+    javascript: "javascript-compiler.html",
+    python: "python-compiler.html",
+    C: "c-compiler.html",
+    "c++": "cpp-compiler.html"
+  };
+  const NOTES_LINKS = {
+    java: "java/notes.html",
+    javascript: "javascript/notes.html",
+    python: "python/notes.html",
+    C: "C/notes.html",
+    "c++": "c++/notes.html"
+  };
+
   const langBody = document.getElementById("langProgressBody");
   if (langBody) {
     const container = document.createElement("div");
-    container.style.cssText = "display:grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-top: 8px;";
+    container.style.cssText = "display:grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; margin-top: 8px;";
 
     LANGUAGES.forEach(lang => {
       const ld = langData[lang];
       const pct = Math.round((ld.completed / ld.total) * 100);
       const color = LANG_COLORS[lang] || "#3b82f6";
       const label = LANG_LABELS[lang] || lang;
+      const notesUrl = NOTES_LINKS[lang] || "languages.html";
+      const compUrl = COMPILER_LINKS[lang] || "compiler-select.html";
 
       const card = document.createElement("div");
       card.style.cssText = `
@@ -105,21 +122,93 @@ if (!currentUser || !users[currentUser]) {
         border: 1px solid rgba(255,255,255,0.07);
         border-radius: 14px;
         padding: 18px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
       `;
       card.innerHTML = `
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-          <span style="font-weight:700; font-size:15px; color:#e2e8f0;">${label}</span>
-          <span style="font-size:13px; font-weight:700; color:${color};">${pct}%</span>
+        <div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+            <span style="font-weight:700; font-size:15px; color:#e2e8f0;">${label}</span>
+            <span style="font-size:13px; font-weight:700; color:${color};">${pct}%</span>
+          </div>
+          <div style="height:6px; background:rgba(255,255,255,0.07); border-radius:100px; overflow:hidden;">
+            <div style="height:100%; width:${pct}%; background:${color}; border-radius:100px; transition:width 0.8s ease;"></div>
+          </div>
+          <p style="margin-top:8px; font-size:12px; color:#64748b;">${ld.completed} / ${ld.total} exercises done</p>
         </div>
-        <div style="height:6px; background:rgba(255,255,255,0.07); border-radius:100px; overflow:hidden;">
-          <div style="height:100%; width:${pct}%; background:${color}; border-radius:100px; transition:width 0.8s ease;"></div>
+        <div style="display:flex; gap:8px; margin-top:14px;">
+          <a href="${notesUrl}" style="flex:1; text-align:center; padding:6px 0; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:8px; font-size:11px; font-weight:600; color:#cbd5e1; text-decoration:none; transition:all 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.12)'" onmouseout="this.style.background='rgba(255,255,255,0.06)'">📖 Practice</a>
+          <a href="${compUrl}" style="flex:1; text-align:center; padding:6px 0; background:rgba(59,130,246,0.15); border:1px solid rgba(59,130,246,0.25); border-radius:8px; font-size:11px; font-weight:600; color:#60a5fa; text-decoration:none; transition:all 0.2s;" onmouseover="this.style.background='rgba(59,130,246,0.25)'" onmouseout="this.style.background='rgba(59,130,246,0.15)'">⚡ Compiler</a>
         </div>
-        <p style="margin-top:8px; font-size:12px; color:#64748b;">${ld.completed} / ${ld.total} exercises done</p>
       `;
       container.appendChild(card);
     });
 
     langBody.appendChild(container);
+  }
+
+  // --- Gamification Stats (Streak, XP, Badges) ---
+  if (window.Gamification) {
+    const gStats = Gamification.getUserStats();
+    if (gStats) {
+      // Streak Card
+      const streakEl = document.getElementById("streakDays");
+      const streakSub = document.getElementById("streakSubtitle");
+      if (streakEl) streakEl.textContent = `${gStats.streak} Day${gStats.streak === 1 ? "" : "s"}`;
+      if (streakSub && gStats.longestStreak > 1) {
+        streakSub.textContent = `Personal Best: ${gStats.longestStreak} days! Keep the momentum!`;
+      }
+
+      // XP & Level Card
+      const xpEl = document.getElementById("userTotalXP");
+      const lvlTitleEl = document.getElementById("userLevelTitle");
+      const xpFill = document.getElementById("xpProgressFill");
+      const lvlLabel = document.getElementById("levelLabel");
+      const xpNextLabel = document.getElementById("xpToNextLabel");
+
+      if (xpEl) xpEl.innerHTML = `${gStats.xp.toLocaleString()} <small>XP</small>`;
+      if (lvlTitleEl) lvlTitleEl.textContent = gStats.title;
+      if (lvlLabel) lvlLabel.textContent = `Level ${gStats.level}`;
+      if (xpNextLabel) {
+        xpNextLabel.textContent = gStats.nextXP ? `${gStats.xp} / ${gStats.nextXP} XP` : "Max Level Reached! 👑";
+      }
+      if (xpFill) {
+        setTimeout(() => {
+          xpFill.style.width = `${gStats.levelPercent}%`;
+        }, 400);
+      }
+
+      // Badges Shelf
+      const badgesContainer = document.getElementById("badgesContainer");
+      const badgesLabel = document.getElementById("badgesCountLabel");
+      const allBadges = Gamification.getAllBadges();
+
+      if (badgesLabel) {
+        const unlockedCount = allBadges.filter(b => b.unlocked).length;
+        badgesLabel.textContent = `${unlockedCount} / ${allBadges.length} Unlocked`;
+      }
+
+      if (badgesContainer) {
+        badgesContainer.innerHTML = "";
+        allBadges.forEach(b => {
+          const badgeCard = document.createElement("div");
+          badgeCard.className = `badge-card ${b.unlocked ? "unlocked" : "locked"}`;
+          badgeCard.title = b.unlocked ? `Unlocked! ${b.description}` : `Locked: ${b.description}`;
+          badgeCard.innerHTML = `
+            <div class="badge-icon-box" style="border-color: ${b.unlocked ? b.color + '55' : 'rgba(255,255,255,0.08)'}">
+              <span>${b.unlocked ? b.icon : "🔒"}</span>
+            </div>
+            <div class="badge-info">
+              <div class="badge-name">${b.name}</div>
+              <div class="badge-desc">${b.description}</div>
+              <div class="badge-status">${b.unlocked ? "Earned 🌟" : "Locked"}</div>
+            </div>
+          `;
+          badgesContainer.appendChild(badgeCard);
+        });
+      }
+    }
   }
 
   // --- Admin Panel ---

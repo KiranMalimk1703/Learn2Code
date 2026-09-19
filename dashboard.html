@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -101,16 +101,55 @@
           <div class="score-grid">
             <div class="score-item">
               <div class="score-circle">
-                <span class="score-number">45<small>%</small></span>
+                <span class="score-number" id="mcqAvgScore">0<small>%</small></span>
               </div>
               <span class="score-label">MCQs Avg</span>
             </div>
             <div class="score-item">
               <div class="score-circle">
-                <span class="score-number">60<small>%</small></span>
+                <span class="score-number" id="quizAvgScore">0<small>%</small></span>
               </div>
               <span class="score-label">Quizzes avg</span>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Daily Streak Card -->
+      <div class="glass-panel card streak-card fade-in-up delay-4">
+        <div class="card-header">
+          <i class="fa-solid fa-fire icon-bg" style="color: #f97316;"></i>
+          <h4>Daily Streak</h4>
+        </div>
+        <div class="card-body streak-body">
+          <div class="streak-flame-wrapper">🔥</div>
+          <div class="streak-details">
+            <h3 id="streakDays">1 Day</h3>
+            <p id="streakSubtitle">Keep coding daily to grow your streak!</p>
+            <div class="streak-status-badge">
+              <i class="fa-solid fa-circle-check"></i> Active Today
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- XP & Level Card -->
+      <div class="glass-panel card xp-card fade-in-up delay-5">
+        <div class="card-header">
+          <i class="fa-solid fa-bolt icon-bg" style="color: #f59e0b;"></i>
+          <h4>XP & Level</h4>
+        </div>
+        <div class="card-body">
+          <div class="xp-header-info">
+            <div class="xp-total" id="userTotalXP">0 <small>XP</small></div>
+            <div class="xp-level-title" id="userLevelTitle">Novice Coder</div>
+          </div>
+          <div class="xp-bar-bg">
+            <div class="xp-bar-fill" id="xpProgressFill" style="width: 0%;"></div>
+          </div>
+          <div class="xp-hint">
+            <span id="levelLabel">Level 1</span>
+            <span id="xpToNextLabel">0 / 200 XP</span>
           </div>
         </div>
       </div>
@@ -168,9 +207,28 @@
         </div>
       </div>
 
+      <!-- Achievements & Badges Card -->
+      <div class="glass-panel card fade-in-up" style="grid-column: 1 / -1;">
+        <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <i class="fa-solid fa-trophy icon-bg" style="color: #f59e0b;"></i>
+            <h4>Achievement Badges</h4>
+          </div>
+          <span style="font-size: 13px; font-weight: 700; color: #f59e0b;" id="badgesCountLabel">0 / 13 Unlocked</span>
+        </div>
+        <div class="card-body">
+          <p style="font-size: 13px; color: #94a3b8; margin-bottom: 12px;">Earn badges by completing quizzes, compiling code, and maintaining coding streaks!</p>
+          <div class="badges-container" id="badgesContainer">
+            <!-- injected by dashboard.js -->
+          </div>
+        </div>
+      </div>
+
     </section>
   </div>
 
+  <script src="toast.js"></script>
+  <script src="gamification.js"></script>
   <script src="dashboard.js"></script>
 
   <!-- Chatbot JS -->

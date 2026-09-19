@@ -491,3 +491,217 @@ h4 {
   color: #64748b;
 }
 
+/* ── Gamification: Streaks, XP & Badges ── */
+@keyframes flamePulse {
+  0% { transform: scale(1); filter: drop-shadow(0 0 6px rgba(249, 115, 22, 0.4)); }
+  50% { transform: scale(1.15) rotate(-3deg); filter: drop-shadow(0 0 16px rgba(249, 115, 22, 0.8)); }
+  100% { transform: scale(1); filter: drop-shadow(0 0 6px rgba(249, 115, 22, 0.4)); }
+}
+
+.streak-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.streak-body {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-top: 10px;
+}
+
+.streak-flame-wrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.25) 0%, rgba(234, 88, 12, 0.05) 70%);
+  border: 1px solid rgba(249, 115, 22, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  flex-shrink: 0;
+  animation: flamePulse 2.8s infinite ease-in-out;
+}
+
+.streak-details h3 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #f8fafc;
+  line-height: 1.1;
+}
+
+.streak-details p {
+  font-size: 13px;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+.streak-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-top: 8px;
+}
+
+/* XP Card */
+.xp-card .xp-header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.xp-total {
+  font-size: 26px;
+  font-weight: 800;
+  color: #f8fafc;
+}
+
+.xp-total small {
+  font-size: 14px;
+  color: #f59e0b;
+  margin-left: 4px;
+  font-weight: 700;
+}
+
+.xp-level-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  padding: 3px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.xp-bar-bg {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 100px;
+  overflow: hidden;
+  margin: 12px 0 8px;
+}
+
+.xp-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #f59e0b, #ec4899);
+  border-radius: 100px;
+  transition: width 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.xp-hint {
+  font-size: 12px;
+  color: #64748b;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Badges Section */
+.badges-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.badge-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.badge-card:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.badge-card.unlocked {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.badge-card.locked {
+  opacity: 0.45;
+  filter: grayscale(0.85);
+}
+
+.badge-card.locked:hover {
+  opacity: 0.8;
+  filter: grayscale(0.2);
+}
+
+.badge-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.badge-card.unlocked .badge-icon-box {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.03) 80%);
+}
+
+.badge-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.badge-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #f1f5f9;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.badge-desc {
+  font-size: 11px;
+  color: #94a3b8;
+  margin-top: 3px;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.badge-status {
+  font-size: 10px;
+  font-weight: 700;
+  margin-top: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-card.unlocked .badge-status {
+  color: #10b981;
+}
+
+.badge-card.locked .badge-status {
+  color: #64748b;
+}
+
+

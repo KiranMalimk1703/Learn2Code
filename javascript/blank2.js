@@ -132,6 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const totalQuestions = typeof mcqCards !== 'undefined' ? mcqCards.length : (typeof blankCards !== 'undefined' ? blankCards.length : 0);
       users[currentUser].scores[`${folderName}_${quizName}`] = { score: score, total: totalQuestions };
       localStorage.setItem("users", JSON.stringify(users));
+      if (window.showToast) showToast(`Progress saved: ${score}/${totalQuestions} correct!`, "success");
     }
 
   }

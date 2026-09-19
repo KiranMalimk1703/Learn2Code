@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -56,8 +56,25 @@
       <div class="glass-compiler-panel">
 
         <div class="compiler-header">
-          <span><i class="fa-brands fa-node-js" style="color:#68a063; margin-right:5px;"></i> index.js</span>
-          <button class="btn-run" onclick="runit()" id="runBtn"><i class="fa-solid fa-play"></i> Run Code</button>
+          <span class="compiler-filename-tab"><i class="fa-brands fa-node-js" style="color:#68a063; margin-right:5px;"></i> index.js</span>
+          <div class="compiler-toolbar">
+            <div class="toolbar-group">
+              <select class="toolbar-select" id="templateSelect" title="Load a template">
+                <option value="">📋 Templates</option>
+              </select>
+            </div>
+            <div class="toolbar-group toolbar-font-size">
+              <button class="toolbar-btn" id="fontDecrBtn" title="Decrease font size"><i class="fa-solid fa-minus"></i></button>
+              <span class="font-size-label" id="fontSizeLabel">14px</span>
+              <button class="toolbar-btn" id="fontIncrBtn" title="Increase font size"><i class="fa-solid fa-plus"></i></button>
+            </div>
+            <div class="toolbar-group">
+              <button class="toolbar-btn" id="copyBtn" title="Copy code"><i class="fa-solid fa-copy"></i></button>
+              <button class="toolbar-btn" id="clearOutBtn" title="Clear terminal output"><i class="fa-solid fa-broom"></i></button>
+              <button class="toolbar-btn" id="fullscreenBtn" title="Toggle fullscreen"><i class="fa-solid fa-expand"></i></button>
+            </div>
+            <button class="btn-run" onclick="runit()" id="runBtn"><i class="fa-solid fa-play"></i> Run <kbd class="run-kbd">Ctrl+↵</kbd></button>
+          </div>
         </div>
 
         <div class="compiler-body">
@@ -127,6 +144,8 @@ for (let i = 1; i <= 3; i++) {
     </div>
   </div>
 
+  <script src="toast.js"></script>
+  <script src="gamification.js"></script>
   <script src="javascript-compiler.js"></script>
 
 

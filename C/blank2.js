@@ -98,9 +98,10 @@ function showFinalResult() {
       if (!users[currentUser].scores) users[currentUser].scores = {};
       const quizName = window.location.pathname.split('/').pop().replace('.html', '').replace('.js', '');
       const folderName = window.location.pathname.split('/').slice(-2)[0];
-      const totalQuestions = typeof mcqCards !== 'undefined' ? mcqCards.length : (typeof blankCards !== 'undefined' ? blankCards.length : 0);
+      const totalQuestions = typeof blanks !== 'undefined' ? blanks.length : (typeof blankCards !== 'undefined' ? blankCards.length : 0);
       users[currentUser].scores[`${folderName}_${quizName}`] = { score: score, total: totalQuestions };
       localStorage.setItem("users", JSON.stringify(users));
+      if (window.showToast) showToast(`Progress saved: ${score}/${totalQuestions} correct!`, "success");
     }
 
 }
