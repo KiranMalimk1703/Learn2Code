@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Leaderboard | CodeStart Social Platform</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="leaderboard.css">
+  <link rel="stylesheet" href="chatbot.css">
+</head>
+
+<body>
+
+  <!-- Dynamic Glowing Background Shapes -->
+  <div class="bg-shape shape-1"></div>
+  <div class="bg-shape shape-2"></div>
+  <div class="bg-shape shape-3"></div>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-code" style="color: #60a5fa;"></i> Code<span>Start</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-btn"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="languages.html" class="nav-btn"><i class="fa-solid fa-book-open"></i> Courses</a>
+        <a href="compiler-select.html" class="nav-btn"><i class="fa-solid fa-terminal"></i> Compiler</a>
+        <a href="community.html" class="nav-btn"><i class="fa-solid fa-users"></i> Community</a>
+        <a href="leaderboard.html" class="nav-btn active"><i class="fa-solid fa-trophy"></i> Leaderboard</a>
+        <a href="chat.html" class="nav-btn"><i class="fa-solid fa-comments"></i> Chat</a>
+        <a href="dashboard.html" class="nav-btn"><i class="fa-solid fa-gauge-high"></i> Dashboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="leaderboard-wrap">
+    <div class="container">
+
+      <!-- Title -->
+      <div class="leaderboard-title">
+        <h1>Global <span style="background: linear-gradient(135deg, #f59e0b, #fbbf24); -webkit-background-clip: text; color: transparent;">Leaderboard</span> 🏆</h1>
+        <p>Recognizing top performers, coding streaks, and quiz masterminds across all languages</p>
+      </div>
+
+      <!-- Top 3 Podium -->
+      <div class="podium-container" id="podiumContainer">
+        <!-- Injected dynamically by leaderboard.js -->
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="controls-row">
+        <div class="lang-filter-group" id="langFilters">
+          <button class="filter-chip active" data-lang="all">🌐 Overall</button>
+          <button class="filter-chip" data-lang="python">Python</button>
+          <button class="filter-chip" data-lang="java">Java</button>
+          <button class="filter-chip" data-lang="javascript">JavaScript</button>
+          <button class="filter-chip" data-lang="c">C</button>
+          <button class="filter-chip" data-lang="c++">C++</button>
+        </div>
+      </div>
+
+      <!-- Leaderboard Table -->
+      <div class="leaderboard-table-panel">
+        <table class="leaderboard-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Developer</th>
+              <th>Focus</th>
+              <th>Streak</th>
+              <th>Exercises</th>
+              <th>Accuracy</th>
+              <th>Total XP</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboardTbody">
+            <!-- Injected dynamically by leaderboard.js -->
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Global Toast Notification -->
+  <script src="toast.js"></script>
+
+  <!-- Firebase Compat CDN -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+  <!-- CodeStart Firebase & Social Engine -->
+  <script src="firebase-config.js"></script>
+
+  <!-- Leaderboard Logic -->
+  <script src="leaderboard.js"></script>
+
+  <!-- Chatbot JS -->
+  <script src="chatbot.js"></script>
+</body>
+
+</html>

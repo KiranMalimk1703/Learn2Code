@@ -1,4 +1,4 @@
-﻿// javascript-compiler.js — Learn2code Enhanced Compiler
+// javascript-compiler.js — Learn2code Enhanced Compiler
 
 // ── Templates ──
 const JS_TEMPLATES = [
@@ -191,6 +191,9 @@ async function runit() {
         } else {
             if (data.stdout) mypre.innerText += data.stdout;
             if (data.stderr) mypre.innerHTML += '<span class="output-error">' + data.stderr + '</span>';
+        }
+        if (window.recordCompilerRun) {
+            window.recordCompilerRun(code, mypre.innerText, elapsed + "ms");
         }
     } catch (err) {
         spinner.style.display = "none";

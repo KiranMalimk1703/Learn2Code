@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Feed | CodeStart Social Platform</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="community.css">
+  <link rel="stylesheet" href="chatbot.css">
+</head>
+
+<body>
+
+  <!-- Dynamic Glowing Background Shapes -->
+  <div class="bg-shape shape-1"></div>
+  <div class="bg-shape shape-2"></div>
+  <div class="bg-shape shape-3"></div>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-code" style="color: #60a5fa;"></i> Code<span>Start</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-btn"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="languages.html" class="nav-btn"><i class="fa-solid fa-book-open"></i> Courses</a>
+        <a href="compiler-select.html" class="nav-btn"><i class="fa-solid fa-terminal"></i> Compiler</a>
+        <a href="community.html" class="nav-btn active"><i class="fa-solid fa-users"></i> Community</a>
+        <a href="leaderboard.html" class="nav-btn"><i class="fa-solid fa-trophy"></i> Leaderboard</a>
+        <a href="chat.html" class="nav-btn"><i class="fa-solid fa-comments"></i> Chat</a>
+        <a href="dashboard.html" class="nav-btn" id="navDashboardBtn"><i class="fa-solid fa-gauge-high"></i> Dashboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Feed Main Wrapper -->
+  <main class="main-feed-wrap">
+    <div class="container">
+
+      <!-- Feed Header -->
+      <div class="feed-header">
+        <h1>Community <span style="background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; color: transparent;">Feed</span></h1>
+        <p>Celebrate coding wins, share scores, and learn together with fellow developers</p>
+      </div>
+
+      <!-- Create Post Card -->
+      <div class="create-post-card">
+        <div class="create-post-top">
+          <div id="currentUserAvatarWrap">
+            <!-- Dynamic Avatar -->
+          </div>
+          <textarea class="create-post-input" id="postContentInput" placeholder="What coding milestone did you conquer today? Share an achievement or question..." rows="3"></textarea>
+        </div>
+
+        <div class="create-post-toolbar">
+          <div class="post-tag-group">
+            <select class="post-tag-select" id="postLanguageSelect">
+              <option value="General">🌐 General</option>
+              <option value="Python">🐍 Python</option>
+              <option value="Java">☕ Java</option>
+              <option value="JavaScript">🟨 JavaScript</option>
+              <option value="C">🔷 C</option>
+              <option value="C++">⚡ C++</option>
+            </select>
+
+            <select class="post-tag-select" id="postScoreSelect">
+              <option value="">No score badge</option>
+              <option value="100">🏆 Scored 100%</option>
+              <option value="90">🔥 Scored 90%+</option>
+              <option value="80">✨ Scored 80%+</option>
+              <option value="streak">⚡ Active Streak</option>
+            </select>
+          </div>
+
+          <button class="btn-post-submit" id="submitPostBtn">
+            <i class="fa-solid fa-paper-plane"></i> Post
+          </button>
+        </div>
+      </div>
+
+      <!-- Language Filter Tabs -->
+      <div class="filter-tabs" id="filterTabs">
+        <button class="filter-tab active" data-lang="all">🌟 All Posts</button>
+        <button class="filter-tab" data-lang="python">Python</button>
+        <button class="filter-tab" data-lang="java">Java</button>
+        <button class="filter-tab" data-lang="javascript">JavaScript</button>
+        <button class="filter-tab" data-lang="c">C</button>
+        <button class="filter-tab" data-lang="c++">C++</button>
+      </div>
+
+      <!-- Posts List -->
+      <div class="posts-feed" id="postsFeed">
+        <!-- Injected dynamically by community.js -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Global Toast Notification -->
+  <script src="toast.js"></script>
+
+  <!-- Firebase Compat CDN -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+  <!-- CodeStart Firebase & Social Engine -->
+  <script src="firebase-config.js"></script>
+
+  <!-- Community Logic -->
+  <script src="community.js"></script>
+
+  <!-- Chatbot JS -->
+  <script src="chatbot.js"></script>
+</body>
+
+</html>

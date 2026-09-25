@@ -254,9 +254,16 @@ function runit() {
     myPromise.then(function(mod) {
         const elapsed = Date.now() - startTime;
         if (execEl) execEl.textContent = "⏱ " + elapsed + "ms";
+        if (window.recordCompilerRun) {
+            window.recordCompilerRun(prog, mypre.innerText, elapsed + "ms");
+        }
     }, function(err) {
         const elapsed = Date.now() - startTime;
         if (execEl) execEl.textContent = "⏱ " + elapsed + "ms";
         mypre.innerHTML += `<span class="output-error">\n${err.toString()}</span>`;
+        if (window.recordCompilerRun) {
+            window.recordCompilerRun(prog, mypre.innerText, elapsed + "ms");
+        }
     });
 }
+

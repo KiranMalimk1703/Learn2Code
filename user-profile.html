@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile | CodeStart Social Platform</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="user-profile.css">
+  <link rel="stylesheet" href="chatbot.css">
+</head>
+
+<body>
+
+  <!-- Dynamic Glowing Background Shapes -->
+  <div class="bg-shape shape-1"></div>
+  <div class="bg-shape shape-2"></div>
+  <div class="bg-shape shape-3"></div>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-code" style="color: #60a5fa;"></i> Code<span>Start</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-btn"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="languages.html" class="nav-btn"><i class="fa-solid fa-book-open"></i> Courses</a>
+        <a href="compiler-select.html" class="nav-btn"><i class="fa-solid fa-terminal"></i> Compiler</a>
+        <a href="community.html" class="nav-btn"><i class="fa-solid fa-users"></i> Community</a>
+        <a href="leaderboard.html" class="nav-btn"><i class="fa-solid fa-trophy"></i> Leaderboard</a>
+        <a href="chat.html" class="nav-btn"><i class="fa-solid fa-comments"></i> Chat</a>
+        <a href="dashboard.html" class="nav-btn"><i class="fa-solid fa-gauge-high"></i> Dashboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Profile Content Container -->
+  <main class="profile-page-wrap">
+    <div class="container">
+
+      <!-- Profile Hero Card -->
+      <section class="profile-hero-card" id="profileHero">
+        <div class="profile-hero-content">
+          <div class="profile-avatar-details">
+            <div class="profile-large-avatar" id="profileAvatar">U</div>
+            <div class="profile-info">
+              <h1 id="profileFullName">User Name</h1>
+              <div class="profile-username" id="profileUsername">@username</div>
+              <p class="profile-bio" id="profileBio">Passionate software developer learning and building with CodeStart.</p>
+              <div class="profile-badges-row">
+                <span class="badge-tag" id="profileLevel"><i class="fa-solid fa-layer-group"></i> Level: Intermediate</span>
+                <span class="badge-tag" id="profileLanguage"><i class="fa-solid fa-terminal"></i> Focus: Python</span>
+                <span class="badge-tag" id="profileJoined"><i class="fa-regular fa-calendar"></i> Joined Jan 2026</span>
+                <span class="badge-tag" id="profileStreak" style="color: #f97316; border-color: rgba(249, 115, 22, 0.3);"><i class="fa-solid fa-fire"></i> 1 Day Streak</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile-action-buttons">
+            <a href="chat.html" class="btn-message" id="messageBtn">
+              <i class="fa-solid fa-comment-dots"></i> Message
+            </a>
+            <button class="btn-secondary-action" id="shareProfileBtn">
+              <i class="fa-solid fa-share-nodes"></i> Share
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Overview Grid -->
+      <section class="stats-grid">
+        <div class="stat-box">
+          <div class="stat-box-num" id="statExercises" style="color: #3b82f6;">0</div>
+          <div class="stat-box-label">Exercises Completed</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-num" id="statMcqAvg" style="color: #10b981;">0%</div>
+          <div class="stat-box-label">MCQ Accuracy</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-num" id="statQuizAvg" style="color: #8b5cf6;">0%</div>
+          <div class="stat-box-label">Quiz Accuracy</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-num" id="statTotalXP" style="color: #f59e0b;">0</div>
+          <div class="stat-box-label">Total XP Earned</div>
+        </div>
+      </section>
+
+      <!-- Language Mastery Bars -->
+      <section class="section-panel">
+        <h3><i class="fa-solid fa-chart-simple" style="color: #60a5fa;"></i> Language Mastery</h3>
+        <div class="lang-bars-list" id="langBarsList">
+          <!-- Injected dynamically -->
+        </div>
+      </section>
+
+      <!-- Community Posts by User -->
+      <section class="section-panel">
+        <h3><i class="fa-regular fa-newspaper" style="color: #a78bfa;"></i> Recent Activity & Community Posts</h3>
+        <div class="user-posts-list" id="userPostsList">
+          <!-- Injected dynamically -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Global Toast Notification -->
+  <script src="toast.js"></script>
+
+  <!-- Firebase Compat CDN -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+  <!-- CodeStart Firebase & Social Engine -->
+  <script src="firebase-config.js"></script>
+
+  <!-- Profile Logic -->
+  <script src="user-profile.js"></script>
+
+  <!-- Chatbot JS -->
+  <script src="chatbot.js"></script>
+</body>
+
+</html>

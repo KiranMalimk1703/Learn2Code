@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peer & Group Chat | CodeStart Social Platform</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/chatbot.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="chat.css">
+</head>
+
+<body>
+
+  <!-- Background Shapes -->
+  <div class="bg-shape shape-1"></div>
+  <div class="bg-shape shape-2"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-code" style="color: #60a5fa;"></i> Code<span>Start</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-btn"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="community.html" class="nav-btn"><i class="fa-solid fa-users"></i> Community</a>
+        <a href="leaderboard.html" class="nav-btn"><i class="fa-solid fa-trophy"></i> Leaderboard</a>
+        <a href="chat.html" class="nav-btn active"><i class="fa-solid fa-comments"></i> Chat</a>
+        <a href="dashboard.html" class="nav-btn"><i class="fa-solid fa-gauge-high"></i> Dashboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Chat App Container -->
+  <div class="chat-app-wrapper">
+
+    <!-- Sidebar: Rooms & Direct Messages -->
+    <aside class="chat-sidebar" id="chatSidebar">
+      <div class="sidebar-search-box">
+        <div class="search-input-wrap">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" class="search-input" id="userSearchInput" placeholder="Search developers...">
+        </div>
+      </div>
+
+      <div class="sidebar-scroll-area">
+        <div class="sidebar-section-title">Community Channels</div>
+        <div class="chat-item active" data-channel="general" id="channelGeneral">
+          <div class="chat-item-avatar-wrap">
+            <div
+              style="width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #3b82f6, #8b5cf6); display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff;">
+              #
+            </div>
+            <div class="online-dot"></div>
+          </div>
+          <div class="chat-item-info">
+            <div class="chat-item-top">
+              <div class="chat-item-name">#general</div>
+              <span style="font-size: 10px; color: #10b981;">Online</span>
+            </div>
+            <div class="chat-item-preview">Live global community discussions</div>
+          </div>
+        </div>
+
+        <div class="sidebar-section-title" style="margin-top: 10px;">Direct Messages</div>
+        <div id="directMessagesList">
+          <!-- Injected dynamically by chat.js -->
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Chat Window -->
+    <main class="chat-main">
+      <div class="chat-header">
+        <div class="chat-header-peer">
+          <div id="chatHeaderAvatar">
+            <div
+              style="width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg, #3b82f6, #8b5cf6); display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff;">
+              #</div>
+          </div>
+          <div>
+            <div class="chat-header-name" id="chatHeaderName">#general</div>
+            <div class="chat-header-status" id="chatHeaderStatus">
+              <span
+                style="width: 7px; height: 7px; background: #10b981; border-radius: 50%; display: inline-block;"></span>
+              <span>Active Channel &bull; Real-time</span>
+            </div>
+          </div>
+        </div>
+
+        <button class="nav-btn" onclick="document.getElementById('chatSidebar').classList.toggle('active')"
+          style="display: none;" id="mobileSidebarToggle">
+          <i class="fa-solid fa-users"></i> Users
+        </button>
+      </div>
+
+      <!-- Messages Stream -->
+      <div class="chat-messages" id="chatMessages">
+        <!-- Injected dynamically -->
+      </div>
+
+      <!-- Quick Emoji Bar -->
+      <div class="chat-quick-emojis">
+        <button class="emoji-btn" data-emoji="🔥">🔥</button>
+        <button class="emoji-btn" data-emoji="🚀">🚀</button>
+        <button class="emoji-btn" data-emoji="💻">💻</button>
+        <button class="emoji-btn" data-emoji="🎉">🎉</button>
+        <button class="emoji-btn" data-emoji="👍">👍</button>
+        <button class="emoji-btn" data-emoji="❤️">❤️</button>
+        <button class="emoji-btn" data-emoji="💡">💡</button>
+        <button class="emoji-btn" data-emoji="👏">👏</button>
+        <button class="emoji-btn" data-emoji="🏆">🏆</button>
+      </div>
+
+      <!-- Input Bar -->
+      <div class="chat-input-bar">
+        <input type="text" class="chat-input-field" id="chatInputField" placeholder="Type a message (Enter to send)..."
+          autocomplete="off">
+        <button class="chat-send-btn" id="chatSendBtn" title="Send Message">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Global Toast Notification -->
+  <script src="toast.js"></script>
+
+  <!-- Firebase Compat CDN -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+  <!-- CodeStart Firebase & Social Engine -->
+  <script src="firebase-config.js"></script>
+
+  <!-- Chat Logic -->
+  <script src="chat.js"></script>
+  <script src="/chatbot.js"></script>
+</body>
+
+</html>

@@ -242,6 +242,10 @@ async function runit() {
             }
         }
 
+        if (window.recordCompilerRun) {
+            window.recordCompilerRun(code, mypre.innerText, elapsed + "ms");
+        }
+
     } catch (err) {
         spinner.style.display = "none";
         runBtn.disabled = false;

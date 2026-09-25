@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -32,7 +32,7 @@
   <header>
     <div class="header-container container">
       <div class="logo">
-        <i class="fa-solid fa-code"></i> <span>Learn2code</span>
+        <i class="fa-solid fa-code" style="color: #60a5fa;"></i> Code<span>Start</span>
       </div>
       <a href="index.html" class="btn-home">
         <i class="fa-solid fa-house"></i> Home
@@ -49,17 +49,38 @@
         <form id="authForm">
           <div class="input-group">
             <i class="fa-regular fa-user"></i>
-            <input type="text" id="username" placeholder="Username" required>
+            <input type="text" id="username" placeholder="Username or Email" required autocomplete="username">
           </div>
 
           <div class="input-group signup-only" id="emailGroup">
             <i class="fa-regular fa-envelope"></i>
-            <input type="email" id="email" placeholder="Email Address">
+            <input type="email" id="email" placeholder="Email Address (for real cloud auth)" autocomplete="email">
           </div>
 
           <div class="input-group">
             <i class="fa-solid fa-lock"></i>
-            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="password" placeholder="Password" required autocomplete="current-password">
+            <i class="fa-regular fa-eye toggle-password" id="togglePasswordBtn" title="Toggle password visibility"></i>
+          </div>
+
+          <!-- Password strength meter for signup -->
+          <div class="password-strength-wrap" id="passwordStrengthWrap">
+            <div class="password-strength-track">
+              <div class="password-strength-fill" id="passwordStrengthFill"></div>
+            </div>
+            <div class="password-strength-label">
+              <span>Password strength</span>
+              <span id="passwordStrengthText" style="font-weight: 600;">Weak</span>
+            </div>
+          </div>
+
+          <!-- Remember me row -->
+          <div class="remember-row">
+            <label class="remember-checkbox">
+              <input type="checkbox" id="rememberMeCheckbox" checked>
+              <span>Remember me</span>
+            </label>
+            <a href="#" onclick="showToast('Password reset link sent to your registered email.', 'info'); return false;" style="color: #60a5fa; text-decoration: none; font-size: 13px;">Forgot?</a>
           </div>
 
           <button type="submit" class="btn btn-primary" id="submitBtn">
@@ -75,7 +96,18 @@
     </div>
   </div>
 
-  <!-- JS -->
+  <!-- Toast Notification System -->
+  <script src="toast.js"></script>
+
+  <!-- Firebase Compat CDN (Optional live connection) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+  <!-- Firebase Configuration & Social Data Engine -->
+  <script src="firebase-config.js"></script>
+
+  <!-- Login Logic -->
   <script src="Login.js"></script>
 
   <!-- Chatbot JS -->

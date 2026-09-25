@@ -28,13 +28,17 @@
   <header>
     <div class="header-container container">
       <div class="logo">
-        <i class="fa-solid fa-code"></i> <span>Learn2code</span>
+        <i class="fa-solid fa-code" style="color: #60a5fa;"></i> Code<span>Start</span>
       </div>
       <div class="nav-actions">
         <!-- Hidden toggle button for mobile -->
-        <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
-        <div class="nav-links">
+        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fa-solid fa-bars"></i></button>
+        <div class="nav-links" id="navLinks">
           <button onclick="goHome()" class="btn-nav"><i class="fa-solid fa-house"></i> Home</button>
+          <a href="community.html" class="btn-nav"><i class="fa-solid fa-users"></i> Community</a>
+          <a href="leaderboard.html" class="btn-nav"><i class="fa-solid fa-trophy"></i> Leaderboard</a>
+          <a href="chat.html" class="btn-nav"><i class="fa-solid fa-comments"></i> Chat</a>
+          <a href="profile.html" class="btn-nav" id="navProfileBtn"><i class="fa-solid fa-user-gear"></i> Profile</a>
           <button onclick="logout()" class="btn-nav btn-logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
         </div>
       </div>
@@ -46,9 +50,19 @@
     <section class="dashboard">
 
       <!-- Welcome Card -->
-      <div class="glass-panel card welcome fade-in-up delay-1">
-        <h3>Welcome back, <span id="userName" class="gradient-text">User</span> <span class="wave">👋</span></h3>
-        <p>Let’s continue your programming journey. You're doing great!</p>
+      <div class="glass-panel card welcome fade-in-up delay-1" style="grid-column: 1 / -1;">
+        <div class="welcome-inner">
+          <div class="welcome-user-info">
+            <div id="welcomeAvatarWrap"></div>
+            <div>
+              <h3>Welcome back, <span id="userName" class="gradient-text">User</span> <span class="wave">👋</span></h3>
+              <p>Let’s continue your programming journey. You're doing great!</p>
+            </div>
+          </div>
+          <button class="btn-share-score" id="shareScoreBtn" onclick="shareScoreToCommunity()">
+            <i class="fa-solid fa-share-nodes"></i> Share Score to Community
+          </button>
+        </div>
       </div>
 
       <!-- Profile Details Card -->
@@ -91,7 +105,7 @@
         </div>
       </div>
 
-      <!-- Scorecard Card -->
+      <!-- Scorecard Card with Circular SVG Rings -->
       <div class="glass-panel card score-card fade-in-up delay-4">
         <div class="card-header">
           <i class="fa-solid fa-star icon-bg"></i>
@@ -101,12 +115,20 @@
           <div class="score-grid">
             <div class="score-item">
               <div class="score-circle">
+                <svg class="progress-ring" width="90" height="90">
+                  <circle class="ring-bg" cx="45" cy="45" r="38"></circle>
+                  <circle class="ring-fill mcq-ring-fill" id="mcqRing" cx="45" cy="45" r="38" stroke-dasharray="238.76" stroke-dashoffset="238.76"></circle>
+                </svg>
                 <span class="score-number" id="mcqAvgScore">0<small>%</small></span>
               </div>
               <span class="score-label">MCQs Avg</span>
             </div>
             <div class="score-item">
               <div class="score-circle">
+                <svg class="progress-ring" width="90" height="90">
+                  <circle class="ring-bg" cx="45" cy="45" r="38"></circle>
+                  <circle class="ring-fill quiz-ring-fill" id="quizRing" cx="45" cy="45" r="38" stroke-dasharray="238.76" stroke-dashoffset="238.76"></circle>
+                </svg>
                 <span class="score-number" id="quizAvgScore">0<small>%</small></span>
               </div>
               <span class="score-label">Quizzes avg</span>
@@ -164,8 +186,14 @@
           <button class="btn btn-primary" onclick="window.location.href='languages.html'">
             <i class="fa-solid fa-book-open"></i> Continue Learning
           </button>
-          <button class="btn btn-secondary" onclick="window.location.href='languages.html'">
-            <i class="fa-solid fa-pen-nib"></i> Take a Quiz
+          <button class="btn btn-secondary" onclick="window.location.href='community.html'">
+            <i class="fa-solid fa-users"></i> Community Feed
+          </button>
+          <button class="btn btn-dark" onclick="window.location.href='leaderboard.html'">
+            <i class="fa-solid fa-trophy"></i> Global Leaderboard
+          </button>
+          <button class="btn btn-dark" onclick="window.location.href='chat.html'">
+            <i class="fa-solid fa-comments"></i> Peer & Group Chat
           </button>
           <button class="btn btn-dark" onclick="window.location.href='compiler-select.html'">
             <i class="fa-solid fa-terminal"></i> Open Compiler
@@ -228,6 +256,15 @@
   </div>
 
   <script src="toast.js"></script>
+
+  <!-- Firebase Compat CDN -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+  <!-- Firebase Config & Social Engine -->
+  <script src="firebase-config.js"></script>
+
   <script src="gamification.js"></script>
   <script src="dashboard.js"></script>
 

@@ -85,40 +85,40 @@ If asked anything unrelated to programming or learning, politely redirect the co
         saveKeyBtn, keyError, resetKeyLink, closeBtn;
 
     function cacheRefs() {
-        toggleBtn    = document.getElementById('chatbot-toggle');
-        chatWindow   = document.getElementById('chatbot-window');
-        setupPanel   = document.getElementById('chatbot-setup');
-        messagesEl   = document.getElementById('chatbot-messages');
-        inputArea    = document.getElementById('chatbot-input-area');
-        chatInput    = document.getElementById('chatbot-input');
-        sendBtn      = document.getElementById('chatbot-send');
-        apikeyInput  = document.getElementById('chatbot-apikey-input');
-        saveKeyBtn   = document.getElementById('chatbot-save-key');
-        keyError     = document.getElementById('chatbot-key-error');
+        toggleBtn = document.getElementById('chatbot-toggle');
+        chatWindow = document.getElementById('chatbot-window');
+        setupPanel = document.getElementById('chatbot-setup');
+        messagesEl = document.getElementById('chatbot-messages');
+        inputArea = document.getElementById('chatbot-input-area');
+        chatInput = document.getElementById('chatbot-input');
+        sendBtn = document.getElementById('chatbot-send');
+        apikeyInput = document.getElementById('chatbot-apikey-input');
+        saveKeyBtn = document.getElementById('chatbot-save-key');
+        keyError = document.getElementById('chatbot-key-error');
         resetKeyLink = document.getElementById('chatbot-reset-key');
-        closeBtn     = document.getElementById('chatbot-close-btn');
+        closeBtn = document.getElementById('chatbot-close-btn');
     }
 
     /* ── Key management ── */
-    function getKey()       { return localStorage.getItem(STORAGE_KEY) || ''; }
-    function saveKey(k)     { localStorage.setItem(STORAGE_KEY, k.trim()); }
-    function clearKey()     { localStorage.removeItem(STORAGE_KEY); }
+    function getKey() { return localStorage.getItem(STORAGE_KEY) || ''; }
+    function saveKey(k) { localStorage.setItem(STORAGE_KEY, k.trim()); }
+    function clearKey() { localStorage.removeItem(STORAGE_KEY); }
 
     /* ── UI state helpers ── */
     function showChat() {
-        setupPanel.style.display  = 'none';
-        messagesEl.style.display  = 'flex';
-        inputArea.style.display   = 'flex';
+        setupPanel.style.display = 'none';
+        messagesEl.style.display = 'flex';
+        inputArea.style.display = 'flex';
         resetKeyLink.style.display = 'block';
         if (conversationHistory.length === 0) addWelcomeMessage();
     }
 
     function showSetup() {
-        setupPanel.style.display  = 'flex';
-        messagesEl.style.display  = 'none';
-        inputArea.style.display   = 'none';
+        setupPanel.style.display = 'flex';
+        messagesEl.style.display = 'none';
+        inputArea.style.display = 'none';
         resetKeyLink.style.display = 'none';
-        keyError.style.display    = 'none';
+        keyError.style.display = 'none';
     }
 
     function openWindow() {

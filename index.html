@@ -34,16 +34,21 @@
   <header>
     <div class="container header-container">
       <div class="logo">
-        <i class="fa-solid fa-code"></i> Learn<span>2code</span>
+        <i class="fa-solid fa-code" style="color: #60a5fa;"></i> Code<span>Start</span>
       </div>
-      <nav>
+      <nav id="mainNav">
         <a href="#" class="nav-link active">Home</a>
         <a href="languages.html" class="nav-link">Courses</a>
         <a href="compiler-select.html" class="nav-link">Compiler</a>
-        <a href="Login.html" class="btn-login" id="navLoginBtn">Login</a>
-        <a href="#" class="btn-login" id="navLogoutBtn" onclick="handleLogout()" style="display: none; background: #ef4444; border-color: #ef4444;">Logout</a>
+        <a href="community.html" class="nav-link">Community</a>
+        <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+        <a href="chat.html" class="nav-link">Chat</a>
+        <span id="navAuthArea">
+          <a href="Login.html" class="btn-login" id="navLoginBtn">Login</a>
+          <a href="#" class="btn-login" id="navLogoutBtn" onclick="handleLogout()" style="display: none; background: #ef4444; border-color: #ef4444;">Logout</a>
+        </span>
       </nav>
-      <div class="mobile-menu-btn">
+      <div class="mobile-menu-btn" id="mobileMenuToggle">
         <i class="fa-solid fa-bars"></i>
       </div>
     </div>
@@ -241,13 +246,21 @@
     </div>
   </footer>
 
+  <!-- Toast & Firebase Config -->
+  <script src="toast.js"></script>
+  <script src="firebase-config.js"></script>
+
   <!-- JS File -->
   <script src="script.js"></script>
 
   <script>
     function handleLogout() {
-      localStorage.removeItem('currentUser');
-      window.location.href = 'index.html';
+      if (window.CodeStart) {
+        window.CodeStart.logout();
+      } else {
+        localStorage.removeItem('currentUser');
+        window.location.reload();
+      }
     }
   </script>
 
